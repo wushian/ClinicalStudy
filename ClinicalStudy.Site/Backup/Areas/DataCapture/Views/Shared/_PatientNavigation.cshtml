@@ -1,0 +1,24 @@
+﻿<div class="patNavHeader">
+	<div>
+		<h3 style="float: left;">
+			Patients</h3>
+		@Html.DevExpress().Button(s => {
+	                                	s.Name = "btnNewPatient";
+	                                	s.SkinID = "Yellow";
+	                                	s.Text = "New Patient";
+	                                	s.ControlStyle.CssClass = "newPatBtn";
+
+	                                	string url = Url.Action("PatientDataContainer", "Patient", new {Area = "DataCapture", patientNumber = -1});
+
+	                                	s.ClientSideEvents.Click = String.Format(@"function (s,e) {{
+											var ajaxOptions = {{
+												OnSuccess : afterNewPatientRequest,
+												NeedHistoryUpdate : true}};
+											buttonAjaxClick(s,e, '{0}', ajaxOptions);}}", url);
+	                                }).GetHtml()
+	</div>
+</div>
+<div>
+	@Html.Action("PatientGrid", "Patient")
+</div>
+@Html.Partial("_ActiveInactiveNavigation")

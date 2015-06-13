@@ -1,0 +1,9 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxwschs" Namespace="DevExpress.Web.ASPxScheduler" Assembly="DevExpress.Web.ASPxScheduler.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<dxwschs:ASPxDateNavigator runat="server" 
+    CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme" 
+    SpriteCssFilePath="{0}/sprite.css">
+    <Properties>
+        <HeaderStyle Spacing="1" />
+    </Properties>
+</dxwschs:ASPxDateNavigator>

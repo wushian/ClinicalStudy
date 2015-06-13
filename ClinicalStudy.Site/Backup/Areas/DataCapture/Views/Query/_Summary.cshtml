@@ -1,0 +1,40 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Query.QueryListDataViewModel
+@(Html.DevExpress().GridView(s => {
+	                                  	s.Name = "SummaryQueryGrid";
+	                                  	s.Settings.ShowFooter = true;
+	                                  	s.Settings.ShowColumnHeaders = false;
+	                                  	s.Settings.ShowTitlePanel = true;
+	                                  	s.Width = 270;
+	                                  	s.SkinID = "Summary";
+
+	                                  	s.SettingsText.EmptyDataRow = "You have no queries";
+	                                  	MVCxGridViewColumn firstCol = s.Columns.Add("IsClosed");
+	                                  	firstCol.Width = 21;
+	                                  	firstCol.CellStyle.Paddings.PaddingLeft = 9;
+	                                  	firstCol.SetDataItemTemplateContent(c => {
+	                                  	                                    	string imgUrl = Url.Content("~/Content/Icons/MarkCompleted.png");
+
+	                                  	                                    	if (!(bool) DataBinder.Eval(c.DataItem, "IsClosed")) {
+																					imgUrl = Url.Content("~/Content/Icons/MarkAttentionNeeded.png");
+																				}
+
+	                                  	                                    	ViewContext.Writer.Write(
+																					Html.DevExpress().Image(imgS => { imgS.ImageUrl = imgUrl; }).GetHtml());
+	                                  	                                    });
+	                                  	s.Columns.Add("QueryText");
+	                                  	s.SetTitlePanelTemplateContent(c => ViewContext.Writer.Write(
+											Html.DevExpress().Label(ls => {
+											                        	ls.SkinID = "BigLabel";
+											                        	ls.Text = Model.OpenQueryNumber > 0 ? string.Format("Last Queries <span class='queriesCnt'>({0} Open)</span>", Model.OpenQueryNumber) : "Last Queries";
+											                        	ls.EncodeHtml = false;
+											                        }).GetHtml()));
+
+	                                  	s.SetFooterRowTemplateContent(c => ViewContext.Writer.Write(
+											Ajax.ActionLink("More", "Index", new {}, new AjaxOptions {
+												UpdateTargetId = "contentPanel",
+												HttpMethod = "GET",
+												LoadingElementId = "loadingIndicator",
+												OnSuccess = "setActiveNavTab('queries')"
+											},
+												new {@class = "dcLink"})));
+	                                  }).Bind(Model).GetHtml())

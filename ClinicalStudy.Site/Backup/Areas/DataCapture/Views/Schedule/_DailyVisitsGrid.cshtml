@@ -1,0 +1,43 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.DataCapture.Models.Schedule.DailyScheduleViewModel
+@Html.DevExpress().GridView(
+	s => {
+		s.Name = "gvDailyVisits";
+		s.CallbackRouteValues = new {Controller = "Schedule", Action = "DailyVisitsGrid", datetime = Model.Date};
+		s.Width = Unit.Percentage(100);
+
+		s.Columns.Add(c => {
+		              	c.Caption = "Subject Initials";
+		              	c.Width = 100;
+		              	c.SetDataItemTemplateContent(t => {
+		              	                             	var text = (string) DataBinder.Eval(t.DataItem, "PatientInitials");
+		              	                             	var visitId = (int) DataBinder.Eval(t.DataItem, "VisitId");
+		              	                             	var patientNumber = (int) DataBinder.Eval(t.DataItem, "PatientNumber");
+		              	                             	var visitName = (string) DataBinder.Eval(t.DataItem, "VisitCaption");
+
+		              	                             	ViewContext.Writer.Write(Html.DevExpress().HyperLink(hs => {
+		              	                             	                                                     	hs.Name = "SubjectInitials" + visitId;
+		              	                             	                                                     	hs.Properties.Text = text;
+		              	                             	                                                     	hs.ControlStyle.Cursor = "pointer";
+		              	                             	                                                     	hs.Properties.ClientSideEvents.Click = "function() { PatientGridReloadWithPatient(" + patientNumber + ",'" + visitName + "');}";
+		              	                             	                                                     }).GetHtml());
+		              	                             });
+		              });
+		s.Columns.Add(c => {
+		              	c.Caption = "Visit Caption";
+		              	c.SetDataItemTemplateContent(t => {
+		              	                             	var text = (string) DataBinder.Eval(t.DataItem, "VisitCaption");
+		              	                             	var visitId = (int) DataBinder.Eval(t.DataItem, "VisitId");
+		              	                             	var patientNumber = (int) DataBinder.Eval(t.DataItem, "PatientNumber");
+		              	                             	var visitName = (string) DataBinder.Eval(t.DataItem, "VisitCaption");
+
+		              	                             	ViewContext.Writer.Write(Html.DevExpress().HyperLink(hs => {
+		              	                             	                                                     	hs.Name = "VisitCaption" + visitId;
+		              	                             	                                                     	hs.Properties.Text = text;
+		              	                             	                                                     	hs.ControlStyle.Cursor = "pointer";
+		              	                             	                                                     	hs.Properties.ClientSideEvents.Click = "function() { PatientGridReloadWithPatient(" + patientNumber + ",'" + visitName + "');}";
+		              	                             	                                                     }).GetHtml());
+		              	                             });
+		              });
+		s.Columns.Add("VisitState", "State");
+	}).Bind(Model.ScheduledVisits).GetHtml()

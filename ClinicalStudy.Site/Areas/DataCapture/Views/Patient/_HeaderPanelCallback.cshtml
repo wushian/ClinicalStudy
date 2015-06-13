@@ -1,0 +1,29 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Patient.HeaderGroupViewModel
+<h1>@Model.PatientCaption</h1>
+@if (!string.IsNullOrWhiteSpace(Model.ClinicCaption)) {
+	@Html.DevExpress().Label(s => {
+	                               	s.Text = "Clinic: " + Model.ClinicCaption;
+	                               	s.SkinID = "SmallLabel";
+	                               	s.Style.Add("color", "#6b636b");
+	                               	s.Style.Add("margin", "0 0 5px 0");
+	                               	s.Style.Add("display", "block");
+	                               }).GetHtml()
+}
+@if (!string.IsNullOrWhiteSpace(Model.PatientInitials)) {
+	@Html.DevExpress().Label(s => {
+	                               	s.Text = "Patient Initials: ";
+	                               	s.SkinID = "SmallLabel";
+	                               	s.Style.Add("color", "#6b636b");
+	                               	s.Style.Add("margin", "0 0 5px 0");
+	                               	//s.Style.Add("display", "block");
+	                               }).GetHtml()
+
+	@Html.DevExpress().Label(s => {
+	                               	s.Text = Model.PatientInitials;
+	                               	s.Name = "HeaderPatientInitialsLabel";
+	                               	s.SkinID = "SmallLabel";
+	                               	s.Style.Add("color", "#6b636b");
+	                               	s.Style.Add("margin", "0 0 5px 0");
+	                               	//s.Style.Add("display", "block");
+	                               }).GetHtml()
+}

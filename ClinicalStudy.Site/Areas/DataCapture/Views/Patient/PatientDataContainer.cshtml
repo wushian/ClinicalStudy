@@ -1,0 +1,6 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Shared.DataContainerViewModel
+@{
+	ViewBag.Title = Model.PageTitle;
+	Layout = "~/Areas/DataCapture/Views/Shared/_DataCaptureLayout.cshtml";
+}
+@Html.Partial("_PatientDataContainer")

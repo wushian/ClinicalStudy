@@ -1,0 +1,173 @@
+﻿@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.AdverseEventFormViewModel
+@{
+	string validationGroup = string.Format("form{0}Validation", Model.FormId);
+}
+
+<h2>@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+@using (Ajax.BeginForm("EditAdverseEventForm", "Form", null,
+	new AjaxOptions {
+		UpdateTargetId = "formPanel" + Model.FormId.ToString(),
+		LoadingElementId = "loadingIndicator",
+		OnSuccess = "processDataChanges"
+	}, new { @id = "editForm" + Model.FormId })){
+	@Html.HiddenFor(model => model.Id)
+	@Html.HiddenFor(model => model.FormId)
+	@Html.HiddenFor(model => model.FormCaption)
+	@Html.HiddenFor(model => model.PatientNumber)
+	@Html.HiddenFor(model => model.VisitName)
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Adverse Experience:";
+	                               	    s.AssociatedControlName = "AdverseExperience";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.AdverseExperienceQuestionId, Model, Url)
+        </div>
+		@Html.Partial("_EditAdverseExperienceData", Model)
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Onset Date:";
+	                               	    s.AssociatedControlName = "OnsetDate";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.OnsetDateQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().DateEdit(s => {
+	                                  	s.Name = "OnsetDate";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+                                        s.Properties.AllowUserInput = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                        s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.OnsetDate).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Onset Time:";
+	                               	    s.AssociatedControlName = "OnsetTime";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.OnsetTimeQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().TimeEdit(s => {
+	                                  	s.Name = "OnsetTime";
+                                        s.Width = 150;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                        s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.OnsetTime).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "End Date:";
+	                               	    s.AssociatedControlName = "EndDate";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.EndDateQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().DateEdit(s => {
+	                                  	s.Name = "EndDate";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+                                        s.Properties.AllowUserInput = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                        s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.EndDate).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "End Time:";
+	                               	    s.AssociatedControlName = "EndTime";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.EndTimeQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().TimeEdit(s => {
+	                                  	s.Name = "EndTime";
+                                        s.Width = 150;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                        s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.EndTime).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Outcome:";
+	                               	    s.AssociatedControlName = "Outcome";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.OutcomeQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().ComboBox(s => {
+	                                  	s.Name = "Outcome";
+	                                  	s.Width = 150;
+	                                  	s.SelectedIndex = 1;
+	                                  	s.Properties.ValueType = typeof (int);
+                                        s.Properties.Items.AddRange(ComboBoxValuesHelper.OutcomeValues);
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                        s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.Outcome).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Intensity:";
+	                               	    s.AssociatedControlName = "Intensity";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.IntensityQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().ComboBox(s => {
+	                                  	s.Name = "Intensity";
+	                                  	s.Width = 150;
+	                                  	s.SelectedIndex = 1;
+	                                  	s.Properties.ValueType = typeof (int);
+                                        s.Properties.Items.AddRange(ComboBoxValuesHelper.IntensityValues);
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                        s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.Intensity).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Relationship to Investigational Drug:";
+	                               	    s.AssociatedControlName = "RelationshipToInvestigationalDrug";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.RelationshipToInvestigationalDrugQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().ComboBox(s => {
+	                                  	s.Name = "RelationshipToInvestigationalDrug";
+	                                  	s.Width = 150;
+	                                  	s.SelectedIndex = 1;
+	                                  	s.Properties.ValueType = typeof (int);
+                                        s.Properties.Items.AddRange(ComboBoxValuesHelper.RelationshipToInvestigationalDrugValues);
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                        s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.RelationshipToInvestigationalDrug).GetHtml()
+	</div>
+
+	@FormHelpers.FormSaveCancelButtons(Html, Ajax, Model)
+	@FormHelpers.FormDataChangePopup(Html, ViewContext, Model)
+}

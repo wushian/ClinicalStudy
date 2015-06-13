@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxm:ASPxPopupMenu runat="server" CssFilePath="{0}/styles.css" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme"
+	ShowPopOutImages="True">
+	<ItemStyle PopOutImageSpacing="10" DropDownButtonSpacing="10" />
+	<SubMenuStyle GutterWidth="0" />
+	<ItemSubMenuOffset FirstItemX="2" LastItemX="2" X="2" />
+    <RootItemSubMenuOffset FirstItemX="2" LastItemX="2" X="2" />	
+    <LoadingPanelStyle ImageSpacing="8" />
+    <LoadingPanelImage Url="Web/Loading.gif" />
+</dxm:ASPxPopupMenu>

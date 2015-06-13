@@ -1,0 +1,77 @@
+﻿@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.DemographicFormViewModel
+
+<h2 class="completed">@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Date Of Birth:";
+	                               	    s.AssociatedControlName = "DateOfBirth";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.DateOfBirthQuestionId, Model, Url)
+	</div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "DateOfBirth";
+	                               	s.Width = 150;
+	                               }).Bind(Model.DateOfBirth.HasValue ? Model.DateOfBirth.Value.ToShortDateString() : string.Empty).GetHtml()
+</div>
+
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Race:";
+	                               	    s.AssociatedControlName = "Race";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.RaceQuestionId, Model, Url)
+	</div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "Race";
+	                               	s.Width = 150;
+	                               	s.Text = ComboBoxValuesHelper.RaceValues.FindByValue(Model.Race) != null ? ComboBoxValuesHelper.RaceValues.FindByValue(Model.Race).Text : String.Empty;
+	                               }).GetHtml()
+</div>
+
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Sex:";
+	                               	    s.AssociatedControlName = "Sex";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.SexQuestionId, Model, Url)
+	</div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "Sex";
+	                               	s.Width = 150;
+	                               	s.Text = ComboBoxValuesHelper.SexValues.FindByValue(Model.Sex) != null ? ComboBoxValuesHelper.SexValues.FindByValue(Model.Sex).Text : String.Empty;
+	                               }).GetHtml()
+</div>
+
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Other:";
+	                               	    s.AssociatedControlName = "Other";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.OtherQuestionId, Model, Url)
+	</div>
+    @Html.DevExpress().Label(s => {
+	                               	s.Name = "Other";
+	                               	s.Width = 450;
+	                               }).Bind(Model.Other).GetHtml()
+</div>
+@Html.DevExpress().Button(s => {
+	                                	s.Name = "btnEditDemog";
+	                                	s.SkinID = "Grey";
+	                                	s.Text = "Edit";
+                                        s.CausesValidation = false;
+	                                	string url = Url.Action("EditForm", "Form", new {Area = "DataCapture", patientNumber = Model.PatientNumber, visitName = Model.VisitName, formName = Model.FormCaption});
+
+	                                	s.ClientSideEvents.Click = String.Format(@"function (s,e) {{
+																				var ajaxOptions = {{UpdateTargetId : 'formPanel{0}'}};
+																				buttonAjaxClick(s,e, '{1}', ajaxOptions);}}",
+											Model.FormId, url);
+	                                }).GetHtml()

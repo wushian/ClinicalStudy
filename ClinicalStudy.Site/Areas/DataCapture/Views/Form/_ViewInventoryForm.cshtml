@@ -1,0 +1,87 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.InventoryFormViewModel
+
+@Html.HiddenFor(model => model.FormId)
+
+<h2 class="completed">@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Quantity Shipped:";
+	                               	    s.AssociatedControlName = "QuantityShipped";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.QuantityShippedQuestionId, Model, Url)
+    </div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "QuantityShipped";
+	                               	s.Width = 150;
+	                               }).Bind(Model.QuantityShipped).GetHtml()
+</div>
+
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Batch Number:";
+	                               	    s.AssociatedControlName = "BatchNumber";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.BatchNumberQuestionId, Model, Url)
+    </div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "BatchNumber";
+	                               	s.Width = 150;
+	                               }).Bind(Model.BatchNumber).GetHtml()
+</div>
+
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Receipt Date:";
+	                               	    s.AssociatedControlName = "ReceiptDate";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.ReceiptDateQuestionId, Model, Url)
+    </div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "ReceiptDate";
+	                               	s.Width = 150;
+	                               }).Bind(Model.ReceiptDate.HasValue ? Model.ReceiptDate.Value.ToShortDateString() : string.Empty).GetHtml()
+</div>
+	
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Ship Date:";
+	                               	    s.AssociatedControlName = "ShipDate";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.ShipDateQuestionId, Model, Url)
+    </div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "ShipDate";
+	                               	s.Width = 150;
+	                               }).Bind(Model.ShipDate.HasValue ? Model.ShipDate.Value.ToShortDateString() : string.Empty).GetHtml()
+</div>
+	
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+                                        s.ControlStyle.CssClass = "editor-label";
+                                        s.Text = "Medication Usage:";
+                                        s.AssociatedControlName = "Medication Usage";
+                                    }).GetHtml()
+    </div>
+	@Html.Partial("_ViewRepeatableInventoryData", Model)
+</div>
+@Html.DevExpress().Button(s => {
+	                                	s.Name = "btnEditInventory";
+	                                	s.SkinID = "Grey";
+	                                	s.Text = "Edit";
+                                        s.CausesValidation = false;
+	                                	string url = Url.Action("EditForm", "Form", new {Area = "DataCapture", patientNumber = Model.PatientNumber, visitName = Model.VisitName, formName = Model.FormCaption});
+
+	                                	s.ClientSideEvents.Click = String.Format(@"function (s,e) {{
+																				var ajaxOptions = {{UpdateTargetId : 'formPanel{0}'}};
+																				buttonAjaxClick(s,e, '{1}', ajaxOptions);}}",
+											Model.FormId, url);
+	                                }).GetHtml()

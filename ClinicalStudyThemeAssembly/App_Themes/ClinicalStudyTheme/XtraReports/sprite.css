@@ -1,0 +1,134 @@
+.dxXtraReports_BtnFirstPage_ClinicalStudyTheme,
+.dxXtraReports_BtnFirstPageDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnLastPage_ClinicalStudyTheme,
+.dxXtraReports_BtnLastPageDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnNextPage_ClinicalStudyTheme,
+.dxXtraReports_BtnNextPageDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnPrevPage_ClinicalStudyTheme,
+.dxXtraReports_BtnPrevPageDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnPrint_ClinicalStudyTheme,
+.dxXtraReports_BtnPrintDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnPrintPage_ClinicalStudyTheme,
+.dxXtraReports_BtnPrintPageDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnSave_ClinicalStudyTheme,
+.dxXtraReports_BtnSaveDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnSaveWindow_ClinicalStudyTheme,
+.dxXtraReports_BtnSaveWindowDisabled_ClinicalStudyTheme,
+.dxXtraReports_BtnSearch_ClinicalStudyTheme,
+.dxXtraReports_BtnSearchDisabled_ClinicalStudyTheme
+{
+    background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.XtraReports.sprite.png")%>');
+    -background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.XtraReports.sprite.gif")%>'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxXtraReports_BtnFirstPage_ClinicalStudyTheme {
+    background-position: -16px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnFirstPageDisabled_ClinicalStudyTheme {
+    background-position: -16px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPage_ClinicalStudyTheme {
+    background-position: -32px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnLastPageDisabled_ClinicalStudyTheme {
+    background-position: -32px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPage_ClinicalStudyTheme {
+    background-position: -64px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnNextPageDisabled_ClinicalStudyTheme {
+    background-position: -64px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPage_ClinicalStudyTheme {
+    background-position: -48px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrevPageDisabled_ClinicalStudyTheme {
+    background-position: -48px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrint_ClinicalStudyTheme {
+    background-position: -80px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintDisabled_ClinicalStudyTheme {
+    background-position: -80px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPage_ClinicalStudyTheme {
+    background-position: -96px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnPrintPageDisabled_ClinicalStudyTheme {
+    background-position: -96px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSave_ClinicalStudyTheme {
+    background-position: -112px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveDisabled_ClinicalStudyTheme {
+    background-position: -112px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindow_ClinicalStudyTheme {
+    background-position: -128px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSaveWindowDisabled_ClinicalStudyTheme {
+    background-position: -128px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearch_ClinicalStudyTheme {
+    background-position: 0px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxXtraReports_BtnSearchDisabled_ClinicalStudyTheme {
+    background-position: 0px -16px;
+    width: 16px;
+    height: 16px;
+}
+
+

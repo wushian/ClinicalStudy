@@ -1,0 +1,81 @@
+﻿@using System.Web.Mvc
+@using ClinicalStudy.Site.Areas.DataCapture.Models.Query
+@using DevExpress.Web
+@using DevExpress.Web.Mvc.UI
+@using System.Web.Mvc.Ajax
+@using System.Web.Mvc.Html
+@using System.Web.Routing
+@using ClinicalStudy.Site.Areas.DataCapture.Models.FormData
+@helper PutQueryIcon(int questionId, ClinicalStudy.Site.Areas.DataCapture.Models.FormData.BaseFormDataViewModel model, UrlHelper url) {
+	if (model.QuestionsWithQueries != null && model.QuestionsWithQueries.ContainsKey(questionId)) {
+		<text>
+			@{
+				QueryShortViewModel queryModel = model.QuestionsWithQueries[questionId];
+				int queryId = queryModel.QueryId;
+				string imgUrl;
+				if (queryModel.IsCompleted) {
+					imgUrl = url.Content("~/Content/Icons/MarkCompleted.png");
+				}
+				else {
+					imgUrl = url.Content("~/Content/Icons/MarkAttentionNeeded.png");
+				}
+
+
+			}
+			<img id="queryIcon@(queryId)" src="@imgUrl" class="queryMark" data-query-id="@queryId" alt="@queryModel.QueryText"/>
+		</text>
+	}
+}
+
+@helper FormSaveCancelButtons(System.Web.Mvc.HtmlHelper html, AjaxHelper ajax, ClinicalStudy.Site.Areas.DataCapture.Models.FormData.BaseFormDataViewModel model) {
+	<div class="formButtons">
+		@{string validationGroup = string.Format("form{0}Validation", model.FormId);}
+		@html.DevExpress().Button(s => {
+                    s.Name = "btnSave" + model.FormId;
+                    s.SkinID = "DarkPink";
+                    s.Text = "Save";
+                    s.CausesValidation = true;
+                    s.ValidationGroup = validationGroup;
+                    if (model is InventoryFormViewModel) {
+						s.ClientSideEvents.Click = string.Format("function(s,e) {{ submitInventoryCrf('#editForm{0}'); }}", model.FormId);
+					}
+					else {
+						s.ClientSideEvents.Click = string.Format("function() {{ submitCrf('#editForm{0}', '{1}'); }}", model.FormId, validationGroup);
+					}
+                }).GetHtml()
+		@if (model.IsCompleted) {
+			@ajax.ActionLink("Cancel", "ViewForm", "Form",
+				new RouteValueDictionary {
+					{"patientNumber", model.PatientNumber},
+					{"visitName", model.VisitName},
+					{"formName", model.FormCaption},
+					{"irt", DateTime.Now.Ticks}
+				}, new AjaxOptions {
+					UpdateTargetId = "formPanel" + model.FormId.ToString(),
+					LoadingElementId = "loadingIndicator"
+				})
+		}
+	</div>
+}
+@helper FormDataChangePopup(System.Web.Mvc.HtmlHelper html, ViewContext context, ClinicalStudy.Site.Areas.DataCapture.Models.FormData.BaseFormDataViewModel model) {
+	if (model.DataChangeReasonRequired) {
+		string popupname = "pcChangeNotification" + model.FormId;
+		<div class="dataChange" data-popup="@popupname"></div>
+		html.DevExpress().PopupControl(settings => {
+		                               	settings.Name = popupname;
+		                               	settings.Width = 433;
+		                               	settings.Height = 315;
+		                               	settings.AllowDragging = true;
+		                               	settings.ShowShadow = false;
+		                               	settings.CloseAction = CloseAction.CloseButton;
+		                               	settings.PopupAnimationType = AnimationType.Fade;
+		                               	settings.HeaderText = "Data Change";
+		                               	settings.Modal = true;
+		                               	settings.PopupHorizontalAlign = PopupHorizontalAlign.WindowCenter;
+		                               	settings.PopupVerticalAlign = PopupVerticalAlign.WindowCenter;
+
+		                               	settings.ClientSideEvents.EndCallback = string.Format("function(s,e){{PrepareValidationScripts($('#editForm{0}'));}}", model.FormId);
+		                               	settings.SetContent(() => context.Writer.Write(html.Partial("_ChangeNotes")));
+		                               }).GetHtml();
+    }
+}

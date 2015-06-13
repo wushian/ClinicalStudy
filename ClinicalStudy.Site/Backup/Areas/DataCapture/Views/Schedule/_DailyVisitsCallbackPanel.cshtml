@@ -1,0 +1,19 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Schedule.DailyScheduleViewModel
+		   
+@Html.DevExpress().CallbackPanel(s => {
+	                                       	s.Name = "cpDailyVisits";
+	                                       	s.ClientSideEvents.BeginCallback = "function(s,e){ showLoadingIndicator(); e.customArgs['datetime'] = calSchedule.GetValue().toDateString();}";
+	                                       	s.ClientSideEvents.EndCallback = "hideLoadingIndicator";
+	                                       	s.CallbackRouteValues = new {Controller = "Schedule", Action = "DailyVisitsCallback"};
+	                                       	s.SettingsLoadingPanel.Enabled = false;
+	                                       	s.HideContentOnCallback = false;
+	                                       	s.SetContent(() => {
+	                                       	             	@Html.DevExpress().Label(ls => {
+	                                       	             	                         	ls.Text = Model.Date.ToString("dddd, MMMM dd");
+	                                       	             	                         	ls.Style.Add("font-size", "130.8%");
+	                                       	             	                         	ls.ControlStyle.CssClass = "curSchedulerDate";
+	                                       	             	                         }).GetHtml();
+
+	                                       	             	ViewContext.Writer.Write(Html.Partial("_DailyVisitsGrid"));
+	                                       	             });
+	                                       }).GetHtml()

@@ -1,0 +1,92 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.BaseFormDataViewModel
+@{
+	string validationGroup = "changeNotesValidation";
+}
+
+@Html.ValidationSummary()
+@for (int i = 0; i < Model.ChangeInfos.Count; i++) {
+	<div>
+		@{ int index = i; }
+		<div class="popup-field">
+			@Html.DevExpress().Label(s => {
+	                               	s.Text = "You changed an answer for question:";
+	                               	s.SkinID = "SubjLabel";
+	                               }).GetHtml()
+			@Html.DevExpress().Label(s => {
+	                               	s.SkinID = "SubjLabel";
+	                               	s.Text = Model.ChangeInfos[index].QuestionName;
+	                               }).GetHtml()
+		</div>
+		<div class="popup-field">
+			@Html.DevExpress().Label(s => {
+	                               	s.Text = "Original Value:";
+	                               	s.SkinID = "SubjLabel";
+	                               }).GetHtml()
+			@Html.DevExpress().Label(s => {
+	                               	s.Text = Model.ChangeInfos[index].OriginalValue;
+	                               	s.SkinID = "SubjLabel";
+                               	    s.EncodeHtml = false;
+                               }).GetHtml()
+		</div>
+		<div class="popup-field">
+			@Html.DevExpress().Label(s => {
+	                               	s.Text = "New Value:";
+	                               	s.SkinID = "SubjLabel";
+	                               }).GetHtml()
+			@Html.DevExpress().Label(s => {
+	                               	s.Text = Model.ChangeInfos[index].NewValue;
+                                    s.SkinID = "SubjLabel";
+                                    s.EncodeHtml = false;
+	                               }).GetHtml()
+		</div>
+		<div class="popup-field-reason">
+			@Html.DevExpress().Label(s => {
+	                               	s.Text = "Please specify a change reason:";
+	                               	s.SkinID = "SubjLabel";
+	                               }).GetHtml()
+			@Html.DevExpress().Memo(s => {
+	                              	s.Name = "ChangeReason";
+	                              	s.Name = string.Format("ChangeInfos[{0}].ChangeReason", index);
+	                              	s.Width = Unit.Percentage(100);
+                                    s.Height = 48;
+                                    s.ShowModelErrors = true;
+                                    s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+
+                              	    var validationSettings = ValidationSettings.CreateValidationSettings();
+                              	    validationSettings.RequiredField.IsRequired = true;
+                              	    validationSettings.RequiredField.ErrorText = "Please specify Change Note";
+                                    validationSettings.Display = Display.Dynamic;
+                                    validationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+                              	validationSettings.ValidationGroup = validationGroup;
+                                    s.Properties.ValidationSettings.Assign(validationSettings);
+                                    s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+									s.Properties.ValidationSettings.ErrorTextPosition = ErrorTextPosition.Bottom;
+	                              }).Bind(Model.ChangeInfos[i].ChangeReason).GetHtml()
+		</div>
+		@Html.HiddenFor(m => m.ChangeInfos[i].QuestionId)
+		@Html.HiddenFor(m => m.ChangeInfos[i].OriginalValue)
+		@Html.HiddenFor(m => m.ChangeInfos[i].NewValue)
+	</div>
+}
+
+<div class="popup-dialog-buttons">
+	@Html.DevExpress().Button(s => {
+	                                	s.Name = "NoteSave1";
+	                                	s.Text = "Save";
+	                                	s.SkinID = "DarkPink";
+	                                	s.ClientSideEvents.Click =
+                                            string.Format("function(){{prepareAndValidateDataChangePopup('pcChangeNotification{0}');}}", Model.FormId);
+	                                	s.UseSubmitBehavior = true;
+	                                	s.CausesValidation = true;
+                                	    s.ValidationGroup = validationGroup;
+                                        
+                                }).GetHtml()
+	@Html.DevExpress().Button(s => {
+	                                	s.Name = "NoteCancel";
+	                                	s.Text = "Cancel";
+	                                	s.SkinID = "DarkPink";
+	                                	s.ClientSideEvents.Click = string.Format("function () {{ pcChangeNotification{0}.Hide(); }}", Model.FormId);
+                                        s.CausesValidation = false;
+	                                }).GetHtml()
+</div>

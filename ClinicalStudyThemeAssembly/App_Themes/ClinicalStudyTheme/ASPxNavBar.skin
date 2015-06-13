@@ -1,0 +1,14 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dx:ASPxNavBar runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="8px"></LoadingPanelStyle>
+</dx:ASPxNavBar>
+
+<dx:ASPxNavBar runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="AdminNav_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="AdminNav">
+<LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="8px"></LoadingPanelStyle>
+</dx:ASPxNavBar>

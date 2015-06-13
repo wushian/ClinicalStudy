@@ -1,0 +1,24 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxgv" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %> 
+
+<dxgv:ASPxGridLookup runat="server" CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme"
+	SpriteCssFilePath="{0}/sprite.css" Spacing="0">
+	<ButtonStyle Width="13" />
+    <GridViewImages SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="GridView/StatusBarLoading.gif" />
+	</GridViewImages>	
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="GridView/Loading.gif" />
+    </GridViewImagesFilterControl>
+    <GridViewProperties>
+        <SettingsPager CurrentPageNumberFormat="{0}" />
+    </GridViewProperties>
+    <GridViewStyles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="8" />
+    </GridViewStyles>	
+    <GridViewStylesEditors ButtonEditCellSpacing="0" SpinButtonsHorizontalSpacing="0">
+        <ProgressBar Height="21" />
+    </GridViewStylesEditors>
+</dxgv:ASPxGridLookup>

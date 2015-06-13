@@ -1,0 +1,10 @@
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.DomainModel\bin\Debug\ClinicalStudy.DomainModel.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.DomainModel\bin\Debug\ClinicalStudy.DomainModel.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.DomainModel\obj\Debug\ClinicalStudy.DomainModel.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.DomainModel\obj\Debug\ClinicalStudy.DomainModel.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.DomainModel\obj\Debug\ClinicalStudy.DomainModel.csprojResolveAssemblyReference.cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.DomainModel\bin\Debug\ClinicalStudy.DomainModel.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.DomainModel\bin\Debug\ClinicalStudy.DomainModel.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.DomainModel\obj\Debug\ClinicalStudy.DomainModel.csprojResolveAssemblyReference.cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.DomainModel\obj\Debug\ClinicalStudy.DomainModel.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.DomainModel\obj\Debug\ClinicalStudy.DomainModel.pdb

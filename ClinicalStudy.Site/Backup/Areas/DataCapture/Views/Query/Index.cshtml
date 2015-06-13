@@ -1,0 +1,14 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Query.QueryListDataViewModel
+
+@{
+	ViewBag.Title = "Doctor's Open Queries";
+	Layout = "~/Areas/DataCapture/Views/Shared/_DataCaptureLayout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        setActiveNavTab('queries');
+    });
+</script>
+
+@Html.Partial("_Index", Model)

@@ -1,0 +1,7 @@
+﻿@model ClinicalStudy.Site.Areas.Analytics.Models.Charts.UnfinishedCrfsList
+@{
+	ViewBag.Title = "Study progress - Unfinished CRFs per Doctor";
+	Layout = "~/Areas/Analytics/Views/Shared/_AnalyticsLayout.cshtml";
+}
+
+@Html.Partial("_UnfinishedCrfsPerDoctor", Model)

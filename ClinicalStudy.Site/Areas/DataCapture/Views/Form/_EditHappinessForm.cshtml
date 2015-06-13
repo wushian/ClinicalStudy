@@ -1,0 +1,48 @@
+﻿@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.HappinessFormViewModel
+@{
+	string validationGroup = string.Format("form{0}Validation", Model.FormId);
+}
+
+<h2>@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+@using (Ajax.BeginForm("EditHappinessForm", "Form", null,
+	new AjaxOptions {
+		UpdateTargetId = "formPanel" + Model.FormId.ToString(),
+		LoadingElementId = "loadingIndicator",
+		OnSuccess = "processDataChanges"
+	}, new { @id = "editForm" + Model.FormId })){
+	@Html.HiddenFor(model => model.Id)
+	@Html.HiddenFor(model => model.FormId)
+	@Html.HiddenFor(model => model.FormCaption)
+	@Html.HiddenFor(model => model.PatientNumber)
+	@Html.HiddenFor(model => model.VisitName)
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Happiness:";
+	                               	    s.AssociatedControlName = "HappinessLevel";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.HappinessLevelQuestionId, Model, Url)
+        </div>
+
+		@Html.DevExpress().TrackBar(s => {
+	                                  	s.Name = "HappinessLevel";
+	                                  	s.Width = 580;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.MaxValue = 100;
+	                                  	s.Properties.MinValue = 0;
+
+	                                  	s.Properties.Items.AddRange(ComboBoxValuesHelper.HappinessValues);
+
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+
+	                                  	s.Properties.ScalePosition = ScalePosition.RightOrBottom;
+	                                  }).Bind(Model.HappinessLevel).GetHtml()
+	</div>
+	@FormHelpers.FormSaveCancelButtons(Html, Ajax, Model)
+	@FormHelpers.FormDataChangePopup(Html, ViewContext, Model)
+}

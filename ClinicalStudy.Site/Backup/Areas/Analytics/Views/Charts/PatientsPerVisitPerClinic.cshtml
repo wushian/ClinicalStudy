@@ -1,0 +1,7 @@
+﻿@model ClinicalStudy.Site.Areas.Analytics.Models.Charts.PatientStateList
+@{
+	ViewBag.Title = "Study progress - Patient state per Clinic";
+	Layout = "~/Areas/Analytics/Views/Shared/_AnalyticsLayout.cshtml";
+}
+
+@Html.Partial("_PatientsPerVisitPerClinic", Model)

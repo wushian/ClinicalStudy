@@ -1,0 +1,18 @@
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.ModelBuilders.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.ModelBuilders.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.DomainModel.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.Repositories.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.DomainModel.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.Repositories.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\obj\Debug\ClinicalStudy.ModelBuilders.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\obj\Debug\ClinicalStudy.ModelBuilders.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.ModelBuilders\obj\Debug\ClinicalStudy.ModelBuilders.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.ModelBuilders.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.ModelBuilders.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.DomainModel.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.Repositories.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.DomainModel.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\bin\Debug\ClinicalStudy.Repositories.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\obj\Debug\ClinicalStudy.ModelBuilders.csprojResolveAssemblyReference.cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\obj\Debug\ClinicalStudy.ModelBuilders.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.ModelBuilders\obj\Debug\ClinicalStudy.ModelBuilders.pdb

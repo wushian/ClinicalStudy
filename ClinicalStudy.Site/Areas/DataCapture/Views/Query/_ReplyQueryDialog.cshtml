@@ -1,0 +1,21 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.DataCapture.Models.Query.QueryViewModel
+@Html.DevExpress().PopupControl(s => {
+                                      	s.Name = "replyQueryPopup";
+                                      	s.Width = 470;
+                                      	s.CallbackRouteValues = new {Controller = "Query", Action = "ReplyQueryDialog"};
+
+                                      	s.ClientSideEvents.BeginCallback = "onQueryDialogBeginCallback";
+                                      	s.ClientSideEvents.EndCallback = "function(s,e){PrepareValidationScripts($('#replyQueryForm')); replyQueryPopup.UpdatePosition();}";
+                                      	s.LoadContentViaCallback = LoadContentViaCallback.OnFirstShow;
+                                      	s.SetContent(() => ViewContext.Writer.Write(Html.Partial("_ReplyQueryDialogBody")));
+                                      	s.HeaderText = string.Format("Reply Query");
+
+                                      	s.PopupAnimationType = AnimationType.Fade;
+                                      	s.PopupHorizontalAlign = PopupHorizontalAlign.WindowCenter;
+                                      	s.PopupVerticalAlign = PopupVerticalAlign.WindowCenter;
+                                      	s.SettingsLoadingPanel.ImagePosition = ImagePosition.Top;
+
+                                      	s.CloseAction = CloseAction.CloseButton;
+                                      	s.Modal = true;
+                                      }).GetHtml()

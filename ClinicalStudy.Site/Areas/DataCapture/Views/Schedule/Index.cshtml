@@ -1,0 +1,15 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Schedule.DailyScheduleViewModel
+
+@{
+	ViewBag.Title = "Doctor's Schedule";
+
+	Layout = "~/Areas/DataCapture/Views/Shared/_DataCaptureLayout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        setActiveNavTab('schedule');
+    });
+</script>
+
+@Html.Partial("_Index", Model)

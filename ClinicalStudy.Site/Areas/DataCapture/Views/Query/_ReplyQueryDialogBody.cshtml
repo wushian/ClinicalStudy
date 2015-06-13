@@ -1,0 +1,97 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.DataCapture.Models.Query.QueryViewModel
+@{
+	string validationGroup = string.Format("query{0}Validation", Model.QueryId);
+}
+<div id="replyQueryForm">
+	<div class="queryInfo">
+	  	@Html.DevExpress().BinaryImage(s => {
+                                     	s.ContentBytes = Model.QueryAuthorImage;
+                                     	s.Width = 88;
+                                     	s.Height = 88;
+                                     	s.ControlStyle.CssClass = "queryUserPhoto";
+                                     }).GetHtml()
+		@Html.DevExpress().Label(s => {
+                               	s.Text = string.Format("Query from {0}", Model.QueryAuthor);
+                               	s.SkinID = "SubjLabel";
+                               }).GetHtml()
+		<br/>
+		@Html.DevExpress().Label(s => {
+                               	s.Text = string.Format("Question {0} for {1}, Visit {2}, CRF {3}", Model.Question, Model.PatientCaption, Model.VisitCaption, Model.FormCaption);
+                               	s.SkinID = "SmallLabel";
+                               }).GetHtml()
+		  	
+		@Html.DevExpress().Label(s => {
+                               	s.Text = Model.QueryText;
+                               	s.SkinID = "SubjLabel";
+                               	s.ControlStyle.CssClass = "questionLabel";
+                               }).GetHtml()
+	</div>
+	@if (Model.IsClosed) {
+		<div class="queryInfo">
+			@Html.DevExpress().BinaryImage(s => {
+                                     	s.ContentBytes = Model.AnswerAuthorImage;
+                                     	s.Width = 88;
+                                     	s.Height = 88;
+                                     	s.ControlStyle.CssClass = "queryUserPhoto";
+                                     }).GetHtml()
+			@Html.DevExpress().Label(s => {
+                            s.Text = string.Format("Answered by {0}", Model.AnswerAuthor);
+                            s.SkinID = "SubjLabel";
+                            }).GetHtml()
+			
+			@Html.DevExpress().Label(s => {
+                            s.Text = Model.Answer;
+                            s.SkinID = "SubjLabel";
+                            s.ControlStyle.CssClass = "answerLabel";
+                            }).GetHtml()
+		</div>
+		<div class="popup-dialog-buttons">
+			@Html.DevExpress().Button(s =>
+                                {
+                                	s.Name = "AnsweredQueryClose";
+                                	s.Text = "Close";
+                                	s.SkinID = "DarkPink";
+                                	s.ClientSideEvents.Click = "function () { replyQueryPopup.Hide(); }";
+                                }).GetHtml()
+		</div>
+	}
+	else
+	{
+		using (@Ajax.BeginForm("ReplyQueryDialogPost", "Query", new AjaxOptions { OnSuccess = "onQueryAnswered" }))
+		{
+			<div class="queryInfo">
+				@Html.HiddenFor(m => m.QueryId)
+				@Html.DevExpress().Memo(s =>
+                              {
+                              	s.Name = "Answer";
+                              	s.Properties.NullDisplayText = "Your reply here";
+								s.Properties.NullText = "Your reply here";
+                              	s.ShowModelErrors = true;
+                              	s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                              	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+								  s.Properties.ValidationSettings.ErrorTextPosition = ErrorTextPosition.Bottom;
+                              	s.Width = Unit.Percentage(100);
+                              }).GetHtml()
+			</div>
+			<div class="popup-dialog-buttons">
+				@Html.DevExpress().Button(s =>
+                            {
+                                s.UseSubmitBehavior = true;
+                                s.Name = "SubmitReply";
+                                s.Text = "Reply";
+                                s.SkinID = "DarkPink";
+                                s.ValidationGroup = validationGroup;
+                            }).GetHtml()
+				@Html.DevExpress().Button(s =>
+                            {
+                                s.Name = "ReplyQueryClose";
+                                s.Text = "Close";
+                                s.SkinID = "DarkPink";
+                                s.ClientSideEvents.Click = "function () { replyQueryPopup.Hide(); }";
+                                s.CausesValidation = false;
+                            }).GetHtml()
+			</div>
+		}
+	}
+</div>

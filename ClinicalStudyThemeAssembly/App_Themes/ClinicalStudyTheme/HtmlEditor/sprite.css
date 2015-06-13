@@ -1,0 +1,854 @@
+.dxHtmlEditor_Icons_heCut_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heCutDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heCopy_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heCopyDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_hePaste_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_hePasteDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_hePasteFromWord_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_hePasteFromWordDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heUndo_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heUndoDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heRedo_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heRedoDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heBold_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heBoldDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heItalic_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heItalicDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heUnderline_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heUnderlineDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heStrikethrough_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heStrikethroughDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heCenter_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heCenterDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heLeft_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heLeftDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heRight_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heRightDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heJustifyFull_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heJustifyFullDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSuperscript_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSuperscriptDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSubscript_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSubscriptDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heIndent_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heIndentDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heOutdent_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heOutdentDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertOrderedList_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertOrderedListDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertUnorderedList_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertUnorderedListDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertImageDialog_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertImageDialogDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertLinkDialog_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertLinkDialogDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableDialog_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableDialogDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableDialog_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableDialogDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableCellDialog_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableCellDialogDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableColumnDialog_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableColumnDialogDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableRowDialog_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heChangeTableRowDialogDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableRowAbove_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableRowAboveDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableRowBelow_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableRowBelowDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeft_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeftDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableColumnOnRight_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heInsertTableColumnOnRightDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSplitTableCellHorizontal_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSplitTableCellHorizontalDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSplitTableCellVertical_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSplitTableCellVerticalDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heMergeTableCellHorizontal_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heMergeTableCellHorizontalDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heMergeTableCellVertical_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heMergeTableCellVerticalDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heDeleteTable_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heDeleteTableDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heDeleteTableColumn_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heDeleteTableColumnDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heDeleteTableRow_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heDeleteTableRowDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heUnlink_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heUnlinkDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heBackColor_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heBackColorDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heForeColor_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heForeColorDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heRemoveFormat_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heRemoveFormatDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_hePrint_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_hePrintDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heCheckSpelling_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heCheckSpellingDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heFullscreen_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heFullscreenDisabled_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSaveAsDocx_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSaveAsMht_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSaveAsOdt_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSaveAsPdf_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSaveAsRtf_ClinicalStudyTheme,
+.dxHtmlEditor_Icons_heSaveAsTxt_ClinicalStudyTheme,
+.dxHtmlEditor_heToolbarPopOut_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsMiddleOn_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsMiddleOff_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsBottom_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsTop_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsMiddleOnRtl_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsMiddleOffRtl_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsBottomRtl_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsTopRtl_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpHeaderTopLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpHeaderTopRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpBottomLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpBottomRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpTopLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpTopRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_heSizeGrip_ClinicalStudyTheme,
+.dxHtmlEditor_heSizeGripRtl_ClinicalStudyTheme,
+.dxHtmlEditor_heErrorFrameCloseButton_ClinicalStudyTheme
+ {
+    background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.HtmlEditor.sprite.png")%>');
+    -background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.HtmlEditor.sprite.gif")%>'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOn_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsMiddleOff_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsBottom_ClinicalStudyTheme,
+.dxHtmlEditor_heConstrainProportionsTop_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpHeaderTopLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpHeaderTopRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpBottomLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpBottomRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpTopLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpTopRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomRightCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopLeftCorner_ClinicalStudyTheme,
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopRightCorner_ClinicalStudyTheme
+{
+	display:block;
+}
+
+.dxHtmlEditor_Icons_heCut_ClinicalStudyTheme {
+    background-position: -48px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCutDisabled_ClinicalStudyTheme {
+    background-position: -72px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCopy_ClinicalStudyTheme {
+    background-position: 0px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCopyDisabled_ClinicalStudyTheme {
+    background-position: -24px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePaste_ClinicalStudyTheme {
+    background-position: -96px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteDisabled_ClinicalStudyTheme {
+    background-position: -120px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteFromWord_ClinicalStudyTheme {
+    background-position: -144px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePasteFromWordDisabled_ClinicalStudyTheme {
+    background-position: -168px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUndo_ClinicalStudyTheme {
+    background-position: -96px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUndoDisabled_ClinicalStudyTheme {
+    background-position: -120px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRedo_ClinicalStudyTheme {
+    background-position: -48px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRedoDisabled_ClinicalStudyTheme {
+    background-position: -72px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBold_ClinicalStudyTheme {
+    background-position: -48px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBoldDisabled_ClinicalStudyTheme {
+    background-position: -72px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heItalic_ClinicalStudyTheme {
+    background-position: 0px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heItalicDisabled_ClinicalStudyTheme {
+    background-position: -24px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnderline_ClinicalStudyTheme {
+    background-position: -48px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnderlineDisabled_ClinicalStudyTheme {
+    background-position: -72px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heStrikethrough_ClinicalStudyTheme {
+    background-position: -96px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heStrikethroughDisabled_ClinicalStudyTheme {
+    background-position: -120px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCenter_ClinicalStudyTheme {
+    background-position: -96px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCenterDisabled_ClinicalStudyTheme {
+    background-position: -120px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heLeft_ClinicalStudyTheme {
+    background-position: -96px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heLeftDisabled_ClinicalStudyTheme {
+    background-position: -120px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRight_ClinicalStudyTheme {
+    background-position: -144px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRightDisabled_ClinicalStudyTheme {
+    background-position: -168px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heJustifyFull_ClinicalStudyTheme {
+    background-position: -48px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heJustifyFullDisabled_ClinicalStudyTheme {
+    background-position: -72px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSuperscript_ClinicalStudyTheme {
+    background-position: 0px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSuperscriptDisabled_ClinicalStudyTheme {
+    background-position: -24px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSubscript_ClinicalStudyTheme {
+    background-position: -144px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSubscriptDisabled_ClinicalStudyTheme {
+    background-position: -168px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heIndent_ClinicalStudyTheme {
+    background-position: -96px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heIndentDisabled_ClinicalStudyTheme {
+    background-position: -120px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heOutdent_ClinicalStudyTheme {
+    background-position: -48px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heOutdentDisabled_ClinicalStudyTheme {
+    background-position: -72px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertOrderedList_ClinicalStudyTheme {
+    background-position: -48px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertOrderedListDisabled_ClinicalStudyTheme {
+    background-position: -72px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertUnorderedList_ClinicalStudyTheme {
+    background-position: -144px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertUnorderedListDisabled_ClinicalStudyTheme {
+    background-position: -168px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertImageDialog_ClinicalStudyTheme {
+    background-position: -144px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertImageDialogDisabled_ClinicalStudyTheme {
+    background-position: -168px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertLinkDialog_ClinicalStudyTheme {
+    background-position: 0px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertLinkDialogDisabled_ClinicalStudyTheme {
+    background-position: -24px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableDialog_ClinicalStudyTheme {
+    background-position: 0px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableDialogDisabled_ClinicalStudyTheme {
+    background-position: -24px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableDialog_ClinicalStudyTheme {
+    background-position: -48px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableDialogDisabled_ClinicalStudyTheme {
+    background-position: -72px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableCellDialog_ClinicalStudyTheme {
+    background-position: -144px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableCellDialogDisabled_ClinicalStudyTheme {
+    background-position: -168px -26px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableColumnDialog_ClinicalStudyTheme {
+    background-position: 0px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableColumnDialogDisabled_ClinicalStudyTheme {
+    background-position: -24px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableRowDialog_ClinicalStudyTheme {
+    background-position: -96px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heChangeTableRowDialogDisabled_ClinicalStudyTheme {
+    background-position: -120px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowAbove_ClinicalStudyTheme {
+    background-position: -48px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowAboveDisabled_ClinicalStudyTheme {
+    background-position: -72px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowBelow_ClinicalStudyTheme {
+    background-position: -96px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableRowBelowDisabled_ClinicalStudyTheme {
+    background-position: -120px -146px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeft_ClinicalStudyTheme {
+    background-position: -96px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnLeftDisabled_ClinicalStudyTheme {
+    background-position: -120px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnRight_ClinicalStudyTheme {
+    background-position: -144px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heInsertTableColumnOnRightDisabled_ClinicalStudyTheme {
+    background-position: -168px -122px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellHorizontal_ClinicalStudyTheme {
+    background-position: 0px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellHorizontalDisabled_ClinicalStudyTheme {
+    background-position: -24px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellVertical_ClinicalStudyTheme {
+    background-position: -48px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSplitTableCellVerticalDisabled_ClinicalStudyTheme {
+    background-position: -72px -242px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellHorizontal_ClinicalStudyTheme {
+    background-position: -144px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellHorizontalDisabled_ClinicalStudyTheme {
+    background-position: -168px -170px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellVertical_ClinicalStudyTheme {
+    background-position: 0px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heMergeTableCellVerticalDisabled_ClinicalStudyTheme {
+    background-position: -24px -194px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTable_ClinicalStudyTheme {
+    background-position: -96px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableDisabled_ClinicalStudyTheme {
+    background-position: -120px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableColumn_ClinicalStudyTheme {
+    background-position: -144px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableColumnDisabled_ClinicalStudyTheme {
+    background-position: -168px -74px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableRow_ClinicalStudyTheme {
+    background-position: 0px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heDeleteTableRowDisabled_ClinicalStudyTheme {
+    background-position: -24px -98px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnlink_ClinicalStudyTheme {
+    background-position: -144px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heUnlinkDisabled_ClinicalStudyTheme {
+    background-position: -168px -266px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heBackColor_ClinicalStudyTheme {
+    background-position: 0px -26px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heBackColorDisabled_ClinicalStudyTheme {
+    background-position: -24px -26px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heForeColor_ClinicalStudyTheme {
+    background-position: -48px -98px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heForeColorDisabled_ClinicalStudyTheme {
+    background-position: -72px -98px;
+    width: 16px;
+    height: 13px;
+}
+
+.dxHtmlEditor_Icons_heRemoveFormat_ClinicalStudyTheme {
+    background-position: -96px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heRemoveFormatDisabled_ClinicalStudyTheme {
+    background-position: -120px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePrint_ClinicalStudyTheme {
+    background-position: 0px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_hePrintDisabled_ClinicalStudyTheme {
+    background-position: -24px -218px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCheckSpelling_ClinicalStudyTheme {
+    background-position: -144px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heCheckSpellingDisabled_ClinicalStudyTheme {
+    background-position: -168px -50px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heFullscreen_ClinicalStudyTheme 
+{
+    background-position: -24px -290px;
+    width: 16px;
+    height: 16px;
+}
+.dxHtmlEditor_Icons_heFullscreenDisabled_ClinicalStudyTheme
+{
+    background-position: -24px -314px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSaveAsDocx_ClinicalStudyTheme
+{
+    background-position: -48px -290px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSaveAsMht_ClinicalStudyTheme
+{
+    background-position: -72px -290px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSaveAsOdt_ClinicalStudyTheme
+{
+    background-position: -96px -290px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSaveAsPdf_ClinicalStudyTheme
+{
+    background-position: -120px -290px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSaveAsRtf_ClinicalStudyTheme
+{
+    background-position: -144px -290px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_Icons_heSaveAsTxt_ClinicalStudyTheme
+{
+    background-position: -168px -290px;
+    width: 16px;
+    height: 16px;
+}
+
+.dxHtmlEditor_heToolbarPopOut_ClinicalStudyTheme {
+    background-position: -135px 0px;
+    width: 7px;
+    height: 4px;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOn_ClinicalStudyTheme {
+    background-position: -19px 0px;
+    width: 11px;
+    height: 18px;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOff_ClinicalStudyTheme {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 18px;
+}
+.dxHtmlEditor_heConstrainProportionsMiddleOnRtl_ClinicalStudyTheme {
+    background-position: -162px 0px;
+    width: 11px;
+    height: 18px;
+}
+
+.dxHtmlEditor_heConstrainProportionsMiddleOffRtl_ClinicalStudyTheme {
+    background-position: -181px 0px;
+    width: 11px;
+    height: 18px;
+}
+
+.dxHtmlEditor_heConstrainProportionsBottom_ClinicalStudyTheme {
+    background-position: -38px 0px;
+    width: 11px;
+    height: 6px;
+}
+
+.dxHtmlEditor_heConstrainProportionsTop_ClinicalStudyTheme {
+    background-position: -38px -14px;
+    width: 11px;
+    height: 5px;
+}
+
+.dxHtmlEditor_heConstrainProportionsBottomRtl_ClinicalStudyTheme {
+    background-position: -143px 0px;
+    width: 11px;
+    height: 6px;
+}
+
+.dxHtmlEditor_heConstrainProportionsTopRtl_ClinicalStudyTheme {
+    background-position: -143px -14px;
+    width: 11px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpHeaderTopLeftCorner_ClinicalStudyTheme {
+    background-position: -109px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpHeaderTopRightCorner_ClinicalStudyTheme {
+    background-position: -122px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpBottomLeftCorner_ClinicalStudyTheme {
+    background-position: -57px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpBottomRightCorner_ClinicalStudyTheme {
+    background-position: -70px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpTopLeftCorner_ClinicalStudyTheme {
+    background-position: -57px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpTopRightCorner_ClinicalStudyTheme {
+    background-position: -70px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomLeftCorner_ClinicalStudyTheme {
+    background-position: -83px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxBottomRightCorner_ClinicalStudyTheme {
+    background-position: -96px -13px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopLeftCorner_ClinicalStudyTheme {
+    background-position: -83px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_RoundPanel_herpGroupBoxTopRightCorner_ClinicalStudyTheme {
+    background-position: -96px 0px;
+    width: 5px;
+    height: 5px;
+}
+
+.dxHtmlEditor_heSizeGrip_ClinicalStudyTheme {
+    background-position: 0px -290px;
+    width: 13px;
+    height: 13px;
+}
+.dxHtmlEditor_heSizeGripRtl_ClinicalStudyTheme {
+    background-position: 0px -314px;
+    width: 13px;
+    height: 13px;
+}
+.dxHtmlEditor_heErrorFrameCloseButton_ClinicalStudyTheme {
+    background-position: -109px -9px;
+    width: 13px;
+    height: 9px;
+}

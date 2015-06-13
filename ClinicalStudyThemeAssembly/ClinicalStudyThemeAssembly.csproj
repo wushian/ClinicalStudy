@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{033DBF43-ED50-449B-894B-0B2AB5153827}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClinicalStudyThemeAssembly</RootNamespace>
+    <AssemblyName>ClinicalStudyThemeAssembly</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\ClinicalStudy.Site\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>.</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>Bin</ReferencePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="DevExpress.Web.v14.2">
+      <SpecificVersion>False</SpecificVersion>
+    <HintPath></HintPath><Private>False</Private></Reference>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Web"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxButton.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxButtonEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxCalendar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxCallbackPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxCaptcha.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxChartControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxCheckBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxCheckBoxList.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxCloudControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxColorEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxComboBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxDataView.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxDateEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxDateNavigator.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxDockPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxDropDownEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxFileManager.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxFilterControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxGridLookup.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxGridView.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxHeadline.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxHtmlEditor.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxHyperLink.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxLabel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxListBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxLoadingPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxMemo.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxMenu.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxNavBar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxNewsControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxPageControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxPager.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxPivotGrid.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxPopupControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxPopupMenu.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxProgressBar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxRadioButton.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxRadioButtonList.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxRatingControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxRoundPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxScheduler.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxSiteMapControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxSpellChecker.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxSpinEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxSplitter.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxTabControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxTextBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxTimeEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxTitleIndex.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxTrackBar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxTreeList.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxTreeView.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxUploadControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MonthEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxButton.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxButtonEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxCalendar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxCallbackPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxChartControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxCheckBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxCheckBoxList.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxColorEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxComboBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxDateEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxDropDownEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxGridView.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxHtmlEditor.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxHyperLink.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxLabel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxListBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxLoadingPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxMemo.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxMenu.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxNavBar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxPageControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxPivotGrid.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxPopupControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxPopupMenu.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxProgressBar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxRadioButton.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxRadioButtonList.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxReportToolbar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxReportViewer.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxRoundPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxScheduler.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxSpinEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxSplitter.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxTabControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxTextBox.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxTimeEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxTrackBar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxTreeView.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxUploadControl.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\RecurrenceTypeEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ReportDocumentMap.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ReportParametersPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ReportToolbar.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ReportViewer.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\WeekDaysEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\WeekOfMonthEdit.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Chart\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Chart\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\BtnBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\caChallengeImageBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\DarkGrey.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\DarkPink.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtBtnBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtBtnDisabledBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtBtnHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtBtnPBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtDropDownBtnHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtDropDownBtnPBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtProgressBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtProgressIndicatorBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarBarHighlightH.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarBarHighlightV.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarDoubleLargeTickH.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarDoubleLargeTickV.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarDoubleSmallTickH.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarDoubleSmallTickV.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarLargeTickH.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarLargeTickV.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarSmallTickH.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarSmallTickV.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarTrackGrey.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarTrackH.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarTrackLeft.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarTrackRight.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarTrackScale.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarTrackTurquoise.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\edtTrackBarTrackV.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\Grey.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\lbHeaderBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\LogonTextBoxBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\sprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\TextBoxBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\Turquoise.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Editors\Yellow.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\GridHSeparator.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\GridVSeparator.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\gvFocusedBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\gvGroupPanelBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\gvHeaderBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\gvPagerPanelBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\gvTitleBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\sprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\StatusBarLoading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\GridView\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\Bar-Line.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\SBTabBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\SBTabHoverBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\sprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\ToolbarBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\HtmlEditor\ToolbarBackRtl.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\FLsprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\FLsprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\HeaderBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\HeaderHoverBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\PagerBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\pcHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\sprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\TitleBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\PivotGrid\tvNodeLoading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\sprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\CssImages\ToolbarBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\CssImages\ViewSelectorButtonBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\CssImages\ViewSelectorButtonHoverBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Scheduler\CssImages\ViewSelectorButtonPressedBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\SpellChecker\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\SpellChecker\scErrorUnderline.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\SpellChecker\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\sprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\CssImages\AltBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\CssImages\ControlBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\CssImages\FocusedBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\CssImages\HeaderBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\CssImages\PagerBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\CssImages\PreviewBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\TreeList\CssImages\TitleBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\Active.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\dvItemBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\dvPagerPanelBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\dvPagerPanelSpacingBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\edtBtnBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\edtBtnDisabledBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\edtBtnHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\fmSplitterSeparator.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\Hover_23.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\Inactive.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\Loading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mHorzItemSepBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mItemBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mItemHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mItemHover.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mItemSBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mScrollHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mScrollPBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mSubItemHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mSubItemSepBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\mVertItemSepBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\nbHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\nbIHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\nbISBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ncPagerPanelSpacingBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\pcFBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\pcHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\pDropDownButtonHoverBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\pDropDownButtonPressedBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\PopupBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\pSepBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\rcMapImage.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\rpHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\rpTEdgeBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ScrollBtn.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\Selected_23.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\Separator.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\splHSepHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\splResizingPointer.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\splVSepHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\sprite.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\styles.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\tcTabBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\tcTabHoverBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\TextBoxBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\tiFBBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\tiHBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ToolbarBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\tvNodeLoading.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\UcBbBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ucButtonBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ucButtonDisabledBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ucButtonHoverBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ucButtonPressedBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ucProgressBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\ucProgressIndicatorBack.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\Web\VisitTabsWrapperBkg.png" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\XtraReports\sprite.css" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\XtraReports\sprite.gif" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\XtraReports\sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemesProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\ASPxValidationSummary.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxDataView.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxDockPanel.skin" />
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxValidationSummary.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxCaptcha.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App_Themes\ClinicalStudyTheme\MVCxFileManager.skin" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+</Project>

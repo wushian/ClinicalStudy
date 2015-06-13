@@ -1,0 +1,8 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Shared.DataContainerViewModel
+
+<div class="patientDataContainer">
+	<div class="headerGroup" data-page-title="@(Model.PageTitle)">
+		@Html.Action("PatientHeaderGroup", "Patient", new {patientNumber = Model.PatientNumber, visitName = Model.SelectedVisitName})
+	</div> 
+	@Html.Partial("_PatientDataPagesPanel")
+</div>

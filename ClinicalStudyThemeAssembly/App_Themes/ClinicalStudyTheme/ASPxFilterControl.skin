@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxe:ASPxFilterControl runat="server">
+	<Images SpriteCssFilePath="{0}/sprite.css">
+	    <LoadingPanel Url="Editors/Loading.gif" />
+	</Images>
+	<LoadingPanelStyle ImageSpacing="8" />
+	<Styles CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme" />
+	<StylesEditors ButtonEditCellSpacing="0" />
+</dxe:ASPxFilterControl>
+

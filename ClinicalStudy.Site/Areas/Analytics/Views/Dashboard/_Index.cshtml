@@ -1,0 +1,61 @@
+﻿@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+<div class="adminDashboard">
+    <div class="quickStartGroup">
+	    <div class="quickStartItem">
+		    @Ajax.ImageActionLink(Url.Content("~/Content/Images/Chart.png"), "Patients Progress per Visit",
+                "PatientsPerVisit", 
+                "Charts",
+			    null,
+			    new AjaxOptions {
+				    UpdateTargetId = "contentPanel",
+				    HttpMethod = "GET",
+                    LoadingElementId = "loadingIndicator",
+                    OnSuccess = "setActiveNavBarItem('StudyProgress','PatientsPerVisit')"
+			    },
+			    new {@class = "dcLink"})
+	    </div>	
+
+	    <div class="quickStartItem">
+		    @Ajax.ImageActionLink(Url.Content("~/Content/Images/Pivot.png"), "Happiness Change",
+                "Happiness",
+                "Analytics",
+			    null,
+			    new AjaxOptions {
+				    UpdateTargetId = "contentPanel",
+				    HttpMethod = "GET",
+                    LoadingElementId = "loadingIndicator",
+                    OnSuccess = "setActiveNavBarItem('Analytics','HappinessChange')"
+			    },
+			    new {@class = "dcLink"})
+	    </div>
+    </div>
+    <div class="quickStartGroup">
+	    <div class="quickStartItem">
+		    @Ajax.ImageActionLink(Url.Content("~/Content/Images/Report.png"), "Patients Report",
+                "Patients",
+                "Reports",
+			    null,
+			    new AjaxOptions {
+				    UpdateTargetId = "contentPanel",
+				    HttpMethod = "GET",
+                    LoadingElementId = "loadingIndicator",
+                    OnSuccess = "setActiveNavBarItem('Reports','PatientsReport')"
+			    },
+			    new {@class = "dcLink"})
+	    </div>
+
+        <div class="quickStartItem">
+		    @Ajax.ImageActionLink(Url.Content("~/Content/Images/Grid.png"), "Manage Clinics",
+                "Clinics",
+                "Administration",
+			    null,
+			    new AjaxOptions {
+				    UpdateTargetId = "contentPanel",
+				    HttpMethod = "GET",
+                    LoadingElementId = "loadingIndicator",
+                    OnSuccess = "setActiveNavBarItem('StudyAdministration','ManageClinics')"
+			    },
+			    new {@class = "dcLink"})
+	    </div>
+    </div>
+</div>

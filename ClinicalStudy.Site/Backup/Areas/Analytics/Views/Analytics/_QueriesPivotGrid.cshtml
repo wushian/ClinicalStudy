@@ -1,0 +1,79 @@
+﻿@using System.Web.UI.WebControls
+@model List<ClinicalStudy.Site.Areas.Analytics.Models.Analytics.QueriesAnalyticsViewModel>
+
+@Html.DevExpress().PivotGrid(
+	settings => {
+		settings.Name = "queriesPivotGrid";
+		settings.CallbackRouteValues = new {Controller = "Analytics", Action = "QueriesPartial"};
+		settings.Width = Unit.Percentage(100);
+		settings.OptionsView.ShowHorizontalScrollBar = true;
+		settings.OptionsView.ShowFilterHeaders = false;
+        settings.OptionsFilter.NativeCheckBoxes = false;
+        settings.OptionsView.ShowContextMenus = false;
+
+		settings.CustomizationFieldsLeft = 600;
+		settings.CustomizationFieldsTop = 400;
+
+		settings.OptionsPager.ShowNumericButtons = true;
+		settings.OptionsPager.NumericButtonCount = 4;
+
+		settings.Groups.Add("Clinics - Doctors");
+		settings.Groups.Add("CRF - Question");
+		settings.Groups.Add("Queries count, Open queries");
+
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.RowArea;
+		                    	field.AreaIndex = 0;
+		                    	field.Caption = "Clinic";
+		                    	field.FieldName = "Clinic";
+		                    	field.GroupIndex = 0;
+		                    	field.InnerGroupIndex = 0;
+		                    	field.CustomTotals.Add(PivotSummaryType.Count);
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.ColumnArea;
+		                    	field.AreaIndex = 0;
+		                    	field.Caption = "CRF";
+		                    	field.FieldName = "Crf";
+		                    	field.GroupIndex = 1;
+		                    	field.InnerGroupIndex = 0;
+		                    	field.UnboundFieldName = "Crf";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.ColumnArea;
+		                    	field.AreaIndex = 1;
+		                    	field.Caption = "Question";
+		                    	field.FieldName = "Question";
+		                    	field.ExpandedInFieldsGroup = false;
+		                    	field.GroupIndex = 1;
+		                    	field.InnerGroupIndex = 1;
+		                    	field.UnboundFieldName = "Question";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.DataArea;
+		                    	field.AreaIndex = 0;
+		                    	field.Caption = "Queries";
+		                    	field.FieldName = "Queries";
+		                    	field.ExpandedInFieldsGroup = false;
+		                    	field.GroupIndex = 2;
+		                    	field.InnerGroupIndex = 0;
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.RowArea;
+		                    	field.AreaIndex = 1;
+		                    	field.Caption = "Doctor";
+		                    	field.FieldName = "Doctor";
+		                    	field.GroupIndex = 0;
+		                    	field.InnerGroupIndex = 1;
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.DataArea;
+		                    	field.AreaIndex = 1;
+		                    	field.Caption = "Open Queries";
+		                    	field.FieldName = "OpenQueries";
+		                    	field.Visible = false;
+		                    	field.ExpandedInFieldsGroup = false;
+		                    	field.GroupIndex = 2;
+		                    	field.InnerGroupIndex = 1;
+		                    });
+	}).Bind(Model).GetHtml()

@@ -1,0 +1,48 @@
+﻿@using System.Web.UI.WebControls
+@model List<ClinicalStudy.Site.Areas.Analytics.Models.Analytics.PatientsHappinessChangeViewModel>
+
+@Html.DevExpress().PivotGrid(
+	settings => {
+		settings.Name = "happinessPivotGrid";
+		settings.CallbackRouteValues = new {Controller = "Analytics", Action = "HappinessPartial"};
+		settings.Width = Unit.Percentage(100);
+		settings.OptionsView.ShowHorizontalScrollBar = true;
+        settings.OptionsFilter.NativeCheckBoxes = false;
+        settings.OptionsView.ShowContextMenus = false;
+
+		settings.OptionsPager.ShowNumericButtons = true;
+		settings.OptionsPager.NumericButtonCount = 4;
+
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.FilterArea;
+		                    	field.AreaIndex = 0;
+		                    	field.FieldName = "ClinicName";
+		                    	field.Caption = "Clinic";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.ColumnArea;
+		                    	field.AreaIndex = 0;
+		                    	field.FieldName = "Race";
+		                    	field.Caption = "Race";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.ColumnArea;
+		                    	field.AreaIndex = 1;
+		                    	field.FieldName = "Gender";
+		                    	field.Caption = "Gender";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.DataArea;
+		                    	field.AreaIndex = 0;
+		                    	field.FieldName = "HappinessChange";
+		                    	field.Caption = "Happiness Change";
+		                    	field.SummaryType = PivotSummaryType.Average;
+		                    	field.CellFormat.FormatString = "p";
+		                    	field.CellFormat.FormatType = FormatType.Numeric;
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.AreaIndex = 0;
+		                    	field.FieldName = "DoctorName";
+		                    	field.Caption = "Doctor";
+		                    });
+	}).Bind(Model).GetHtml()

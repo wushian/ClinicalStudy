@@ -1,0 +1,208 @@
+.dxGridView_gvCollapsedButton_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvExpandedButton_ClinicalStudyTheme,
+.dxGridView_gvExpandedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButton_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButton_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvFilterRowButton_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilter_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilterActive_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortDown_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortUp_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowDown_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowUp_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropHideColumn_ClinicalStudyTheme,
+.dxGridView_gvParentGroupRows_ClinicalStudyTheme,
+.dxGridView_WindowResizer_ClinicalStudyTheme,
+.dxGridView_WindowResizerRtl_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvExpandedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvExpandedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvFilterRowButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilter_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilterActive_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortDown_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortUp_Clear_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowDown_Clear_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowUp_Clear_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropHideColumn_Clear_ClinicalStudyTheme,
+.dxGridView_gvParentGroupRows_Clear_ClinicalStudyTheme,
+.dxGridView_WindowResizer_Clear_ClinicalStudyTheme,
+.dxGridView_WindowResizerRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButton_Master_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButtonRtl_Master_ClinicalStudyTheme,
+.dxGridView_gvExpandedButton_Master_ClinicalStudyTheme,
+.dxGridView_gvExpandedButtonRtl_Master_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButton_Master_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButtonRtl_Master_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButton_Master_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButtonRtl_Master_ClinicalStudyTheme,
+.dxGridView_gvFilterRowButton_Master_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilter_Master_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilterActive_Master_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortDown_Master_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortUp_Master_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowDown_Master_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowUp_Master_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropHideColumn_Master_ClinicalStudyTheme,
+.dxGridView_gvParentGroupRows_Master_ClinicalStudyTheme,
+.dxGridView_WindowResizer_Master_ClinicalStudyTheme,
+.dxGridView_WindowResizerRtl_Master_ClinicalStudyTheme
+ {
+    background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.GridView.sprite.png")%>');
+    -background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.GridView.sprite.gif")%>'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.dxGridView_gvCollapsedButton_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButton_Master_ClinicalStudyTheme {
+    background-position: -36px 0px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvCollapsedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvCollapsedButtonRtl_Master_ClinicalStudyTheme {
+    background-position: -94px 0px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvExpandedButton_ClinicalStudyTheme,
+.dxGridView_gvExpandedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvExpandedButton_Master_ClinicalStudyTheme {
+    background-position: -36px -17px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvExpandedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvExpandedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvExpandedButtonRtl_Master_ClinicalStudyTheme {
+    background-position: -94px -17px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailCollapsedButton_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButton_Master_ClinicalStudyTheme {
+    background-position: -53px 0px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailCollapsedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailCollapsedButtonRtl_Master_ClinicalStudyTheme {
+    background-position: -111px 0px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailExpandedButton_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButton_Master_ClinicalStudyTheme {
+    background-position: -53px -17px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailExpandedButtonRtl_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButtonRtl_Clear_ClinicalStudyTheme,
+.dxGridView_gvDetailExpandedButtonRtl_Master_ClinicalStudyTheme {
+    background-position: -111px -17px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvFilterRowButton_ClinicalStudyTheme,
+.dxGridView_gvFilterRowButton_Clear_ClinicalStudyTheme,
+.dxGridView_gvFilterRowButton_Master_ClinicalStudyTheme {
+    background-position: 0px -54px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilter_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilter_Master_ClinicalStudyTheme {
+    background-position: 0px -36px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvHeaderFilterActive_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilterActive_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderFilterActive_Master_ClinicalStudyTheme {
+    background-position: -23px -36px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvHeaderSortDown_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortDown_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortDown_Master_ClinicalStudyTheme {
+    background-position: -19px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxGridView_gvHeaderSortUp_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortUp_Clear_ClinicalStudyTheme,
+.dxGridView_gvHeaderSortUp_Master_ClinicalStudyTheme {
+    background-position: -19px -17px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowDown_Clear_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowDown_Master_ClinicalStudyTheme {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowUp_Clear_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropArrowUp_Master_ClinicalStudyTheme {
+    background-position: 0px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropHideColumn_Clear_ClinicalStudyTheme,
+.dxGridView_gvDragAndDropHideColumn_Master_ClinicalStudyTheme {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_ClinicalStudyTheme,
+.dxGridView_gvParentGroupRows_Clear_ClinicalStudyTheme,
+.dxGridView_gvParentGroupRows_Master_ClinicalStudyTheme {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_ClinicalStudyTheme,
+.dxGridView_WindowResizer_Clear_ClinicalStudyTheme,
+.dxGridView_WindowResizer_Master_ClinicalStudyTheme {
+    background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizerRtl_ClinicalStudyTheme,
+.dxGridView_WindowResizerRtl_Clear_ClinicalStudyTheme,
+.dxGridView_WindowResizerRtl_Master_ClinicalStudyTheme {
+    background-position: -46px -54px;
+    width: 13px;
+    height: 13px;
+}
+

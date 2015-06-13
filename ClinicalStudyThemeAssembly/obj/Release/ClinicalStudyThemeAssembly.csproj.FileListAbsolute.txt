@@ -1,0 +1,10 @@
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudyThemeAssembly\obj\Release\ClinicalStudyThemeAssembly.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudyThemeAssembly\obj\Release\ClinicalStudyThemeAssembly.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudyThemeAssembly\ClinicalStudyThemeAssembly.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudyThemeAssembly\ClinicalStudyThemeAssembly.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudyThemeAssembly\obj\Release\ClinicalStudyThemeAssembly.csprojResolveAssemblyReference.cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudyThemeAssembly\obj\Release\ClinicalStudyThemeAssembly.csprojResolveAssemblyReference.cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudyThemeAssembly\obj\Release\ClinicalStudyThemeAssembly.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudyThemeAssembly\obj\Release\ClinicalStudyThemeAssembly.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudyThemeAssembly\ClinicalStudyThemeAssembly.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudyThemeAssembly\ClinicalStudyThemeAssembly.pdb

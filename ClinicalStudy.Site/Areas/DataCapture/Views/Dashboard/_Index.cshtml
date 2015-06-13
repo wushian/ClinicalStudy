@@ -1,0 +1,55 @@
+﻿@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+<div class="quickStart">
+	<div class="quickStartItem">
+		@Ajax.ImageActionLink(Url.Content("~/Content/Images/NewPatient.png"), "Add a New Patient",
+			"PatientDataContainer",
+			"Patient",
+			null,
+			new AjaxOptions {
+				UpdateTargetId = "contentPanel",
+				HttpMethod = "GET",
+				LoadingElementId = "loadingIndicator",
+				OnSuccess = "setActiveNavTab('patients')"
+			},
+			new {@class = "dcLink"})
+	</div>	
+
+	<div class="quickStartItem">
+		@Ajax.ImageActionLink(Url.Content("~/Content/Images/Visits.png"), "Open Today's Visits",
+			"Index",
+			"Schedule",
+			null,
+			new AjaxOptions {
+				UpdateTargetId = "contentPanel",
+				HttpMethod = "GET",
+				LoadingElementId = "loadingIndicator",
+				OnSuccess = "setActiveNavTab('schedule')"
+			},
+			new {@class = "dcLink"})
+	</div>
+
+	<div class="quickStartItem">
+		@Ajax.ImageActionLink(Url.Content("~/Content/Images/Queries.png"), "View Queries",
+			"Index",
+			"Query",
+			null,
+			new AjaxOptions {
+				UpdateTargetId = "contentPanel",
+				HttpMethod = "GET",
+				LoadingElementId = "loadingIndicator",
+				OnSuccess = "setActiveNavTab('queries')"
+			},
+			new {@class = "dcLink"})
+	</div>
+</div>
+<div class="summaryInfo">
+	<div>
+		@Html.Action("Summary", "Schedule")
+	</div>
+	
+	<div>
+		@Html.Action("Summary", "Query")
+        
+        
+	</div>
+</div>

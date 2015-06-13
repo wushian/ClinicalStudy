@@ -1,0 +1,67 @@
+﻿@model ClinicalStudy.Site.Models.Account.LogOnViewModel
+<div class="logonUserChooserContainer">
+    <div class="logonUserChooser" id="uc_@(Model.UserName)">
+        @Html.DevExpress().BinaryImage(s => {
+                                     	s.Name = "loginPhotoP_" + Model.UserName;
+                                     	s.ContentBytes = Model.Photo;
+										s.ControlStyle.CssClass = "logonUserPhoto";
+                                     	s.Properties.AlternateText = Model.FullName;
+
+                                     }).GetHtml()
+        @Html.DevExpress().Label(s => {
+                               	s.Text = string.Format("{0} {1}", Model.Role, Model.FullName);
+                               	s.ControlStyle.CssClass = "logon-label";
+                               	s.SkinID = "LogonLabel";
+                               	s.Style.Add("font-size", "138.5%");
+                               }).GetHtml()
+    </div>
+</div>
+<div class="logonUserContainer" id="ui_uc_@(Model.UserName)">
+    @using (Html.BeginForm()) {
+		<input id="UserName" name="UserName" type="hidden" value="@Model.UserName" />
+		@Html.DevExpress().BinaryImage(s => {
+		                                     	s.Name = "loginPhotoF_" + Model.UserName;
+		                                     	s.ContentBytes = Model.Photo;
+		                                     	s.Attributes.Add("class", "logonUserPhoto");
+		                                     	s.Properties.AlternateText = Model.FullName;
+
+		                                     }).GetHtml()
+		<div class="logonUserInfo">
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = string.Format("{0} {1}", Model.Role, Model.FullName);
+		                               	s.ControlStyle.CssClass = "logon-label";
+		                               	s.SkinID = "LogonLabel";
+		                               	s.Style.Add("font-size", "138.5%");
+		                               }).GetHtml()
+			<div class="logonUserPassword">
+				@Html.DevExpress().Label(s => {
+		                               	s.Text = "Password:";
+		                               	s.ControlStyle.CssClass = "logon-password-label";
+		                               	s.SkinID = "LogonLabel";
+		                               	s.Style.Add("font-size", "107.5%");
+		                               }).GetHtml()
+				@Html.DevExpress().TextBox(s => {
+		                                 	s.Text = "MostSecretPassword";
+		                                 	s.Properties.Password = true;
+		                                 	s.ControlStyle.CssClass = "logon-password";
+		                                 	s.SkinID = "LogonTextBox";
+		                                 	s.Name = "Password" + Model.UserName;
+		                                 	s.Width = 100;
+		                                 }).GetHtml()
+				@Html.DevExpress().Button(s => {
+		                                	s.UseSubmitBehavior = true;
+		                                	s.Text = "Enter";
+                                            s.ControlStyle.CssClass = "logon-password-btn";
+		                                	s.SkinID = "Turquoise";
+		                                	s.Name = "Logon" + Model.UserName;
+		                                }).GetHtml()
+			</div>
+		</div>
+	}
+    @Html.DevExpress().HyperLink(s => {
+                                   	s.Properties.Text = "Switch user";
+                                   	s.NavigateUrl = "#";
+                                   	s.ControlStyle.CssClass = "switchUserLink";
+
+                                   }).GetHtml()
+</div>

@@ -1,0 +1,20 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.XtraReports.Web" Assembly="DevExpress.XtraReports.v14.2.Web, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dx:ReportViewer runat="server" BorderColor="#C5C4C5" BorderStyle="Solid" BorderWidth="1px" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<LoadingPanelImage Url="Web/Loading.gif"></LoadingPanelImage>
+
+<LoadingPanelStyle ImageSpacing="8px" CssClass="dxlpLoadingPanel_ClinicalStudyTheme" Font-Names="Segoe UI" Font-Size="12px" ForeColor="#706C70">
+<Paddings PaddingLeft="17px" PaddingTop="10px" PaddingRight="17px" PaddingBottom="10px"></Paddings>
+
+<BorderLeft BorderColor="#C5C4C5" BorderStyle="Solid" BorderWidth="1px"></BorderLeft>
+
+<BorderTop BorderColor="#C5C4C5" BorderStyle="Solid" BorderWidth="1px"></BorderTop>
+
+<BorderRight BorderColor="#C5C4C5" BorderStyle="Solid" BorderWidth="1px"></BorderRight>
+
+<BorderBottom BorderColor="#9C9A9C" BorderStyle="Solid" BorderWidth="1px"></BorderBottom>
+</LoadingPanelStyle>
+
+<Border BorderColor="#C5C4C5" BorderStyle="Solid" BorderWidth="1px"></Border>
+</dx:ReportViewer>

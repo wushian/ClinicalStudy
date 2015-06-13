@@ -1,0 +1,11 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dx:ASPxCaptcha runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+    <ChallengeImage BorderColor="#a8aab4" BorderWidth="1" ForegroundColor="#cdafe4">
+        <BackgroundImage ImageUrl="Editors/caChallengeImageBack.png" />
+    </ChallengeImage>
+    <RefreshButtonStyle Paddings-PaddingTop="4" />
+    <LoadingPanelImage Url="Editors/Loading.gif" />
+</dx:ASPxCaptcha>
+

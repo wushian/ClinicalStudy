@@ -1,0 +1,13 @@
+﻿<div class="leftNav">
+	@Html.DevExpress().TabControl(s => {
+	                                    	s.Name = "navigationLeftTab";
+	                                    	s.ClientSideEvents.TabClick = "activePatientsGridChange";
+	                                    	s.TabPosition = TabPosition.Left;
+	                                    	s.SkinID = "LeftTab";
+
+	                                    	MVCxTab apTab = s.Tabs.Add("Active", "active", Url.Content("~/Content/Images/Tabs/ActivePatTab.png"));
+	                                    	MVCxTab ipTab = s.Tabs.Add("Inactive", "inactive", Url.Content("~/Content/Images/Tabs/InactivePatTab.png"));
+	                                    	apTab.ActiveTabImage.Url = Url.Content("~/Content/Images/Tabs/ActivePatActiveTab.png");
+	                                    	ipTab.ActiveTabImage.Url = Url.Content("~/Content/Images/Tabs/InactivePatActiveTab.png");
+	                                    }).GetHtml()
+</div>

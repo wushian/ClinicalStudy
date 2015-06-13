@@ -1,0 +1,11 @@
+﻿@model ClinicalStudy.Site.Areas.Analytics.Models.Charts.PatientStateList
+    @{
+    string header;
+    if (Model.PatientState != "Adverse Event Visit"){
+        header = String.Format("{0} Patients in {1}", Model.PatientState, Model.ClinicName);
+    } else {
+        header = String.Format("Patient Visit for Adverse Event in {0}", Model.ClinicName);
+    }        
+}
+<h1 class="admin">@header</h1>
+@Html.Partial("_PatientsPerVisitPerDoctorChart", Model)

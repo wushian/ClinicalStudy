@@ -1,0 +1,77 @@
+﻿@using System.Web.UI.WebControls
+@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+@model ClinicalStudy.Site.Areas.DataCapture.Models.Patient.PatientsListViewModel
+		   
+@functions{
+
+	private void SetNeededPage(MVCxGridView grid) {
+		if (Model.CertainPatientPageIndex >= 0)
+			grid.PageIndex = Model.CertainPatientPageIndex;
+		grid.JSProperties.Add("cpRequestedPatientActivity", Model.CertainPatientIsActive);
+	}
+
+}
+
+@(Html
+  	.DevExpress()
+  	.GridView(s => {
+  	          	int pageSize = 8;
+  	          	s.Name = "PatientListGrid";
+  	          	s.SkinID = "ClearGrid";
+  	          	s.CallbackRouteValues = new {Controller = "Patient", Action = "PatientGrid", pageSize};
+  	          	s.ClientSideEvents.RowClick = "OnGridClick";
+  	          	s.ClientSideEvents.BeginCallback = "patientsListGridBeginCallback";
+  	          	s.ClientSideEvents.EndCallback = "patientsListGridEndCallback";
+  	          	s.SettingsLoadingPanel.Mode = GridViewLoadingPanelMode.Disabled;
+  	          	s.KeyFieldName = "Id";
+  	          	s.Columns.Add("Caption");
+  	          	s.Settings.ShowColumnHeaders = false;
+
+  	          	s.SettingsPager.PageSize = pageSize;
+  	          	s.SettingsPager.ShowNumericButtons = true;
+  	          	s.SettingsPager.NumericButtonCount = 4;
+
+  	          	s.Width = Unit.Percentage(100);
+  	          	s.SetDataItemTemplateContent(c => {
+  	          	                             	ViewContext.Writer.Write("<div class='patientItem'><div>");
+
+                                                ViewContext.Writer.Write(String.Format("<div class=\"patLogo {0}\"></div>", 
+                                                    Url.PatientIconClass(DataBinder.Eval(c.DataItem, "Sex") as string, DataBinder.Eval(c.DataItem, "IsSelected") as bool?)));    
+
+  	          	                             	ViewContext.Writer.Write("<div>");
+  	          	                             	ViewContext.Writer.Write(
+													@Html
+														.DevExpress()
+														.Label(ls => {
+														       	ls.Text = DataBinder.Eval(c.DataItem, "Caption").ToString();
+														       	ls.SkinID = "SubjLabel";
+														       	ls.Style.Add("margin", "0 0 5px 0");
+														       	ls.Style.Add("display", "block");
+														       }).GetHtml());
+  	          	                             	ViewContext.Writer.Write(
+													@Html
+														.DevExpress()
+														.Label(ls => {
+														       	ls.Text = DataBinder.Eval(c.DataItem, "Gender").ToString();
+														       	ls.SkinID = "SmallLabel";
+														       	ls.Style.Add("display", "block");
+														       	ls.Style.Add("line-height", "100%");
+														       }).GetHtml());
+  	          	                             	ViewContext.Writer.Write(
+													@Html
+														.DevExpress()
+														.Label(ls => {
+														       	ls.Text = DataBinder.Eval(c.DataItem, "Age").ToString();
+														       	ls.SkinID = "SmallLabel";
+														       	ls.Style.Add("display", "block");
+														       	ls.Style.Add("line-height", "100%");
+														       }).GetHtml());
+
+  	          	                             	ViewContext.Writer.Write("</div>");
+  	          	                             	ViewContext.Writer.Write("</div></div>");
+  	          	                             });
+
+  	          	s.PreRender = (sender, e) => SetNeededPage((MVCxGridView) sender);
+  	          	s.BeforeGetCallbackResult = (sender, e) => SetNeededPage((MVCxGridView) sender);
+  	          }
+  	).Bind(Model.PatientsList).GetHtml())

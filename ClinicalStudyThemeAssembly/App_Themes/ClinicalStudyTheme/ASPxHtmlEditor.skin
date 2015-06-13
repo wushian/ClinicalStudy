@@ -1,0 +1,22 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register Assembly="DevExpress.Web.ASPxHtmlEditor.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" Namespace="DevExpress.Web.ASPxHtmlEditor" TagPrefix="dxhe" %>
+
+<dxhe:ASPxHtmlEditor runat="server" Width="740px">
+    <Images SpriteCssFilePath="{0}/sprite.css">
+	    <LoadingPanel Url="HtmlEditor/Loading.gif" />
+	</Images>
+    <ImagesFileManager>
+        <LoadingPanel Url="Web/Loading.gif"></LoadingPanel>
+        <FolderContainerNodeLoadingPanel Url="Web/tvNodeLoading.gif"></FolderContainerNodeLoadingPanel>
+    </ImagesFileManager>
+	<Styles CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+        <ViewArea Border-BorderColor="#9da0aa" />
+    </Styles>
+	<StylesEditors ButtonEditCellSpacing="0" />
+	<StylesStatusBar>
+        <StatusBar TabSpacing="0">
+            <Paddings Padding="0" />
+        </StatusBar>    
+    </StylesStatusBar>
+</dxhe:ASPxHtmlEditor>
+

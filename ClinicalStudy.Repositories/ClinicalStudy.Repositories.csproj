@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62781D27-08D4-42FD-9303-3084F646A814}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClinicalStudy.Repositories</RootNamespace>
+    <AssemblyName>ClinicalStudy.Repositories</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\ClinicalStudy.Site\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>..\ClinicalStudy.Site\packages\EntityFramework.5.0.0\lib\net40</ReferencePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath></HintPath>
+    <Private>False</Private></Reference>
+    <Reference Include="System"><Private>False</Private></Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations"><Private>False</Private></Reference>
+    <Reference Include="System.Core"><Private>False</Private></Reference>
+    <Reference Include="System.Data.Entity"><Private>False</Private></Reference>
+    <Reference Include="System.Web"><Private>False</Private></Reference>
+    <Reference Include="System.Xml.Linq"><Private>False</Private></Reference>
+    <Reference Include="System.Data.DataSetExtensions"><Private>False</Private></Reference>
+    <Reference Include="Microsoft.CSharp"><Private>False</Private></Reference>
+    <Reference Include="System.Data"><Private>False</Private></Reference>
+    <Reference Include="System.Xml"><Private>False</Private></Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EntityFrameworkRepository\AttachmentRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\ClinicalStudyContext.cs" />
+    <Compile Include="EntityFrameworkRepository\ClinicRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\ChangeNoteRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormData\VitalsFormDataRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormData\AdverseEventFormDataRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormData\DemographicFormDataRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormData\ElectrocardiogramFormDataRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormData\GenericFormDataRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormData\HappinessFormDataRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormData\InventoryFormDataRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\FormRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\GenericRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\IClinicalStudyContextFactory.cs" />
+    <Compile Include="EntityFrameworkRepository\PatientRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\QueryRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\QuestionRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\UserRepository.cs" />
+    <Compile Include="EntityFrameworkRepository\VisitRepository.cs" />
+    <Compile Include="Interface\IChangeNoteRepository.cs" />
+    <Compile Include="Interface\FormData\IFormDataRepository.cs" />
+    <Compile Include="Interface\FormData\IAdverseEventFormDataRepository.cs" />
+    <Compile Include="Interface\FormData\IElectrocardiogramFormDataRepository.cs" />
+    <Compile Include="Interface\FormData\IHappinessFormDataRepository.cs" />
+    <Compile Include="Interface\FormData\IInventoryFormDataRepository.cs" />
+    <Compile Include="Interface\FormData\IVitalsFormDataRepository.cs" />
+    <Compile Include="Interface\FormData\IDemographicFormDataRepository.cs" />
+    <Compile Include="Interface\IAttachmentRepository.cs" />
+    <Compile Include="Interface\IClinicRepository.cs" />
+    <Compile Include="Interface\IFormRepository.cs" />
+    <Compile Include="Interface\IPatientRepository.cs" />
+    <Compile Include="Interface\IQueryRepository.cs" />
+    <Compile Include="Interface\IQuestionRepository.cs" />
+    <Compile Include="Interface\IRepository.cs" />
+    <Compile Include="Interface\IUserRepository.cs" />
+    <Compile Include="Interface\IVisitRepository.cs" />
+    <Compile Include="MemoryRepositories\AttachmentRepository.cs" />
+    <Compile Include="MemoryRepositories\ClinicRepository.cs" />
+    <Compile Include="MemoryRepositories\ChangeNoteRepository.cs" />
+    <Compile Include="MemoryRepositories\FormData\AdverseEventFormDataRepository.cs" />
+    <Compile Include="MemoryRepositories\FormData\ElectrocardiogramFormDataRepository.cs" />
+    <Compile Include="MemoryRepositories\FormData\HappinessFormDataRepository.cs" />
+    <Compile Include="MemoryRepositories\FormData\InventoryFormDataRepository.cs" />
+    <Compile Include="MemoryRepositories\FormData\VitalsFormDataRepository.cs" />
+    <Compile Include="MemoryRepositories\FormData\GenericFormDataRepository.cs" />
+    <Compile Include="MemoryRepositories\FormData\DemographicFormDataRepository.cs" />
+    <Compile Include="MemoryRepositories\DataStorage\IDataStorage.cs" />
+    <Compile Include="MemoryRepositories\DataStorage\PerSessionDataStorage.cs" />
+    <Compile Include="MemoryRepositories\FormRepository.cs" />
+    <Compile Include="MemoryRepositories\GenericRepository.cs" />
+    <Compile Include="MemoryRepositories\PatientRepository.cs" />
+    <Compile Include="MemoryRepositories\QueryRepository.cs" />
+    <Compile Include="MemoryRepositories\QuestionRepository.cs" />
+    <Compile Include="MemoryRepositories\UserRepository.cs" />
+    <Compile Include="MemoryRepositories\VisitRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClinicalStudy.DomainModel\ClinicalStudy.DomainModel.csproj">
+      <Project>{C77FBD02-5476-4D5A-AB95-E5671CBE4190}</Project>
+      <Name>ClinicalStudy.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DemoData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

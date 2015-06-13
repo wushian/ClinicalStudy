@@ -1,0 +1,51 @@
+﻿@using System.Web.UI.WebControls
+@model List<ClinicalStudy.Site.Areas.DataCapture.Models.Query.QueryViewModel>
+@(Html
+  	.DevExpress()
+  	.GridView(s => {
+  	          	s.Name = "QueryGrid";
+  	          	s.SkinID = "ClearGrid";
+  	          	s.Settings.ShowColumnHeaders = false;
+
+  	          	s.CallbackRouteValues = new {Controller = "Query", Action = "GridCallback"};
+  	          	MVCxGridViewColumn firstCol = s.Columns.Add("IsClosed");
+  	          	firstCol.Width = 21;
+  	          	firstCol.SetDataItemTemplateContent((c) => ViewContext.Writer.Write(
+					Html.DevExpress().Image(imgS => {
+					                        	imgS.ImageUrl = (bool) DataBinder.Eval(c.DataItem, "IsClosed")
+					                        	                	? Url.Content("~/Content/Icons/MarkCompleted.png")
+					                        	                	: Url.Content("~/Content/Icons/MarkAttentionNeeded.png");
+					                        }).GetHtml()));
+
+  	          	s.Columns.Add("QueryText").CellStyle.Paddings.PaddingRight = 9;
+  	          	s.Columns.Add()
+					.SetDataItemTemplateContent(c => {
+					                            	var patientNumber = (int) DataBinder.Eval(c.DataItem, "PatientNumber");
+					                            	var visitName = (string) DataBinder.Eval(c.DataItem, "VisitCaption");
+					                            	var formName = (string) DataBinder.Eval(c.DataItem, "FormCaption");
+
+					                            	ViewContext.Writer.Write(Html.DevExpress().HyperLink(hs => {
+					                            	                                                     	hs.Name = "ExamineQueryLink" + DataBinder.Eval(c.DataItem, "QueryId");
+					                            	                                                     	hs.Properties.Text = "Examine";
+					                            	                                                     	hs.ControlStyle.Cursor = "pointer";
+					                            	                                                     	hs.Properties.ClientSideEvents.Click = "function() {PatientGridReloadWithPatient(" + patientNumber + ",'" + visitName + "','" + formName + "'); return false;}";
+					                            	                                                     }).GetHtml());
+					                            });
+  	          	MVCxGridViewColumn buttonColumn = s.Columns.Add();
+  	          	buttonColumn.CellStyle.Paddings.PaddingLeft = Unit.Pixel(20);
+  	          	buttonColumn.SetDataItemTemplateContent(c => {
+  	          	                                        	ViewContext.Writer.Write(
+																Html.DevExpress().Button(
+																	bs => {
+																		var queryId = (int) DataBinder.Eval(c.DataItem, "QueryId");
+																		string text = "Reply";
+																		if ((bool) DataBinder.Eval(c.DataItem, "IsClosed"))
+																			text = "View";
+																		bs.Name = "replyButton" + queryId.ToString();
+																		bs.ClientSideEvents.Click =
+																			string.Format("function(s,e){{ selectedStudyData.selectedQueryId = {0};replyQueryPopup.PerformCallback();replyQueryPopup.Show();}}", queryId);
+																		bs.Text = text;
+																		bs.SkinID = "DarkPink";
+																	}).GetHtml());
+  	          	                                        });
+  	          }).Bind(Model).GetHtml())

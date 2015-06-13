@@ -1,0 +1,71 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.VisitViewModel
+@{
+	string validationGroup = string.Format("visit{0}Validation", Model.Id);
+}
+
+<div id="visitContainer@(Model.Id)" class="visitPanel">
+	<h2>Visit Information</h2>
+	@using (Ajax.BeginForm("EditVisit", "Visit",
+		new AjaxOptions {
+			UpdateTargetId = "visitContainer" + Model.Id.ToString(),
+			LoadingElementId = "loadingIndicator"
+		})) {
+		@Html.HiddenFor(model => model.Id)
+		@Html.HiddenFor(model => model.Caption)
+		@Html.HiddenFor(model => model.NoExpectedVisitDate)
+		<div class="editor-field">
+			@Html.DevExpress().Label(s => {
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.Text = "Visit Date:";
+		                               	s.AssociatedControlName = "VisitDate";
+		                               }).GetHtml()
+			@Html.DevExpress().DateEdit(s => {
+		                                  	s.Name = "VisitDate";
+		                                  	s.Width = 150;
+                                            s.ShowModelErrors = true;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+		                                  }).Bind(Model.VisitDate).GetHtml()
+		</div>
+		<div class="editor-field">
+			@Html.HiddenFor(model => model.Id)
+			@Html.DevExpress().Label(s => {
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.Text = "Visit Time:";
+		                               	s.AssociatedControlName = "VisitTime";
+		                               }).GetHtml()
+			@Html.DevExpress().TimeEdit(s => {
+		                                  	s.Name = "VisitTime";
+		                                  	s.Width = 150;
+                                            s.ShowModelErrors = true;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+		                                  }).Bind(Model.VisitTime).GetHtml()
+		</div>
+		if (!Model.NoExpectedVisitDate) {
+			<div class="editor-field">
+				@Html.HiddenFor(model => model.Id)
+				@Html.DevExpress().Label(s => {
+			                               	s.ControlStyle.CssClass = "editor-label";
+			                               	s.Text = "Expected Visit Date:";
+			                               	s.AssociatedControlName = "ExpectedVisitDate";
+			                               }).GetHtml()
+				@Html.DevExpress().DateEdit(s => {
+			                                  	s.Name = "ExpectedVisitDate";
+			                                  	s.Width = 150;
+                                                s.ShowModelErrors = true;
+                                                s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+			                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+			                                  	s.ReadOnly = Model.NoExpectedVisitDate;
+			                                  }).Bind(Model.ExpectedVisitDate).GetHtml()
+			</div>
+		}
+		@Html.DevExpress().Button(s => {
+		                                	s.Name = "btnSave_Visit" + Model.Id;
+		                                	s.SkinID = "DarkPink";
+		                                	s.Text = "Save";
+		                                	s.UseSubmitBehavior = true;
+		                                	s.ValidationGroup = validationGroup;
+		                                }).GetHtml()
+	}
+</div>

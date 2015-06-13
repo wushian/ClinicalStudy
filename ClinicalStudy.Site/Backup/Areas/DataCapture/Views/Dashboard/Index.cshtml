@@ -1,0 +1,12 @@
+﻿@{
+	ViewBag.Title = "Doctor's Dashboard";
+	Layout = "~/Areas/DataCapture/Views/Shared/_DataCaptureLayout.cshtml";
+}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        setActiveNavTab('patients');
+    });
+</script>
+
+@Html.Partial("_Index")

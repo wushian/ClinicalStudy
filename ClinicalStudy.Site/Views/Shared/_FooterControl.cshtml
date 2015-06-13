@@ -1,0 +1,60 @@
+﻿@using DevExpress.Web.Mvc.UI
+<footer>
+	<div id="footerContent">
+		<div class="contactDx">
+			@Html.DevExpress().Image(settings => {
+												 	settings.ImageUrl = "~/Content/Images/connectus.png";
+												 	settings.Properties.ImageHeight = 33;
+												 	settings.Properties.ImageWidth = 102;
+                               }).GetHtml()
+			@Html.DevExpress().HyperLink(settings => {
+													 	settings.Name = "forumLink";
+
+													 	settings.NavigateUrl = "http://community.devexpress.com/";
+														settings.Properties.Text = "Forum";		
+													 	settings.Properties.Target = "_blank";
+													 	settings.Properties.ImageUrl = "~/Content/Images/logo_forum.png";
+													 	settings.Properties.ImageHeight = 33;
+													 	settings.Properties.ImageWidth = 33;
+                                   }).GetHtml()
+
+			@Html.DevExpress().HyperLink(settings => {
+													 	settings.Name = "fbLink";
+
+													 	settings.NavigateUrl = "http://www.facebook.com/DevExpress";
+														settings.Properties.Text = "Facebook";		
+													 	settings.Properties.Target = "_blank";
+													 	settings.Properties.ImageUrl = "~/Content/Images/logo_fb.png";
+													 	settings.Properties.ImageHeight = 33;
+													 	settings.Properties.ImageWidth = 33;
+                                   }).GetHtml()
+
+			@Html.DevExpress().HyperLink(settings => {
+													 	settings.Name = "twitterLink";
+
+													 	settings.NavigateUrl = "http://twitter.com/Devexpress";
+														settings.Properties.Text = "Twitter";		
+													 	settings.Properties.Target = "_blank";
+													 	settings.Properties.ImageUrl = "~/Content/Images/logo_twitter.png";
+													 	settings.Properties.ImageHeight = 33;
+													 	settings.Properties.ImageWidth = 33;
+                                   }).GetHtml()
+		</div>
+
+		<div class="copyrightDx">
+			@Html.DevExpress().HyperLink(settings => {
+													 	settings.Name = "dxLink";
+
+														settings.NavigateUrl = "http://www.devexpress.com";
+														settings.Properties.Text = "DevExpress.com";		
+													 	settings.Properties.Target = "_blank";
+													 	settings.Properties.ImageUrl = "~/Content/Images/Copyright.png";
+													 	settings.Properties.ImageHeight = 29;
+													 	settings.Properties.ImageWidth = 148;
+                                   }).GetHtml()
+			<p>Copyright &copy; 1998-@DateTime.Now.Year Developer Express Inc.<br/> 
+			ALL RIGHTS RESERVED</p>
+			
+		</div>
+	</div>
+</footer>

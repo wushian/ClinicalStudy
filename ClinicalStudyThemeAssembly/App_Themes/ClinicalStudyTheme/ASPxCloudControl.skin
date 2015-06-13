@@ -1,0 +1,7 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxcc" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxcc:ASPxCloudControl runat="server" CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme"
+    ValueColor="#1b3f91" MinColor="#a9b9dd" MaxColor="#1b3f91">
+	<DisabledStyle ForeColor="#b1b1b8" />
+</dxcc:ASPxCloudControl>

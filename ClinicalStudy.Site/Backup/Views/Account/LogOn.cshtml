@@ -1,0 +1,55 @@
+﻿@using System.Web.UI.WebControls
+@model IEnumerable<ClinicalStudy.Site.Models.Account.LogOnViewModel>
+@{
+    ViewBag.Title = "Log On";
+}
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$(".logonUserChooser").click(processUserSelection);
+		$(".switchUserLink").click(processSwitchUser);
+	    
+
+		if (location.hash) {
+		    var inputHtml = '<input id="returnUrl" name="returnUrl" type="hidden" value="'
+		        + location.hash.substr(1, location.hash.length)
+		        + '"/>';
+		    $("form").append(
+		        inputHtml);
+        }
+
+		function processUserSelection(s) {
+			var uc = $(".logonUserChooserContainer");
+			var selectedId = this.id;
+
+			if (uc) {
+				uc.fadeOut(500, function () {
+					var selectedUserInfo = $("#ui_" + selectedId);
+					if (selectedUserInfo) {
+						selectedUserInfo.fadeIn(500);
+						selectedUserInfo.find("input[type=password]").val('MyPassword');
+                        ASPxClientControl.AdjustControls();
+					}
+				});
+			}
+		}
+
+		function processSwitchUser() {
+			var parent = $(this).parent();
+			if (parent)
+				parent.fadeOut(500, function() {
+					var uc = $(".logonUserChooserContainer");
+					if (uc) {
+						uc.fadeIn(500);
+					}
+				});
+		}
+	});
+</script>
+<div class="logonWrapper">
+	<div class="logonContainer">
+		@foreach (var user in Model) {
+								 		@Html.Partial("_LogonUserInfo", user)
+		}
+	</div>
+</div>

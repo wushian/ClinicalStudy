@@ -1,0 +1,5 @@
+﻿<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v12.2, Version=12.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v12.2, Version=12.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxe:ASPxValidationSummary runat="server" CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme">
+</dxe:ASPxValidationSummary>

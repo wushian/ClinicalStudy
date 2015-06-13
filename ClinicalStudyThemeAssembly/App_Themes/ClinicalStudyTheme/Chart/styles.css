@@ -1,0 +1,36 @@
+/* -- WebChartControl -- */
+.dxchartsuiLoadingDiv_ClinicalStudyTheme
+{
+	background-color: #ffffff;
+	opacity: 0.01;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);	
+}
+.dxchartsuiLoadingPanel_ClinicalStudyTheme
+{
+	font-size: 92%;
+	color: #706c70;
+	background-color: White;
+	border: 1px solid #c5c4c5;
+	border-bottom-color: #9c9a9c;
+	
+	border-collapse: separate!important;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	-webkit-box-shadow: 1px 1px 1px #e5e5e5;
+	-moz-box-shadow: 1px 1px 1px #e5e5e5;
+	box-shadow: 1px 1px 1px #e5e5e5;
+	
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.dxchartsuiLoadingPanel_ClinicalStudyTheme td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 7px 17px;
+	height: 66px;
+}
+

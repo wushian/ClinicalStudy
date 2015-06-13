@@ -1,0 +1,29 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register Assembly="DevExpress.Web.ASPxPivotGrid.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" Namespace="DevExpress.Web.ASPxPivotGrid" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.PivotGrid.v14.2.Core, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" Namespace="DevExpress.XtraPivotGrid" TagPrefix="dx" %>
+
+<dx:ASPxPivotGrid runat="server">
+<OptionsPager CurrentPageNumberFormat="{0}">
+<Summary Visible="False"></Summary>
+</OptionsPager>
+
+<OptionsLoadingPanel>
+<Image Url="PivotGrid/Loading.gif"></Image>
+
+<Style ImageSpacing="8px"></Style>
+</OptionsLoadingPanel>
+
+<Images SpriteCssFilePath="{0}/sprite.css">
+<CustomizationFieldsBackground Url="PivotGrid/pcHBack.png"></CustomizationFieldsBackground>
+
+<TreeViewNodeLoadingPanel Url="PivotGrid/tvNodeLoading.gif"></TreeViewNodeLoadingPanel>
+
+<LoadingPanel Url="PivotGrid/Loading.gif"></LoadingPanel>
+</Images>
+
+<Styles CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<LoadingPanel ImageSpacing="8px"></LoadingPanel>
+</Styles>
+
+<StylesEditors ButtonEditCellSpacing="0"></StylesEditors>
+</dx:ASPxPivotGrid>

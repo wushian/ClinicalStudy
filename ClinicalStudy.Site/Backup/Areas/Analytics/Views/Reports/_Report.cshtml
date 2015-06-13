@@ -1,0 +1,12 @@
+﻿@model ClinicalStudy.Site.Areas.Analytics.Models.REPORTS.ReportViewModel
+		   
+<h1 class="admin">@String.Format("{0} Report", Model.ReportName)</h1>
+@Html.DevExpress().ReportToolbar(
+	settings => {
+		settings.Name = "ReportToolbar";
+		settings.ReportViewerName = String.Format("{0}ReportViewer", Model.ReportName);
+	}).GetHtml()
+	
+<div class="reportContent">
+	@Html.Partial("_ReportViewer", Model)
+</div>

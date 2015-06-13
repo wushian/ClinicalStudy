@@ -1,0 +1,552 @@
+.dxpgControl_ClinicalStudyTheme
+{
+	color: #201f35;
+	font-size: 100%;
+	border: 1px solid #c5c4c5;
+	background-color: white;
+}
+.dxpgContainerCell_ClinicalStudyTheme
+{
+	vertical-align: top;
+}
+.dxpgMainTable_ClinicalStudyTheme
+{
+	color: #201f35;
+	font-size: 100%;
+	border-width: 0;
+	border-collapse: separate;
+	width: 100%;
+	text-align: left;
+}
+.dxpgMainTable_ClinicalStudyTheme caption
+{
+	font-size: 100%;
+	font-weight: normal;
+	padding: 3px 3px 5px;
+	text-align: center;
+	background: #ffffff;
+	color: #706C70;
+	border-bottom: 1px solid #c5c4c5;
+}
+.dxpgHeader_ClinicalStudyTheme
+{
+	border-width: 0;
+	color: #3E3B3E;
+	background: #fff6da;
+	cursor: pointer;
+	white-space: nowrap;
+	text-align: left;
+}
+.dxpgHeaderTable_ClinicalStudyTheme
+{
+	border: 1px solid #e3c692;
+	width: 100%;
+}
+.dxpgHeaderGroupButton_ClinicalStudyTheme
+{
+	padding-left: 4px;
+	vertical-align: middle;
+}
+.dxpgHeaderText_ClinicalStudyTheme
+{
+    padding: 8px 6px;
+}
+.dxpgHeaderSort_ClinicalStudyTheme
+{
+	padding: 0 4px 0 0;
+	vertical-align: middle;
+}
+.dxpgHeaderFilter_ClinicalStudyTheme
+{
+	padding: 2px 2px 2px 0;
+	vertical-align: middle;
+}
+.dxpgHeaderHover_ClinicalStudyTheme
+{
+	background: #fff6da;
+}
+.dxpgArea_ClinicalStudyTheme, .dxpgArea_ClinicalStudyTheme table
+{
+	color: #706C70;
+	font-size: 100%;
+}
+.dxpgArea_ClinicalStudyTheme
+{
+	border-width: 1px;
+	border-color: #c5c4c5;
+	border-style: none;
+	background-color: #ffffff;
+}
+.dxpgColumnArea_ClinicalStudyTheme
+{
+	border-bottom-style: solid;
+	border-bottom-color: #e3c692;
+}
+.dxpgRowArea_ClinicalStudyTheme
+{
+}
+.dxpgDataArea_ClinicalStudyTheme
+{
+}
+.dxpgFilterArea_ClinicalStudyTheme
+{
+	color: #3b3e3b;
+	background: #ffffff;
+	border-bottom-style: none;
+}
+.dxpgEmptyArea_ClinicalStudyTheme
+{
+	cursor: default;
+	padding: 6px;
+}
+.dxpgColumnFieldValue_ClinicalStudyTheme
+{
+	color: #3e3b3e;
+	background: #fff6da;
+	border: 1px solid #e3c692;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+	padding: 8px 6px;
+	font-weight: normal;
+	text-align: left;
+}
+.dxpgColumnTotalFieldValue_ClinicalStudyTheme
+{
+	color: #3e3b3e;
+	background: #ffefc3;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+}
+.dxpgColumnGrandTotalFieldValue_ClinicalStudyTheme
+{
+	background: #ffefc3;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+}
+.dxpgRowFieldValue_ClinicalStudyTheme
+{
+	color: #706C70;
+	background: #fff6da;
+	border: 1px solid #e3c692;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+	padding: 8px 6px;
+	font-weight: normal;
+	text-align: left;
+}
+.dxpgRowTotalFieldValue_ClinicalStudyTheme
+{
+	background: #ffefc3;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.dxpgRowTreeFieldValue_ClinicalStudyTheme
+{	
+	padding: 0;
+	font: 0px;
+}
+.dxpgRowGrandTotalFieldValue_ClinicalStudyTheme
+{
+	background: #ffefc3;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.dxpgCollapsedButton_ClinicalStudyTheme
+{
+	vertical-align: -2px;
+	border: 0;
+	margin-right: 5px;
+}
+.dxpgSortByColumnImage_ClinicalStudyTheme
+{
+	vertical-align: -1px;
+	border: 0;
+	margin-left: 5px;
+}
+.dxpgCell_ClinicalStudyTheme 
+{
+	color: #706C70;
+	text-align: left;
+	background-color: White;
+	border-color: #dcdcdc;
+	border-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-bottom-style: none;
+	border-right-style: none;
+	padding: 8px 6px;
+	white-space: nowrap;
+}
+.dxpgKPICell_ClinicalStudyTheme
+{
+	text-align: center;
+	vertical-align: middle;
+}
+.dxpgTotalCell_ClinicalStudyTheme
+{
+	background-color: #f7f7f7;
+}
+.dxpgGrandTotalCell_ClinicalStudyTheme
+{
+	background-color: #f7f7f7;
+}
+.dxpgFilterWindow_ClinicalStudyTheme
+{
+	color: #201f35;
+	font: 11px Verdana;
+	border: 1px solid #9da0aa;
+}
+.dxpgFilterItemsArea_ClinicalStudyTheme
+{
+	color: #201f35;
+	background-color: White;
+}
+.dxpgFilterItem_ClinicalStudyTheme
+{
+	font: 11px Verdana;
+    white-space: nowrap;
+}
+.dxpgFilterButton_ClinicalStudyTheme
+{
+	font: 11px Verdana;
+	padding: 2px 6px;
+}
+.dxpgFilterButtonPanel_ClinicalStudyTheme
+{
+	font: 11px Verdana;
+	color: #201f35;
+	background-color: #ebecef;
+	border-top: 1px solid #9da0aa;
+}
+.dxpgLoadingDiv_ClinicalStudyTheme
+{
+	background-color: #ffffff;
+	opacity: 0.01;
+	filter: progid:DXImageTransform.Microsoft.Alpha(Style=0, Opacity=1);
+}
+.dxpgTopPager_ClinicalStudyTheme,
+.dxpgBottomPager_ClinicalStudyTheme
+{
+    background: #f0f0f0;
+    border-color: #c5c4c5;
+    border-style: solid;
+}
+.dxpgTopPager_ClinicalStudyTheme
+{
+    border-width: 0 0 1px 0;
+}
+.dxpgBottomPager_ClinicalStudyTheme
+{
+	border-width: 1px 0 0 0;
+}
+.dxpgCustomizationFieldsHeader_ClinicalStudyTheme
+{
+	color: #201f35;
+	font: 11px Verdana;
+}
+.dxpgCustomizationFieldsContent_ClinicalStudyTheme
+{
+	padding: 0px !important;
+}
+.dxpgLoadingPanel_ClinicalStudyTheme
+{
+	font-size: 92%;
+	color: #706c70;
+	background-color: White;
+	border: 1px solid #c5c4c5;
+	border-bottom-color: #9c9a9c;
+	
+	border-collapse: separate!important;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	-webkit-box-shadow: 1px 1px 1px #e5e5e5;
+	-moz-box-shadow: 1px 1px 1px #e5e5e5;
+	box-shadow: 1px 1px 1px #e5e5e5;
+	
+	-webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.dxpgLoadingPanel_ClinicalStudyTheme td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 7px 17px;
+	height: 66px;
+}
+.dxpgMenuItem_ClinicalStudyTheme
+{
+	font: 11px Verdana;
+}
+.dxpgDataHeadersImage_ClinicalStudyTheme
+{
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+.dxpgPrefilterPanelContainer_ClinicalStudyTheme
+{
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+.dxpgPrefilterPanel_ClinicalStudyTheme
+{
+	border: none;
+	background: #f9f9fc;
+}
+.dxpgPrefilterPanelLink_ClinicalStudyTheme
+{
+	color: #1b3f91;
+	text-decoration: underline;
+}
+.dxpgPrefilterPanelCheckBoxCell_ClinicalStudyTheme
+{
+	padding: 0 3px;
+	padding-right: 7px;
+}
+.dxpgPrefilterPanelImageCell_ClinicalStudyTheme
+{
+	padding: 0 3px;
+	padding-right: 1px;
+	cursor: pointer;
+}
+.dxpgPrefilterPanelExpressionCell_ClinicalStudyTheme
+{
+	font-size: 11px;
+	padding: 5px 5px 8px 0;
+	white-space: nowrap;
+}
+.dxpgPrefilterPanelClearButtonCell_ClinicalStudyTheme
+{
+	font-size: 11px;
+	padding: 5px 6px 8px;
+}
+.dxpgFilterBuilderMainArea_ClinicalStudyTheme
+{
+	background: white;
+	padding: 6px 2px;
+} 
+.dxpgFilterBuilderButtonArea_ClinicalStudyTheme
+{
+	background: #ebecef;
+	border-top: 1px solid #abacb9;
+	padding: 6px;
+}
+.dxpgGroupSeparator_ClinicalStudyTheme
+{
+	vertical-align: middle;
+}
+.dxpgCustFieldsFilterAreaHeaders_ClinicalStudyTheme,
+.dxpgCustFieldsRowAreaHeaders_ClinicalStudyTheme,
+.dxpgCustFieldsColumnAreaHeaders_ClinicalStudyTheme,
+.dxpgCustFieldsDataAreaHeaders_ClinicalStudyTheme,
+.BottomPanelOnly1by4 .dxpgFLFRDiv_ClinicalStudyTheme,
+.BottomPanelOnly1by4 .dxpgFLCDDiv_ClinicalStudyTheme
+{
+    width: 100%;
+    height: 50%;
+}
+.StackedDefault .dxpgCustFieldsFieldList_ClinicalStudyTheme
+{
+    height: 33%;
+}
+.StackedDefault .dxpgFLFRDiv_ClinicalStudyTheme
+{
+    width: 50%;
+    height: 66%;
+    float: left;
+}
+.StackedDefault .dxpgFLCDDiv_ClinicalStudyTheme
+{
+    width: 50%;
+    height: 66%;
+    float: right;
+}
+.StackedDefault .dxpgCustFieldsFilterAreaHeaders_ClinicalStudyTheme .dxpgFLTextDiv_ClinicalStudyTheme,
+.StackedDefault .dxpgCustFieldsColumnAreaHeaders_ClinicalStudyTheme .dxpgFLTextDiv_ClinicalStudyTheme
+{
+    height: 47px;
+}
+.TopPanelOnly .dxpgCustFieldsFieldList_ClinicalStudyTheme
+{
+    width: 100%;
+    height: 100%;
+}
+.TopPanelOnly .dxpgFLDefereDiv_ClinicalStudyTheme .dxeBase_ClinicalStudyTheme,
+.TopPanelOnly .dxpgFLDefereDiv_ClinicalStudyTheme .dxpgFLDefereDB_ClinicalStudyTheme,
+.BottomPanelOnly1by4 .dxpgCustFieldsFieldList_ClinicalStudyTheme,
+.TopPanelOnly .dxpgFLFRDiv_ClinicalStudyTheme,
+.TopPanelOnly .dxpgFLCDDiv_ClinicalStudyTheme,
+.BottomPanelOnly2by2 .dxpgCustFieldsFieldList_ClinicalStudyTheme,
+.TopPanelOnly .dxpgFLTextDiv_ClinicalStudyTheme div
+{
+    display: none;
+}
+.TopPanelOnly .dxpgFLTextDiv_ClinicalStudyTheme
+{
+    height: 10px;
+}
+.TopPanelOnly .dxpgFLDefereDiv_ClinicalStudyTheme
+{
+    height: 16px;
+}
+.BottomPanelOnly2by2 .dxpgFLFRDiv_ClinicalStudyTheme,
+.StackedSideBySide .dxpgCustFieldsFieldList_ClinicalStudyTheme
+{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.BottomPanelOnly2by2 .dxpgFLCDDiv_ClinicalStudyTheme
+{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.StackedSideBySide .dxpgFLFRDiv_ClinicalStudyTheme,
+.StackedSideBySide .dxpgFLCDDiv_ClinicalStudyTheme
+{
+    width: 50%;
+    height: 50%;
+    float: right;
+}
+.dxpgCustFields_ClinicalStudyTheme
+{
+    display: block;
+    position: relative;
+}
+.dxpgFLListDiv_ClinicalStudyTheme div
+{
+    border: 1px solid #9da0aa;
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 1px;
+    background: White;
+    overflow: hidden;
+}
+.dxpgFLListDiv_ClinicalStudyTheme div div
+{
+    height: 100%;
+    padding: 0px;
+    border-color: #9da0aa;
+    border-style: solid;
+    border-width: 0;
+    overflow-y: auto;
+}
+.DragOver .dxpgFLListDiv_ClinicalStudyTheme div
+{
+    background: #ffd324;
+}
+.DragOver .dxpgFLListDiv_ClinicalStudyTheme div div
+{
+    background: White;
+}
+.dxpgFLListDiv_ClinicalStudyTheme
+{
+    padding: 0px 3px;
+}
+.dxpgFLButtonDiv_ClinicalStudyTheme .dxbButton_ClinicalStudyTheme div.dxb
+{
+    padding: 2px 8px 1px;
+}
+.dxpgFLButtonDiv_ClinicalStudyTheme .dxbButton_ClinicalStudyTheme div.dxbf
+{
+	border: 1px dotted Black;
+	padding: 1px 7px 0px;
+}
+.dxpgFLTextDiv_ClinicalStudyTheme
+{
+    height: 28px;
+}
+.dxpgFLTextDiv_ClinicalStudyTheme div
+{
+   display: block;
+   float: left;
+   margin: -17px 0px 3px;
+   left: 6px;
+   top: 100%;
+   position: relative;
+}
+.dxpgFLButtonDiv_ClinicalStudyTheme
+{
+    float: right;
+    height: 28px;
+    position:relative;
+    z-index:1;
+}
+.dxpgFLDefereDiv_ClinicalStudyTheme
+{
+    height: 46px;
+}
+.dxpgCustFieldsDiv_ClinicalStudyTheme
+{
+     clear: both;
+     padding: 0px 9px;
+}
+.dxpgFLButton_ClinicalStudyTheme
+{
+     margin: 7px 12px 0px 0px;
+     width: 40px;
+     height: 23px;
+}
+.dxpgFLDefereDiv_ClinicalStudyTheme .dxeBase_ClinicalStudyTheme
+{
+     float: left;
+     display: block;
+     border-collapse: separate;
+     padding: 13px 0px 0px 0px;
+     margin-left: 8px;
+}
+.dxpgFLDefereDB_ClinicalStudyTheme
+{
+    float: right;
+    display: block;
+    padding: 0px 12px 0px 0px;
+    margin-top: 12px;
+}
+.dxpgFLDefereDiv_ClinicalStudyTheme .dxbButton_ClinicalStudyTheme div.dxb
+{
+    padding: 2px 14px;
+}
+.dxpgFLDefereDiv_ClinicalStudyTheme .dxbButton_ClinicalStudyTheme div.dxbf
+{
+    padding: 1px 13px;
+    border: 1px dotted Black;
+}
+.dxpgFLListDiv_ClinicalStudyTheme table
+{
+ width:100%;
+ table-layout:fixed;  
+ overflow:visible;
+}
+.dxpgFLListDiv_ClinicalStudyTheme table table td
+{
+     overflow:hidden; 
+}
+div.dxpgFLTextImgDiv_ClinicalStudyTheme
+{
+    display:block;
+    height:16px;
+    width:16px;
+    margin:-18px 0px 3px 0px;
+    left:3px;
+}

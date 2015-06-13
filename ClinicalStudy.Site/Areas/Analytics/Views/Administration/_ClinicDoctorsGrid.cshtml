@@ -1,0 +1,33 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.Analytics.Models.ClinicDetailsViewModel
+
+@Html.DevExpress().GridView(s => {
+	                                  	s.Name = "clinicDoctorsGrid_" + Model.ClinicId;
+	                                  	s.CallbackRouteValues = new {Controller = "Administration", Action = "ClinicDoctors", clinicId = Model.ClinicId};
+	                                  	s.SettingsPager.PageSize = 3;
+	                                  	s.SettingsPager.AlwaysShowPager = true;
+	                                  	s.SettingsPager.ShowNumericButtons = true;
+	                                  	s.SettingsPager.NumericButtonCount = 4;
+	                                  	s.Width = Unit.Percentage(100);
+
+	                                  	s.Columns.Add("Photo").Width = 112;
+	                                  	s.Columns.Add("FirstName").Width = 100;
+	                                  	s.Columns.Add("LastName").Width = 110;
+	                                  	s.Columns.Add("Login").Width = 90;
+	                                  	s.Columns.Add("Role").Width = 100;
+	                                  	s.Columns.Add("PatientsCount", "Number of Patients");
+	                                  	s.SetDataItemTemplateContent(c => {
+	                                  	                             	if (c.Column.FieldName == "Photo") {
+																			Html.DevExpress().BinaryImage(
+																				imageSettings => {
+																					imageSettings.Name = "Photo" + DataBinder.Eval(c.DataItem, "DoctorId");
+																					imageSettings.Width = 88;
+																					imageSettings.Height = 88;
+																					imageSettings.ContentBytes = DataBinder.Eval(c.DataItem, "Photo") as byte[];
+																				}).Render();
+																		}
+																		else {
+																			ViewContext.Writer.Write(String.Format("<div style='height: 70px;'>{0}</div>", c.Text));
+																		}
+	                                  	                             });
+	                                  }).Bind(Model.Doctors).GetHtml()

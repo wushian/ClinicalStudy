@@ -1,0 +1,180 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.VitalsFormViewModel
+@{
+	string validationGroup = string.Format("form{0}Validation", Model.FormId);
+}
+
+<h2>@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+@using (Ajax.BeginForm("EditVitalsForm", "Form", null,
+	new AjaxOptions {
+		UpdateTargetId = "formPanel" + Model.FormId.ToString(),
+		LoadingElementId = "loadingIndicator",
+		OnSuccess = "processDataChanges"
+	}, new { @id = "editForm" + Model.FormId })){
+	@Html.HiddenFor(model => model.Id)
+	@Html.HiddenFor(model => model.FormId)
+	@Html.HiddenFor(model => model.FormCaption)
+	@Html.HiddenFor(model => model.PatientNumber)
+	@Html.HiddenFor(model => model.VisitName)
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Actual Time:";
+	                               	    s.AssociatedControlName = "ActualTime";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.ActualTimeQuestionId, Model, Url)
+	    </div>
+		@Html.DevExpress().TimeEdit(s => {
+	                                  	s.Name = "ActualTime";
+                                  	s.Width = 150;
+                                  	s.ShowModelErrors = true;
+                                  	s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.ActualTime).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Height, cm:";
+	                               	    s.AssociatedControlName = "Height";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.HeightQuestionId, Model, Url)
+	    </div>
+		@Html.DevExpress().SpinEdit(s => {
+	                                  	s.Name = "Height";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+	                                  	s.Properties.Increment = 1;
+                                        s.Properties.LargeIncrement = 10;
+                                        s.Properties.MinValue = 60;
+	                                  	s.Properties.MaxValue = 250;
+	                                  	s.Properties.SpinButtons.ShowLargeIncrementButtons = true;
+	                                  	s.Properties.NumberFormat = SpinEditNumberFormat.Number;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.Height).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Weight, kg:";
+	                               	    s.AssociatedControlName = "Weight";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.WeightQuestionId, Model, Url)
+	    </div>
+		@Html.DevExpress().SpinEdit(s => {
+	                                  	s.Name = "Weight";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+	                                  	s.Properties.Increment = 0.1m;
+	                                  	s.Properties.LargeIncrement = 1;
+                                        s.Properties.DecimalPlaces = 2;
+                                        s.Properties.MinValue = 20;
+	                                  	s.Properties.MaxValue = 200;
+	                                  	s.Properties.NumberFormat = SpinEditNumberFormat.Number;
+	                                  	s.Properties.SpinButtons.ShowLargeIncrementButtons = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.Weight).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Temperature, °C:";
+	                               	    s.AssociatedControlName = "Temperature";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.TemperatureQuestionId, Model, Url)
+	    </div>
+		@Html.DevExpress().SpinEdit(s => {
+	                                  	s.Name = "Temperature";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+	                                  	s.Properties.Increment = 0.1m;
+	                                  	s.Properties.LargeIncrement = 1;
+                                        s.Properties.DecimalPlaces = 1;
+                                        s.Properties.MinValue = 35.4m;
+	                                  	s.Properties.MaxValue = 42.0m;
+	                                  	s.Properties.NumberFormat = SpinEditNumberFormat.Number;
+	                                  	s.Properties.SpinButtons.ShowLargeIncrementButtons = true;
+	                                  	s.EncodeHtml = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.Temperature).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Heart Rate, bpm:";
+	                               	    s.AssociatedControlName = "HeartRate";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.HeartRateQuestionId, Model, Url)
+	    </div>
+		@Html.DevExpress().SpinEdit(s => {
+	                                  	s.Name = "HeartRate";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+	                                  	s.Properties.Increment = 1;
+                                        s.Properties.LargeIncrement = 10;
+                                        s.Properties.MinValue = 10;
+	                                  	s.Properties.MaxValue = 200;
+	                                  	s.Properties.NumberFormat = SpinEditNumberFormat.Number;
+	                                  	s.Properties.SpinButtons.ShowLargeIncrementButtons = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.HeartRate).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Systolic Blood Pressure, mmHg:";
+	                               	    s.AssociatedControlName = "BloodPressureSystolic";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.BloodPressureSystolicQuestionId, Model, Url)
+	    </div>
+		@Html.DevExpress().TextBox(s => {
+	                                 	s.Name = "BloodPressureSystolic";
+	                                 	s.Width = 150;
+	                                 	s.ShowModelErrors = true;
+	                                 	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                 }).Bind(Model.BloodPressureSystolic).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Diastolic Blood Pressure, mmHg:";
+	                               	    s.AssociatedControlName = "BloodPressureDiastolic";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.BloodPressureDiastolicQuestionId, Model, Url)
+	    </div>
+		@Html.DevExpress().TextBox(s => {
+	                                 	s.Name = "BloodPressureDiastolic";
+	                                 	s.Width = 150;
+	                                 	s.ShowModelErrors = true;
+	                                 	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                 }).Bind(Model.BloodPressureDiastolic).GetHtml()
+	</div>
+
+	@FormHelpers.FormSaveCancelButtons(Html, Ajax, Model)
+	@FormHelpers.FormDataChangePopup(Html, ViewContext, Model)
+}

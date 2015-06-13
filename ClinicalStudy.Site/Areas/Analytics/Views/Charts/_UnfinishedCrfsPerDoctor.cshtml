@@ -1,0 +1,4 @@
+﻿@model ClinicalStudy.Site.Areas.Analytics.Models.Charts.UnfinishedCrfsList
+
+<h1 class="admin">@String.Format("Unfinished CRFs in {0}", Model.ClinicName)</h1>
+@Html.Partial("_UnfinishedCrfsPerDoctorChart", Model)

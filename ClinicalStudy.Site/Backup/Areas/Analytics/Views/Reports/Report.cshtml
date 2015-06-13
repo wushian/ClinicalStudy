@@ -1,0 +1,8 @@
+﻿@model ClinicalStudy.Site.Areas.Analytics.Models.REPORTS.ReportViewModel
+
+@{
+	ViewBag.Title = String.Format("{0} Report", Model.ReportName);
+	Layout = "~/Areas/Analytics/Views/Shared/_AnalyticsLayout.cshtml";
+}
+
+@Html.Partial("_Report", Model)

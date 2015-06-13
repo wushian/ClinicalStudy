@@ -1,0 +1,7 @@
+﻿@model List<ClinicalStudy.Site.Areas.Analytics.Models.Analytics.AdverseEventsAnalyticsViewModel>
+
+@{
+	ViewBag.Title = "Adverse Events analytics";
+	Layout = "~/Areas/Analytics/Views/Shared/_AnalyticsLayout.cshtml";
+}
+@Html.Partial("_AdverseEvents", Model)

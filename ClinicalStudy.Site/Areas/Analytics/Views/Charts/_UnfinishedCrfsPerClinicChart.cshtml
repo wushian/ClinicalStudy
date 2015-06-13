@@ -1,0 +1,41 @@
+﻿@using ClinicalStudy.Site.Areas.Analytics.Helpers
+@using ViewType = DevExpress.XtraCharts.ViewType
+@model ClinicalStudy.Site.Areas.Analytics.Models.Charts.UnfinishedCrfsList
+
+@Html.DevExpress().Chart(s => {
+	                               	s.Name = "UnfinishedCrfsPerClinicChart";
+
+                                    s.BorderOptions.Visibility = DefaultBoolean.False;
+	                               	s.Height = 400;
+	                               	s.Width = 700;
+	                               	s.Legend.AlignmentHorizontal = LegendAlignmentHorizontal.RightOutside;
+	                               	s.Legend.AlignmentVertical = LegendAlignmentVertical.Top;
+
+	                               	s.ToolTipEnabled = DefaultBoolean.False;
+	                               	s.ToolTipOptions.ShowForPoints = false;
+
+
+	                               	s.SeriesTemplate.ChangeView(ViewType.Bar);
+	                               	s.SeriesDataMember = "FormType";
+	                               	s.SeriesTemplate.ArgumentDataMember = "EntityName";
+	                               	s.SeriesTemplate.ValueDataMembers[0] = "FormsNumber";
+	                               	s.SeriesTemplate.Label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+
+
+	                               	var diagram = (XYDiagram) s.Diagram;
+	                               	diagram.AxisX.Label.Angle = 30;
+                                    diagram.AxisY.NumericScaleOptions.AutoGrid = false;
+                                    diagram.AxisY.NumericScaleOptions.GridSpacing = 1;
+                                    diagram.AxisY.Tickmarks.MinorVisible = false;
+                                    s.CrosshairEnabled = DefaultBoolean.False;
+
+
+	                               	s.PaletteRepository.Add(ChartHelper.StudyProgressPaletteName, ChartHelper.StudyProgressPalette);
+	                               	s.PaletteName = ChartHelper.StudyProgressPaletteName;
+
+
+	                               	s.EnableClientSideAPI = true;
+	                               	s.CallbackRouteValues = new {Controller = "Chart", Action = "DrillDownPartial"};
+	                               	s.ClientSideEvents.ObjectHotTracked = "function (s, e) { UnfinishedCrfsPerClinicChart.SetCursor(e.hitInfo.inSeries ? 'pointer' : 'default'); }";
+	                               	s.ClientSideEvents.ObjectSelected = "function (s, e) { if(e.hitInfo.inSeriesPoint) { var url = '" + DevExpressHelper.GetUrl(new {Controller = "Charts", Action = "UnfinishedCrfsPerDoctor"}) + "?clinicName=' + e.hitInfo.seriesPoint.argument; loadContent(url, e.hitInfo.seriesPoint.argument, loadChart); } }";
+	                               }).Bind(Model).GetHtml()

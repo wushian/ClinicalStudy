@@ -1,0 +1,37 @@
+﻿@using ClinicalStudy.Site.Areas.Analytics.Helpers
+@using ViewType = DevExpress.XtraCharts.ViewType
+@model List<ClinicalStudy.Site.Areas.Analytics.Models.Charts.QueryRecordViewModel>
+@Html.DevExpress().Chart(s => {
+	                               	s.Name = "QueryChart";
+
+	                               	s.BorderOptions.Visibility = DefaultBoolean.False;
+	                               	s.Height = 400;
+	                               	s.Width = 700;
+                                    s.Legend.AlignmentHorizontal = LegendAlignmentHorizontal.RightOutside;
+                                    s.Legend.AlignmentVertical = LegendAlignmentVertical.Top;
+
+	                               	s.ToolTipEnabled = DefaultBoolean.False;
+	                               	s.ToolTipOptions.ShowForPoints = true;
+
+	                               	s.SeriesTemplate.ChangeView(ViewType.StackedBar);
+	                               	s.SeriesDataMember = "FormType";
+	                               	s.SeriesTemplate.ArgumentDataMember = "ClinicName";
+	                               	s.SeriesTemplate.ValueDataMembers[0] = "QueriesNumber";
+	                               	s.SeriesTemplate.Label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+                                    s.SeriesTemplate.Label.TextPattern = "{V:N2}";
+
+
+	                               	var diagram = (XYDiagram) s.Diagram;
+	                               	diagram.AxisX.Label.Angle = 30;
+                                    diagram.AxisY.NumericScaleOptions.AutoGrid = false;
+                                    diagram.AxisY.NumericScaleOptions.GridSpacing = 1;
+                                    diagram.AxisY.Tickmarks.MinorVisible = false;
+                                    s.CrosshairEnabled = DefaultBoolean.False;
+
+	                               	s.PaletteRepository.Add(ChartHelper.StudyProgressPaletteName, ChartHelper.StudyProgressPalette);
+	                               	s.PaletteName = ChartHelper.StudyProgressPaletteName;
+
+	                               	s.EnableClientSideAPI = true;
+	                               	s.CallbackRouteValues = new {Controller = "Chart", Action = "DrillDownPartial"};
+	                               	//s.ClientSideEvents.ObjectHotTracked = "function (s, e) { QueryChart.SetCursor(e.hitInfo.inSeries ? 'pointer' : 'default'); }";
+	                               }).Bind(Model).GetHtml()

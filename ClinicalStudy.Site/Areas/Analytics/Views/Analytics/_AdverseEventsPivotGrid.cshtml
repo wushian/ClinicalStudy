@@ -1,0 +1,79 @@
+﻿@using System.Web.UI.WebControls
+@model List<ClinicalStudy.Site.Areas.Analytics.Models.Analytics.AdverseEventsAnalyticsViewModel>
+
+@Html.DevExpress().PivotGrid(
+	settings => {
+		settings.Name = "aePivotGrid";
+		settings.CallbackRouteValues = new {Controller = "Analytics", Action = "AdverseEventsPartial"};
+		settings.Width = Unit.Percentage(100);
+		settings.OptionsView.ShowHorizontalScrollBar = true;
+		settings.OptionsView.ShowFilterHeaders = false;
+        settings.OptionsView.ShowContextMenus = false;
+        
+		settings.CustomizationFieldsLeft = 600;
+		settings.CustomizationFieldsTop = 400;
+        settings.OptionsFilter.NativeCheckBoxes = false;
+
+		settings.OptionsPager.ShowNumericButtons = true;
+		settings.OptionsPager.NumericButtonCount = 4;
+		
+		settings.Groups.Add("Clinics - Doctors");
+		settings.Groups.Add("Intensity - Relationship");
+
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.FilterArea;
+		                    	field.AreaIndex = 0;
+		                    	field.FieldName = "Race";
+		                    	field.Caption = "Race";
+		                    });
+
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.FilterArea;
+		                    	field.AreaIndex = 0;
+		                    	field.FieldName = "Gender";
+		                    	field.Caption = "Gender";
+		                    });
+
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.RowArea;
+		                    	field.AreaIndex = 0;
+		                    	field.Caption = "Clinic";
+		                    	field.FieldName = "ClinicName";
+		                    	field.GroupIndex = 0;
+		                    	field.InnerGroupIndex = 0;
+		                    	field.CustomTotals.Add(PivotSummaryType.Count);
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.ColumnArea;
+		                    	field.AreaIndex = 0;
+		                    	field.Caption = "Intensity";
+		                    	field.FieldName = "Intensity";
+		                    	field.GroupIndex = 1;
+		                    	field.InnerGroupIndex = 0;
+		                    	field.UnboundFieldName = "Intensity";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.ColumnArea;
+		                    	field.AreaIndex = 1;
+		                    	field.Caption = "Relationship to Investigational Drug";
+		                    	field.FieldName = "RelationshipToInvestigationalDrug";
+		                    	field.ExpandedInFieldsGroup = false;
+		                    	field.GroupIndex = 1;
+		                    	field.InnerGroupIndex = 1;
+		                    	field.UnboundFieldName = "RelationshipToInvestigationalDrug";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.DataArea;
+		                    	field.AreaIndex = 0;
+		                    	field.Caption = "Adverse Events Count";
+		                    	field.FieldName = "AesCount";
+		                    });
+		settings.Fields.Add(field => {
+		                    	field.Area = PivotArea.RowArea;
+		                    	field.AreaIndex = 1;
+		                    	field.Caption = "Doctor";
+		                    	field.FieldName = "DoctorName";
+		                    	field.GroupIndex = 0;
+		                    	field.InnerGroupIndex = 1;
+		                    });
+	}).Bind(Model).GetHtml()

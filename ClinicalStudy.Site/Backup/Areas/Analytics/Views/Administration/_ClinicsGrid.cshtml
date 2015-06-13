@@ -1,0 +1,19 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.Analytics.Models.ClinicMasterViewModel
+
+@Html.DevExpress().GridView(
+	s => {
+		s.Name = "clinicsGrid";
+		s.SkinID = "Master";
+		s.CallbackRouteValues = new {Controller = "Administration", Action = "ClinicsPartial"};
+		s.Width = Unit.Pixel(720);
+
+		s.KeyFieldName = "ClinicId";
+		s.Columns.Add("ClinicName", "Clinic");
+		s.Columns.Add("DoctorsCount", "Number of Doctors");
+
+		s.SettingsDetail.AllowOnlyOneMasterRowExpanded = true;
+		s.SettingsDetail.ShowDetailRow = true;
+
+		s.SetDetailRowTemplateContent(c => Html.RenderAction("ClinicDoctors", new {clinicId = DataBinder.Eval(c.DataItem, "ClinicId")}));
+	}).Bind(Model.Clinics).GetHtml()

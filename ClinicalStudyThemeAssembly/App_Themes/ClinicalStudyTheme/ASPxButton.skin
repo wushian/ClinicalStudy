@@ -1,0 +1,14 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dx:ASPxButton runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css"></dx:ASPxButton>
+
+<dx:ASPxButton runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="Yellow_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="Yellow"></dx:ASPxButton>
+
+<dx:ASPxButton runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="Turquoise_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="Turquoise"></dx:ASPxButton>
+
+<dx:ASPxButton runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="DarkPink_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="DarkPink"></dx:ASPxButton>
+
+<dx:ASPxButton runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="DarkGrey_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="DarkGrey"></dx:ASPxButton>
+
+<dx:ASPxButton runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="Grey_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="Grey"></dx:ASPxButton>

@@ -1,0 +1,16 @@
+﻿@model string
+<div class="loggedUser">
+    @Html.DevExpress().Label(s=> {
+								 	s.Text = String.Format("Hello, Dr. {0}", @Model);
+									s.ControlStyle.CssClass = "title";
+                               }).GetHtml()
+	@Html.DevExpress().Button(s => {
+								   	s.Name = "btnLogout";
+								   	s.SkinID = "DarkGrey";
+								   	s.Text = "Logout";
+								   	s.RouteValues = new {Action = "LogOff", Controller = "Account", Area = ""};
+									s.ControlStyle.CssClass = "logoutLink";
+                                	s.CausesValidation = false;
+                                }).GetHtml()
+
+</div>

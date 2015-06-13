@@ -1,0 +1,60 @@
+﻿@using System.Drawing
+@using ClinicalStudy.Site.Areas.Analytics.Helpers
+@using ViewType = DevExpress.XtraCharts.ViewType
+@model ClinicalStudy.Site.Areas.Analytics.Models.Charts.PatientStateList
+@Html.DevExpress().Chart(s => {
+	                               	s.Name = "PatientsPerVisitPerClinicChart";
+
+                                    s.BorderOptions.Visibility = DefaultBoolean.False;
+	                               	s.Height = 400;
+	                               	s.Width = 700;
+	                               	s.Legend.AlignmentHorizontal = LegendAlignmentHorizontal.Right;
+	                               	s.Legend.AlignmentVertical = LegendAlignmentVertical.TopOutside;
+
+	                               	s.ToolTipEnabled = DefaultBoolean.False;
+	                               	s.ToolTipOptions.ShowForPoints = false;
+
+	                               	var series = new Series(Model.PatientState, ViewType.Bar);
+                                    series.LegendTextPattern = "{A}: {V}";
+                                    series.Label.TextPattern = "{V}";
+	                               	series.ArgumentDataMember = "EntityCaption";
+	                               	series.ValueDataMembers[0] = "PatientsNumber";
+	                               	s.Series.Add(series);
+
+	                               	series.Label.ResolveOverlappingMode = ResolveOverlappingMode.HideOverlapped;
+	                               	var diagram = (XYDiagram) s.Diagram;
+	                               	diagram.AxisX.Label.Angle = 30;
+                                    diagram.AxisY.NumericScaleOptions.AutoGrid = false;
+                                    diagram.AxisY.NumericScaleOptions.GridSpacing = 1;
+                                    diagram.AxisY.Tickmarks.MinorVisible = false;
+                                    s.CrosshairEnabled = DefaultBoolean.False;
+    
+	                               	s.Titles.Add(new ChartTitle {
+										Alignment = StringAlignment.Far,
+										Dock = ChartTitleDockStyle.Bottom,
+										Font = new Font("Tahoma", 8),
+										TextColor = Color.Gray,
+										Text = "Click to see detailed progress per doctor"
+									});
+
+
+	                               	s.PaletteRepository.Add(ChartHelper.StudyProgressPaletteName, ChartHelper.StudyProgressPalette);
+	                               	s.PaletteName = ChartHelper.StudyProgressPaletteName;
+	                               	s.PaletteBaseColorNumber = Model.PatientStateColorNumber;
+
+	                               	s.EnableClientSideAPI = true;
+	                               	s.CallbackRouteValues = new {Controller = "Chart", Action = "DrillDownPartial"};
+	                               	s.ClientSideEvents.ObjectHotTracked = "function (s, e) { PatientsPerVisitPerClinicChart.SetCursor(e.hitInfo.inSeries ? 'pointer' : 'default'); }";
+	                               	s.ClientSideEvents.ObjectSelected = "function (s, e) { if(e.hitInfo.inSeriesPoint) { var url = '" + DevExpressHelper.GetUrl(new {Controller = "Charts", Action = "PatientsPerVisitPerDoctor"}) + "?studyState=" + Model.PatientState + "&clinicName=' + e.hitInfo.seriesPoint.argument + '&stateNumber=" + Model.PatientStateColorNumber + "'; loadContent(url, e.hitInfo.seriesPoint.argument, loadChart); } }";
+	                               }).Bind(Model).GetHtml()
+<br />
+<br />
+@Ajax.ActionLink("Back to high-level chart",
+	"PatientsPerVisit",
+	null,
+	new AjaxOptions {
+		UpdateTargetId = "contentPanel",
+		HttpMethod = "GET",
+		LoadingElementId = "loadingIndicator"
+	},
+	new {@class = "dcLink"})

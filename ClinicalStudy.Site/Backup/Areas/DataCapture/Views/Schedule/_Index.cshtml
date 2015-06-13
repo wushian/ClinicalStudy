@@ -1,0 +1,12 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Schedule.DailyScheduleViewModel
+
+<div class="contentSection">
+	<div class="schedulerHeader">
+		<h1>Scheduled Visits</h1>
+		<div class="visitsCalendar">
+			@Html.Action("Calendar")
+		</div>
+	</div>
+
+	@Html.Partial("_DailyVisitsCallbackPanel")
+</div>

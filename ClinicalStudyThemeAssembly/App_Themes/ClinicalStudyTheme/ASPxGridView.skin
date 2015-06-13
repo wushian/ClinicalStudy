@@ -1,0 +1,114 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dx:ASPxGridView runat="server" CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme">
+<SettingsPager CurrentPageNumberFormat="{0}">
+<Summary Visible="False"></Summary>
+</SettingsPager>
+
+<Images SpriteCssFilePath="{0}/sprite.css">
+<LoadingPanelOnStatusBar Url="GridView/StatusBarLoading.gif"></LoadingPanelOnStatusBar>
+
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</Images>
+
+<ImagesFilterControl>
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</ImagesFilterControl>
+
+<Styles CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<Header SortingImageSpacing="5px" ImageSpacing="5px"></Header>
+
+<LoadingPanel ImageSpacing="8px"></LoadingPanel>
+</Styles>
+
+<StylesEditors ButtonEditCellSpacing="0" SpinButtonsHorizontalSpacing="0">
+<ProgressBar Height="21px"></ProgressBar>
+</StylesEditors>
+</dx:ASPxGridView>
+
+<dx:ASPxGridView runat="server" CssFilePath="{0}/styles.css" CssPostfix="Clear_ClinicalStudyTheme" SkinID="ClearGrid">
+<SettingsPager CurrentPageNumberFormat="{0}">
+<Summary Visible="False"></Summary>
+</SettingsPager>
+
+<Images SpriteCssFilePath="{0}/sprite.css">
+<LoadingPanelOnStatusBar Url="GridView/StatusBarLoading.gif"></LoadingPanelOnStatusBar>
+
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</Images>
+
+<ImagesFilterControl>
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</ImagesFilterControl>
+
+<Styles CssPostfix="Clear_ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<Header SortingImageSpacing="5px" ImageSpacing="5px"></Header>
+
+<LoadingPanel ImageSpacing="8px"></LoadingPanel>
+</Styles>
+
+<StylesPager CssPostfix="ClinicalStudyTheme"></StylesPager>
+
+<StylesEditors ButtonEditCellSpacing="0" SpinButtonsHorizontalSpacing="0">
+<ProgressBar Height="21px"></ProgressBar>
+</StylesEditors>
+
+<Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px"></Border>
+</dx:ASPxGridView>
+
+<dx:ASPxGridView runat="server" CssFilePath="{0}/styles.css" CssPostfix="Master_ClinicalStudyTheme" SkinID="Master">
+<SettingsPager CurrentPageNumberFormat="{0}">
+<Summary Visible="False"></Summary>
+</SettingsPager>
+
+<Images SpriteCssFilePath="{0}/sprite.css">
+<LoadingPanelOnStatusBar Url="GridView/StatusBarLoading.gif"></LoadingPanelOnStatusBar>
+
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</Images>
+
+<ImagesFilterControl>
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</ImagesFilterControl>
+
+<Styles CssPostfix="Master_ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<Header SortingImageSpacing="5px" ImageSpacing="5px"></Header>
+
+<LoadingPanel ImageSpacing="8px"></LoadingPanel>
+</Styles>
+
+<StylesPager CssPostfix="ClinicalStudyTheme"></StylesPager>
+
+<StylesEditors ButtonEditCellSpacing="0" SpinButtonsHorizontalSpacing="0">
+<ProgressBar Height="21px"></ProgressBar>
+</StylesEditors>
+</dx:ASPxGridView>
+
+<dx:ASPxGridView runat="server" CssFilePath="{0}/styles.css" CssPostfix="Summary_ClinicalStudyTheme" SkinID="Summary">
+<SettingsPager CurrentPageNumberFormat="{0}">
+<Summary Visible="False"></Summary>
+</SettingsPager>
+
+<Images SpriteCssFilePath="{0}/sprite.css">
+<LoadingPanelOnStatusBar Url="GridView/StatusBarLoading.gif"></LoadingPanelOnStatusBar>
+
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</Images>
+
+<ImagesFilterControl>
+<LoadingPanel Url="GridView/Loading.gif"></LoadingPanel>
+</ImagesFilterControl>
+
+<Styles CssPostfix="Summary_ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<Header SortingImageSpacing="5px" ImageSpacing="5px"></Header>
+
+<LoadingPanel ImageSpacing="8px"></LoadingPanel>
+</Styles>
+
+<StylesPager CssPostfix="ClinicalStudyTheme"></StylesPager>
+
+<StylesEditors ButtonEditCellSpacing="0" SpinButtonsHorizontalSpacing="0">
+<ProgressBar Height="21px"></ProgressBar>
+</StylesEditors>
+</dx:ASPxGridView>

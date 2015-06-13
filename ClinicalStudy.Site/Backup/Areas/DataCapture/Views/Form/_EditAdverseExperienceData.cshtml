@@ -1,0 +1,43 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.AdverseEventFormViewModel
+@{
+	string validationGroup = string.Format("form{0}Validation", Model.FormId);
+}
+@Html.DevExpress().HtmlEditor(s => {
+	                                    	s.Name = "AdverseExperience";
+	                                    	s.Width = 700;
+	                                    	s.Height = 300;
+
+	                                    	s.CallbackRouteValues = new {Action = "AdverseExperienceHtml", Controller = "Form"};
+
+	                                    	s.Settings.AllowDesignView = true;
+	                                    	s.Settings.AllowHtmlView = false;
+	                                    	s.Settings.AllowPreview = false;
+
+
+	                                    	s.Toolbars.Add(toolbar => {
+	                                    	               	toolbar.Items.Add(new ToolbarCutButton(true));
+	                                    	               	toolbar.Items.Add(new ToolbarCopyButton());
+	                                    	               	toolbar.Items.Add(new ToolbarPasteButton());
+	                                    	               	toolbar.Items.Add(new ToolbarUndoButton(true));
+	                                    	               	toolbar.Items.Add(new ToolbarRedoButton());
+	                                    	               	toolbar.Items.Add(new ToolbarSuperscriptButton(true));
+	                                    	               	toolbar.Items.Add(new ToolbarSubscriptButton());
+	                                    	               	toolbar.Items.Add(new ToolbarInsertOrderedListButton(true));
+	                                    	               	toolbar.Items.Add(new ToolbarInsertUnorderedListButton());
+	                                    	               	toolbar.Items.Add(new ToolbarBoldButton(true));
+	                                    	               	toolbar.Items.Add(new ToolbarItalicButton());
+	                                    	               	toolbar.Items.Add(new ToolbarUnderlineButton());
+	                                    	               	toolbar.Items.Add(new ToolbarBackColorButton(true));
+	                                    	               	toolbar.Items.Add(new ToolbarFontColorButton());
+	                                    	               });
+
+
+	                                    	if (ViewData["ActiveView"] != null)
+												s.ActiveView = (HtmlEditorView) ViewData["ActiveView"];
+	                                    	if (ViewData["Html"] != null)
+												s.Html = (string) ViewData["Html"];
+
+	                                    	s.SettingsValidation.RequiredField.IsRequired = true;
+                                            s.SettingsValidation.RequiredField.ErrorText = "Please specify Adverse Experience";
+                                            s.SettingsValidation.ValidationGroup = validationGroup;
+	                                    }).Bind(Model.AdverseExperience).GetHtml()

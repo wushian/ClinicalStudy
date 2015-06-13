@@ -1,0 +1,98 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.PatientViewModel
+<div id="patientPanel">
+	<h2 class="completed">Patient Information - @Model.Caption</h2>
+	@Html.HiddenFor(model => model.Id)
+	<div class="editor-field">
+		@Html.DevExpress().Label(s => {
+	                               	s.Text = "Patient Initials:";
+	                               	s.ControlStyle.CssClass = "editor-label";
+	                               	s.AssociatedControlName = "PatientInitials";
+	                               }).GetHtml()
+		@Html.DevExpress().Label(s => {
+	                               	s.Name = "PatientInitials";
+	                               	s.Width = 150;
+	                               	s.ClientEnabled = true;
+	                               	s.Name = "PatientInitialsLabel";
+	                               }).Bind(Model.PatientInitials).GetHtml()
+	</div>
+	<div class="editor-field">
+		@Html.HiddenFor(m => m.PatientNumber)
+		@Html.DevExpress().Label(s => {
+	                               	s.Text = "Patient Number:";
+	                               	s.ControlStyle.CssClass = "editor-label";
+	                               	s.AssociatedControlName = "PatientNumber";
+	                               }).GetHtml()
+		@Html.DevExpress().Label(s => { s.Width = 150; }).Bind(Model.PatientNumber).GetHtml()
+	</div>
+	<div class="editor-field">
+		@Html.DevExpress().Label(s => {
+	                               	s.Text = "Active:";
+	                               	s.ControlStyle.CssClass = "editor-label";
+	                               	s.AssociatedControlName = "IsActive";
+	                               }).GetHtml()
+		@Html.DevExpress().Label(s => {
+	                               	s.Name = "IsActive";
+	                               	s.Width = 150;
+	                               	s.Text = Model.IsActive ? "Yes" : "No";
+	                               }).GetHtml()
+	</div>
+	<div class="editor-field">
+		@Html.DevExpress().Label(s => {
+	                               	s.Text = "Enrolled:";
+	                               	s.ControlStyle.CssClass = "editor-label";
+	                               	s.AssociatedControlName = "IsEnrolled";
+	                               }).GetHtml()
+		@Html.DevExpress().Label(s => {
+	                               	s.Name = "IsEnrolled";
+	                               	s.Width = 150;
+	                               	s.Text = Model.IsEnrolled ? "Yes" : "No";
+	                               }).GetHtml()
+	</div>
+	<div class="editor-field">
+		@Html.DevExpress().Label(s => {
+	                               	s.Text = "Enroll Date:";
+	                               	s.ControlStyle.CssClass = "editor-label";
+	                               	s.AssociatedControlName = "EnrollDate";
+	                               }).GetHtml()
+		@Html.DevExpress().Label(s => {
+	                               	s.Name = "EnrollDate";
+	                               	s.Width = 150;
+	                               	s.Text = Model.EnrollDate.HasValue ? Model.EnrollDate.Value.ToShortDateString() : string.Empty;
+	                               }).GetHtml()
+	</div>
+	<div class="editor-field">
+		@Html.DevExpress().Label(s => {
+	                               	s.Text = "Randomization Number:";
+	                               	s.ControlStyle.CssClass = "editor-label";
+	                               	s.AssociatedControlName = "RandomisationNumber";
+	                               }).GetHtml()
+		@Html.DevExpress().Label(s => {
+	                               	s.Name = "RandomisationNumber";
+	                               	s.Width = 150;
+	                               }).Bind(Model.RandomisationNumber).GetHtml()
+	</div>
+	<div class="editor-field">
+		@Html.DevExpress().Label(s => {
+	                               	s.Text = "Randomization Date:";
+	                               	s.ControlStyle.CssClass = "editor-label";
+	                               	s.AssociatedControlName = "RandomisationDate";
+	                               }).GetHtml()
+		@Html.DevExpress().Label(s => {
+	                               	s.Name = "RandomisationDate";
+	                               	s.Width = 150;
+	                               	s.Text = Model.RandomisationDate.HasValue ? Model.RandomisationDate.Value.ToShortDateString() : string.Empty;
+	                               }).GetHtml()
+	</div>
+	@Html.DevExpress().Button(s => {
+	                                	s.Name = "btnEditPatient";
+	                                	s.SkinID = "Grey";
+                                        s.Text = "Edit";
+                                        s.CausesValidation = false;
+	                                	string url = Url.Action("EditPatient", "Patient", new {Area = "DataCapture", patientNumber = Model.PatientNumber});
+
+	                                	s.ClientSideEvents.Click = String.Format(@"function (s,e) {{
+																				var ajaxOptions = {{UpdateTargetId : 'patientPanel'}};
+																				buttonAjaxClick(s,e, '{0}', ajaxOptions);}}",
+											url);
+	                                }).GetHtml()
+</div>

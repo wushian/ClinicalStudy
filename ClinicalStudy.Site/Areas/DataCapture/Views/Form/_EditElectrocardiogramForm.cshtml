@@ -1,0 +1,92 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.ElectrocardiogramFormViewModel
+@{
+	string validationGroup = string.Format("form{0}Validation", Model.FormId);
+}
+
+<h2>@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+@using (Ajax.BeginForm("EditElectrocardiogramForm", "Form", null,
+	new AjaxOptions {
+		UpdateTargetId = "formPanel" + Model.FormId.ToString(),
+		LoadingElementId = "loadingIndicator",
+		OnSuccess = "processDataChanges"
+	}, new { @id = "editForm" + Model.FormId })){
+	@Html.HiddenFor(model => model.Id)
+	@Html.HiddenFor(model => model.FormId)
+	@Html.HiddenFor(model => model.FormCaption)
+	@Html.HiddenFor(model => model.PatientNumber)
+	@Html.HiddenFor(model => model.VisitName)
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Actual Time:";
+	                               	    s.AssociatedControlName = "ElectrocardiogramActualTime";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.ActualTimeQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().TimeEdit(s => {
+	                                  	s.Name = "ElectrocardiogramActualTime";
+	                                  	s.Width = 150;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.ElectrocardiogramActualTime).GetHtml()
+	</div>
+	<div class="editor-field">
+        @Html.HiddenFor(model => model.AttachmentId)
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Electrocardiogram Data File:";
+	                               	    s.AssociatedControlName = "Attachment";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.ElectrocardiogramAttachmentQuestionId, Model, Url)
+        </div>
+
+		@Html.DevExpress().UploadControl(settings => {
+	                                       	settings.Name = "ucAttachment";
+	                                       	settings.CallbackRouteValues = new {Controller = "Attachment", Action = "CallbacksElectrocardiogramUpload"};
+	                                       	settings.ControlStyle.CssClass = "editorArea";
+
+	                                       	settings.Width = Unit.Pixel(380);
+	                                       	settings.AdvancedModeSettings.EnableMultiSelect = false;
+
+
+	                                       	settings.ClientVisible = !Model.AttachmentId.HasValue;
+	                                       	settings.UploadMode = UploadControlUploadMode.Standard;
+
+	                                       	settings.ValidationSettings.Assign(Model.ElectrocardiogramValidationSettings);
+
+	                                       	settings.ProgressBarSettings.DisplayMode = ProgressBarDisplayMode.Percentage;
+	                                       	settings.ShowProgressPanel = true;
+	                                       	settings.ShowClearFileSelectionButton = false;
+
+	                                       	settings.ClientSideEvents.FileUploadComplete = "electrocardiogramUploadComplete";
+	                                       	settings.ClientSideEvents.TextChanged = "function(s, e) { ucAttachment.Upload(); }";
+	                                       }).GetHtml()
+		@Html.ValidationMessageFor(model => model.AttachmentId)
+
+		@Html.DevExpress().HyperLink(s => {
+	                                   	s.Name = "hlUploadedFile";
+	                                   	s.NavigateUrl = Url.Action("GetAttachment", "Attachment", new {id = Model.AttachmentId});
+	                                   	s.Properties.Text = Model.AttachmentName ?? "No files to download";
+	                                   	s.ClientVisible = Model.AttachmentId.HasValue;
+	                                   	s.ControlStyle.CssClass = "editor-link";
+	                                   }).GetHtml()
+
+		@Html.DevExpress().HyperLink(s => {
+	                                   	s.Name = "imgRemoveAttachment";
+	                                   	s.Properties.ClientSideEvents.Click = "electrocardiogramRemoveFile";
+	                                   	s.Properties.ImageUrl = "~/Content/Icons/Remove_Icon.png";
+	                                   	s.Properties.Text = "Remove Attachment";
+	                                   	s.ClientVisible = Model.AttachmentId.HasValue;
+	                                   	s.ControlStyle.CssClass = "editor-link";
+	                                   }).GetHtml()
+	</div>
+    <div style="clear:both;"></div>
+
+	@FormHelpers.FormSaveCancelButtons(Html, Ajax, Model)
+	@FormHelpers.FormDataChangePopup(Html, ViewContext, Model)
+}

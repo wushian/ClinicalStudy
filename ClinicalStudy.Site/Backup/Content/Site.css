@@ -1,0 +1,757 @@
+@import url("Reset.css"); /* Resets all styles to default */
+
+/*
+*	font-size: 81.25%
+*	13px = 1em
+*
+*	30pt = 231% = 2.31em
+*	18pt = 138% = 1.38em
+*	17pt = 131% = 1.31em
+*	16pt = 123% = 1.23em
+*	13pt = 100% = 1em
+*	12pt = 92% = 0.92em
+*	11pt = 85% = 0.85em
+*	10pt = 77% = 0.77em
+*/
+
+
+html {
+	height: 100%;
+	overflow-y: scroll;
+	background: #ededed url('Images/Bkg.png');
+}
+
+body {
+	position: relative;	
+    font-size: 81.25%;
+    font-family: Segoe UI, Verdana, Tahoma, Arial, "Helvetica Neue", Helvetica, Sans-Serif;
+    color: #727272;
+    
+	background: transparent url('Images/BodyBkg.png') repeat-y center;
+
+	min-width: 1180px;
+    min-height: 100%;
+    padding: 0;
+	margin: 0 auto;
+}
+
+* html body {
+	height: 100%;
+}
+
+h1 {
+	font-size: 231%;
+	color: #3c3c3c;
+	padding: 0 0 15px 0;
+}
+h1.admin {
+	padding: 0 0 30px;
+}
+
+h3 {
+	font-size: 131%;
+	color: #3c3c3c;
+}
+
+h2 {
+	font-size: 123%;
+	color: #3e3b3e;
+	padding: 0 0 15px 0;
+}
+
+header {
+	height: 95px;
+	width: 100%;
+	background-color: #3e3b3e;
+	box-shadow: 0px 1px 5px #cccccc;
+	-webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+header #headerContent {
+	position:relative;
+	height: 61px;
+	width: 1100px;
+	margin: 0 auto;
+	padding: 30px 35px 0 35px;
+}
+
+.loggedUser {
+	position: relative;
+	text-align: right;
+	float: right;
+	margin: 21px 0 0 0;
+	width: 400px;
+}
+
+.loggedUser:before {
+	content: url('Images/UserIcon.png');
+	height: 13px;
+	width: 14px;
+}
+
+.loggedUser:after {
+	content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.loggedUser .title {
+	color: #edeae5!important;
+	font-size: 92%!important;
+	margin: 1px 100px 0 9px;
+	float: right;
+}
+
+.logoutLink {
+	position: absolute;
+	right: -2px;
+	top: -7px;
+}
+
+header:after {
+	content: " ";
+	display: block;
+	height: 3px;
+	clear: both;
+	background-color: #ffffff;
+	border-bottom: #bebebe solid 1px;
+}
+
+footer {
+	height: 125px;
+	width: 100%;
+	background-color: #86cfc6;
+	bottom: 0px;
+	position: absolute;
+	box-shadow: 0px -1px 5px #cccccc;
+	-webkit-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.2);
+}
+
+footer:before {
+	content: " ";
+	display: block;
+	height: 7px;
+	clear: both;
+	background-color: #7cbab3;
+	border-top: #e5e5e5 solid 1px;
+}
+
+#footerContent {
+	width: 1100px;
+	margin: 0 auto;
+	padding: 0 35px;
+	vertical-align: bottom;
+}
+
+.contactDx {
+	float: left;
+	margin: 40px 0 0 0;
+	color: #f9f9f9;
+	text-transform: uppercase;
+	font-weight: bolder;
+	vertical-align: middle;
+}
+
+.contactDx>:first-child {
+	margin: 0 15px 0 0;
+}
+
+.copyrightDx {
+	float: right;
+	margin: 30px 0 0 0;
+	color: #5a9c93;
+	text-align: right;
+	vertical-align: bottom;
+	font-size: 85%;
+}
+
+.copyrightDx > p {
+    padding: 3px 0 0 0;
+    line-height: 13px;
+}
+
+#pageWrapper {
+	position: relative;
+	height: 100%;
+	min-width: 1170px;
+	padding: 0 0 125px 0;
+	margin: 0 auto;
+}
+
+.pageContent {
+	position: relative;	
+	min-height: 450px;
+	width: 1100px;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+#patientNavigation {
+	position: relative;
+	float: left;
+	width: 208px;
+	min-height: 450px;
+	padding: 30px;
+}
+
+.patNavHeader>div {
+	height: 40px;
+}
+
+.newPatBtn {
+	float: right;
+	margin: -5px 0 0 0;
+	display: inline-block;
+}
+
+.patientItem {
+	height: 66px;
+}
+
+.patientItem>div {
+	height: 48px;
+	width: 100%;
+	padding: 8px 0;
+	cursor: pointer;
+}
+
+.patientItem label {
+	cursor: pointer;
+}
+
+.patientItem .patLogo {
+	float: left;
+	display: block;
+	margin: 0 9px 0 0;
+	width: 48px;
+	height: 48px;
+}
+
+.patientItem .patLogo.male {
+    background: url('Images/Male.png') no-repeat 0 0;
+}
+
+.patientItem .patLogo.female {
+    background: url('Images/Female.png') no-repeat 0 0;
+}
+
+.patientItem .patLogo.unknown {
+    background: url('Images/UnknownGender.png') no-repeat 0 0;
+}
+
+.patientItem .patLogo:hover,
+.patientItem:hover .patLogo {
+    background-position: 0 -96px;
+}
+
+.patientItem .patLogo.selected,
+.patientItem .patLogo.selected:hover,
+.patientItem:hover .patLogo.selected {
+    background-position: 0 -48px;
+}
+
+.patNavHeader:after,
+.patientItem:after {
+	content: " ";
+	display: block;
+	height: 2px;
+	clear: both;
+	background: transparent url('Images/Separator.png');
+}
+
+.mainContent {
+	height: 100%;
+	min-height: 100%;
+	margin: 0 0 0 268px;
+}
+.mainContent:after {
+	content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.tabsContent {
+	padding: 40px 58px;
+}
+
+.dcLink,
+.dcLink:visited,
+.dcLink:hover,
+.dcLink:active {
+	color: #579E95;
+	text-decoration: underline;
+}
+
+.queriesCnt {
+	font-size: 85%;
+	color: #a06b80;
+}
+/* Account */
+.logonWrapper {
+	position: absolute;
+	background: #86CFC6;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	min-height: 500px;
+	padding: 0;
+	margin: 0;
+}
+
+.logonContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 700px;
+	min-height: 300px;
+	padding: 0;
+	margin: -130px 0 0 -200px;
+}
+
+.logonUserPhoto {
+	float: left;
+	margin: 0 25px 0 0;
+	height: 88px;
+	width: 88px;
+	border: 1px solid #71c2b8;
+	background-color: #fbfbfb;
+	padding: 5px;
+}
+
+.logonUserChooser,
+.logonUserContainer {
+	position: relative;
+	height: 100px;
+	margin: 0;
+	width: 400px;
+	color: #fff;
+}
+.logonUserChooserContainer,
+.logonUserContainer {
+	margin: 0 0 30px 0;
+}
+
+.logonUserChooser {
+	line-height: 100px;
+	cursor: pointer;
+}
+
+.logonUserContainer {
+	margin-top: 65px;
+	display: none;
+}
+
+.logonUserChooser:hover .logonUserPhoto {
+	border: 1px solid #86cfc6;
+	-webkit-box-shadow: 1px 1px 15px #ade6d9, -1px 1px 15px #ade6d9, -1px -1px 15px #ade6d9, 1px -1px 15px #ade6d9;
+	-moz-box-shadow: 1px 1px 15px #ade6d9, -1px 1px 15px #ade6d9, -1px -1px 15px #ade6d9, 1px -1px 15px #ade6d9;
+	box-shadow: 1px 1px 15px #ade6d9, -1px 1px 15px #ade6d9, -1px -1px 15px #ade6d9, 1px -1px 15px #ade6d9;
+}
+
+.logonUserInfo {
+	position: relative;
+	padding: 25px 0 0 0;
+}
+
+.logonUserPassword {
+	margin: 0px;
+	height: 29px;
+	position: absolute;
+	top: 53px;
+	left: 125px;
+	width: 250px;
+}
+
+.logon-label,
+.logon-password-label {
+	text-shadow: -1px -1px 1px #71c2b8;
+}
+
+.logon-password-label {
+ 	float: left;
+	width: 70px;
+	margin: 6px 0 0 0;
+	line-height: 13px;
+}
+
+.logon-password {
+ 	float: left;
+	margin: 4px 7px 0 0;
+}
+
+.logon-password-btn {
+ 	float: left;
+}
+
+.switchUserLink,
+.switchUserLink:visited,
+.switchUserLink:hover,
+.switchUserLink:active {
+	position: absolute;
+	bottom: 0;
+	left: 125px;
+	font-size: 100%;
+	color: #1f665d;
+	text-decoration: underline!important;
+}
+
+#contentPanel { 
+	float: left;
+	width: 722px;
+	padding: 40px 55px;
+}
+
+.quickStart {
+	margin: 24px 0 0 33px;
+	float: left;
+}
+
+.quickStart .quickStartItem {
+	width: 340px;
+	height: 112px;
+	margin: 0 0 26px 0;
+}
+
+.summaryInfo {
+	margin: 24px 0 0 445px;
+}
+
+.summaryInfo > div {
+	margin: 0 0 40px 0;
+}
+ 
+.headerGroup {
+	width: 777px;
+	height: 124px;
+	background: #ffeecc url('Images/HeaderGroupBkg.png') repeat-y 0% 0%;
+	padding: 35px 0 0 55px;
+	box-shadow: inset 0px 5px 5px -4px #ede0d2;
+	-webkit-box-shadow: inset 0px 5px 5px -4px rgba(165, 102, 30, 0.2);
+	-moz-box-shadow: inset 0px 5px 5px -4px rgba(165, 102, 30, 0.2);
+	box-shadow: inset 0px 5px 5px -4px rgba(165, 102, 30, 0.2);
+} 
+
+.patientDataContainer {
+	margin: -40px -55px;
+}
+
+.rightNav {
+	position: absolute;
+	width: 56px;
+	top: 33px;
+	right: 7px;
+	margin: 0;
+}
+
+.leftNav {
+	position: absolute;
+	width: 29px;
+	top: 65px;
+	left: -28px;
+	margin: 0px;
+}
+
+.visitPanel {
+	margin: 0 0 25px 0;	
+}
+.formPanel {
+	margin: 25px 0;	
+}
+.formPanel:before {
+	content: " ";
+	display: block;
+	height: 27px;
+	clear: both;
+	background: transparent url('Images/Separator.png') repeat-x;
+	margin-left: -20px;
+}
+
+h2.completed:before {
+	content: url('Icons/FormCompleted.png');
+	margin: 0 0 0 -20px;
+	padding: 0 7px 0 0;
+}
+
+.contentSection {
+	padding: 10px 5px;
+}
+
+.schedulerHeader {
+	 position: relative; 
+}
+
+.visitsCalendar {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.curSchedulerDate {
+	margin: 0 0 120px 0;
+	display: block;
+}
+
+.binder {
+	background: url('Images/Binding.png') 0 0 no-repeat;
+	width: 5px;
+	height: 73px;
+	position: absolute;
+	left: 50%;
+	margin-left: -285px;
+}
+
+.binder.top {
+	top: 195px;
+}
+.binder.bottom {
+	bottom: 225px;
+}
+
+.patientDataPanel {
+	position: relative;
+	height: 100%;
+}
+
+.addNewAE {
+	position: absolute;
+	top: 10px;
+	right: 7px;
+	padding: 13px;
+	cursor: pointer;
+}
+
+.reportContent {
+	margin: 20px 0 0 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.mainContent { margin: 0 0 0 269px;width: 832px;}
+	.rightNav { right: 6px; }
+	.leftNav { left: -27px; }
+	.binder { margin-left: -284px; }
+}
+
+.patNavHeader,
+.patientItem {
+    *border-bottom: 1px solid #c5c4c5;
+}
+
+.formPanel {
+    *padding-top: 25px;
+    *border-top: 1px solid #c5c4c5;
+}
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+
+.editor-label {
+	float: left;
+	width: 210px;
+}
+
+.editor-field {
+	clear: both;
+	margin: 0 0 8px 0;
+}
+
+.editor-field > div {
+	position: relative;
+}
+
+.editor-field label {
+	line-height: 18px;
+}
+
+.editor-link {
+	float: left;
+	line-height: 18px;
+	margin: 0 5px 0 0;
+	cursor: pointer;
+}
+
+.editor-link img {
+	margin: 2px 0 0;
+}
+
+.editor-field:after
+{
+	content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.popup-field label,
+.popup-field-reason label {
+	line-height: 19px;
+}
+.popup-field-reason label 
+{
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+.popup-field-reason
+{
+	margin: 8px 0 12px 0;
+}
+
+.popup-dialog-buttons {
+	float: right;	
+}
+
+.popup-dialog-buttons>table {
+	display: inline-table;
+}
+
+.preloader {
+    display: none;
+}
+
+.queryMark {
+	position: absolute;
+	left: 195px;
+	top: 5px;
+	cursor: pointer;
+}
+
+.queryInfo {
+	margin: 0 0 15px 0;
+}
+
+.queryInfo:after {
+	content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.queryUserPhoto {
+	float: left;
+	margin: 0;
+	height: 88px;
+	width: 88px;
+	border: 1px solid #dcdcdc;
+	background-color: #ffffff;
+	padding: 5px;
+	margin: 0 15px 0 0;
+}
+
+.questionLabel,
+.answerLabel {
+	display: block;	
+	background-color: #c5e8e4;
+	border: 1px solid #91c3bd;
+	padding: 12px;
+	margin: 12px 0 0 115px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	position: relative;
+	min-height: 30px;
+}
+.answerLabel {
+	background-color: #f0f0f0;
+	border: 1px solid #d4d4d4;
+}
+
+.questionLabel:before,
+.answerLabel:before,
+.questionLabel:after,
+.answerLabel:after {
+	content: ' ';
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	left: -16px;
+	top: 12px;
+	border: 8px solid transparent;
+	border-right-color: #91c3bd;
+}
+
+.questionLabel:after,
+.answerLabel:after {
+	left: -14px;
+	top: 13px;
+	border: 7px solid transparent;
+	border-right-color: #c5e8e4;
+}
+
+.answerLabel:before {
+	border-right-color: #d4d4d4;
+}
+.answerLabel:after {
+	border-right-color: #f0f0f0;
+}
+.formButtons {
+	position: relative;
+}
+.formButtons a {
+	text-decoration: none;
+	position: absolute;
+	left: 80px;
+	top: 7px;
+}
+
+/* Admin specific styles */
+.anbHeaderText {
+	display: inline-block;
+	line-height: 30px;
+	height: 100%;
+}
+
+.anbInactiveFlag,
+.anbActiveFlag {
+	position: absolute;
+	height: 19px;
+	width: 32px;
+	left: -51px;
+	padding: 8px 6px;
+	background: transparent url('Images/Tabs/AdminNavTab.png') 0 0 no-repeat;
+}
+
+.anbActiveFlag {
+	background-image:url('Images/Tabs/AdminNavActiveTab.png');
+}
+
+.anbInactiveFlag img,
+.anbActiveFlag img {
+	height: 17px;
+	width: 17px;
+}
+.validation-summary-errors {
+	color: #FF0000;
+	font: 11px "Verdana";
+}
+
+.adminDashboard {
+	margin: 25px 0 0 5px;
+}
+
+.adminDashboard .quickStartGroup {
+    margin: 0 0 28px 0;
+    clear: both;
+}
+
+.quickStartGroup .quickStartItem 
+{
+	width: 340px;
+	height: 112px;
+	margin: 0 0 0 368px;
+}
+
+.quickStartGroup .quickStartItem:first-child
+{
+    float: left;
+	margin: 0;
+}

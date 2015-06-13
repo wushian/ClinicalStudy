@@ -1,0 +1,12 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.Analytics.Models.REPORTS.ReportViewModel
+
+@Html.DevExpress().ReportViewer(
+	settings => {
+		settings.Name = String.Format("{0}ReportViewer", Model.ReportName);
+		settings.Report = Model.Report;
+		settings.CallbackRouteValues = new {Controller = "Reports", Action = String.Format("{0}ReportViewer", Model.ReportName)};
+		settings.ExportRouteValues = new {Controller = "Reports", Action = String.Format("{0}ReportViewerExportTo", Model.ReportName)};
+		settings.Paddings.Padding = Unit.Pixel(30);
+	}
+	).GetHtml()

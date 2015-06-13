@@ -1,0 +1,65 @@
+﻿@using System.Web.UI.WebControls
+@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+@using ClinicalStudy.Site.Areas.DataCapture.Models.Shared
+@model ClinicalStudy.Site.Areas.DataCapture.Models.Shared.DataContainerViewModel
+@Html.DevExpress().TabControl(
+	s => {
+		s.Name = "PatientVisitsTabt";
+		s.Width = Unit.Percentage(100);
+		s.EnableTabScrolling = true;
+		s.TabAlign = TabAlign.Center;
+
+		s.CustomJSProperties = (sender, e) => {
+		                       	e.Properties.Add("cpPageTitle", Model.PageTitle);
+		                       	e.Properties.Add("cpPatientInitials", Model.PatientInitials);
+		                       };
+
+		s.Tabs.Add("Summary", "Summary");
+
+
+		foreach (ConteinerChildViewModel visit in Model.Children) {
+			s.Tabs.Add(visit.Caption, visit.Caption);
+		}
+
+
+		if (!string.IsNullOrEmpty(Model.SelectedVisitName)) {
+			int index = Model.Children.FindIndex(v => v.Caption == Model.SelectedVisitName);
+			if (index != -1)
+				s.ActiveTabIndex = index + 1;
+		}
+
+		s.ClientSideEvents.TabClick = "OnVisitTabClick";
+		s.ClientSideEvents.EndCallback = "afterPatientPanelLoaded";
+	}
+	).GetHtml()
+<div class="tabsContent">
+	@if (string.IsNullOrWhiteSpace(Model.SelectedVisitName) || Model.SelectedVisitName.Equals("Summary", StringComparison.InvariantCultureIgnoreCase)) {
+		if (Model.IsNew) {
+			Html.RenderAction("CreatePatient", "Patient");
+		}
+		else {
+			Html.RenderAction("ShowPatient", "Patient", new {patientNumber = Model.PatientNumber});
+		}
+	}
+	else {
+		Html.RenderAction("VisitDataContainer", "Visit", new {patientNumber = Model.PatientNumber, visitName = Model.SelectedVisitName});
+	}
+</div>
+@if (!Model.IsNew) {
+	@Ajax.ImageActionLink(Url.Content("~/Content/Icons/AddNewTab.png"),
+		"Add Adverse Event",
+		"CreateAdverseEvent",
+		"Visit",
+		new {patientId = Model.Id, irt = DateTime.Now.Ticks},
+		new AjaxOptions {
+			LoadingElementId = "loadingIndicator",
+			OnSuccess = "showCreatedAdverseEvent"
+		},
+		new {@class = "addNewAE", title = "Add Adverse Event. Record diagnoses (if known) or signs/symptoms the participant/subject experienced during the study that qualify as adverse events."})
+}
+<script type="text/javascript">
+    if (window.selectedStudyData) {
+        window.selectedStudyData.selectedPatientNumber = @Model.PatientNumber;
+        window.selectedStudyData.selectedVisitName = @(Html.Raw(string.IsNullOrEmpty(Model.SelectedVisitName) ? "'Summary'" : string.Format("'{0}'", Model.SelectedVisitName)));
+    }
+</script>

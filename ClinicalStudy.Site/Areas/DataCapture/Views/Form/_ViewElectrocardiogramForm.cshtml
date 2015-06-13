@@ -1,0 +1,46 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.ElectrocardiogramFormViewModel
+
+<h2 class="completed">@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Actual Time:";
+	                               	    s.AssociatedControlName = "ElectrocardiogramActualTime";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.ActualTimeQuestionId, Model, Url)
+	</div>
+	@Html.DevExpress().Label(s => {
+	                               	s.Name = "ElectrocardiogramActualTime";
+	                               	s.Width = 150;
+	                               }).Bind(Model.ElectrocardiogramActualTime.HasValue ? Model.ElectrocardiogramActualTime.Value.ToShortTimeString() : string.Empty).GetHtml()
+</div>
+<div class="editor-field">
+    <div>
+	    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Electrocardiogram Data File:";
+	                               	    s.AssociatedControlName = "Attachment";
+	                                   }).GetHtml()
+	    @FormHelpers.PutQueryIcon(Model.ElectrocardiogramAttachmentQuestionId, Model, Url)
+	</div>
+	@Html.DevExpress().HyperLink(s => {
+	                                   	s.Name = "hlUploadedFile";
+	                                   	s.NavigateUrl = Url.Action("GetAttachment", "Attachment", new {id = Model.AttachmentId});
+	                                   	s.Properties.Text = Model.AttachmentName;
+	                                   	s.Properties.Target = "_blank";
+	                                   	s.ControlStyle.CssClass = "editor-link";
+	                                   }).GetHtml()
+</div>
+<div style="clear:both;"></div>
+@Html.DevExpress().Button(s => {
+	                                	s.Name = "btnEditElectro";
+	                                	s.SkinID = "Grey";
+	                                	s.Text = "Edit";
+                                        s.CausesValidation = false;
+	                                	string url = Url.Action("EditForm", "Form", new {Area = "DataCapture", patientNumber = Model.PatientNumber, visitName = Model.VisitName, formName = Model.FormCaption});
+
+	                                	s.ClientSideEvents.Click = String.Format(@"function (s,e) {{
+																					var ajaxOptions = {{UpdateTargetId : 'formPanel{0}'}};
+																					buttonAjaxClick(s,e, '{1}', ajaxOptions);}}", Model.FormId, url);
+	                                }).GetHtml()

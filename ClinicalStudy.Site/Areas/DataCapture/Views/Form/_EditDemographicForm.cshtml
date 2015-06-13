@@ -1,0 +1,106 @@
+﻿@using ClinicalStudy.Site.Areas.DataCapture.HtmlHelpers
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.DemographicFormViewModel
+@{
+	string validationGroup = string.Format("form{0}Validation", Model.FormId);
+}
+
+<h2>@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+@using (Ajax.BeginForm("EditDemographicForm", "Form", null,
+	new AjaxOptions {
+		UpdateTargetId = "formPanel" + Model.FormId.ToString(),
+		LoadingElementId = "loadingIndicator",
+		OnSuccess = "updateDemographic"
+	}, new {@id = "editForm" + Model.FormId})) {
+	@Html.HiddenFor(model => model.Id)
+	@Html.HiddenFor(model => model.FormId)
+	@Html.HiddenFor(model => model.FormCaption)
+	@Html.HiddenFor(model => model.PatientNumber)
+	@Html.HiddenFor(model => model.VisitName)
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Date Of Birth:";
+	                               	    s.AssociatedControlName = "DateOfBirth";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.DateOfBirthQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().DateEdit(s => {
+	                                  	s.Name = "DateOfBirth";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  	s.Properties.EnableClientSideAPI = true;
+	                                  }).Bind(Model.DateOfBirth).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Race:";
+	                               	    s.AssociatedControlName = "Race";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.RaceQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().ComboBox(s => {
+	                                  	s.Name = "Race";
+	                                  	s.Width = 150;
+	                                  	s.SelectedIndex = 0;
+	                                  	s.Properties.ValueType = typeof (int);
+	                                  	s.Properties.Items.AddRange(ComboBoxValuesHelper.RaceValues);
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  	s.Properties.EnableClientSideAPI = true;
+	                                  }).Bind(Model.Race).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Sex:";
+	                               	    s.AssociatedControlName = "Sex";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.SexQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().ComboBox(s => {
+	                                  	s.Name = "Sex";
+	                                  	s.Width = 150;
+	                                  	s.SelectedIndex = 0;
+	                                  	s.Properties.ValueType = typeof (int);
+	                                  	s.Properties.Items.AddRange(ComboBoxValuesHelper.SexValues);
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  	s.Properties.EnableClientSideAPI = true;
+	                                  }).Bind(Model.Sex).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Other:";
+	                               	    s.AssociatedControlName = "Other";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.OtherQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().Memo(s => {
+	                              	s.Name = "Other";
+	                              	s.Width = 380;
+                                    s.Properties.EnableClientSideAPI = true;
+                                    s.ShowModelErrors = true;
+                                    s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+                                    s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                              }).Bind(Model.Other).GetHtml()
+	</div>
+
+	@FormHelpers.FormSaveCancelButtons(Html, Ajax, Model)
+	@FormHelpers.FormDataChangePopup(Html, ViewContext, Model)
+}

@@ -1,0 +1,38 @@
+﻿@using System.Web.UI.WebControls
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<script src="@Url.Content("~/DX.ashx?jsfile=~/Scripts/clinicalStudy.js")" type="text/javascript"></script>
+@RenderSection("ScriptsSection", false)
+
+<script type="text/javascript">
+    if (window.clinicalStudyUrlPrefix)
+        window.clinicalStudyUrlPrefix = @Html.Raw(string.Format("'{0}'", @Url.Content("~")));
+
+</script>
+
+@Html.Partial("_HeaderControl")
+<div id="pageWrapper">
+	@Html.DevExpress().LoadingPanel(s => {
+										 	s.Name = "loadingIndicator";
+                                            s.ContainerElementID = "pageWrapper";
+										 	s.Modal = true;
+                                        }).GetHtml()
+    <div class="pageContent">
+		<div id="patientNavigation">
+			@RenderSection("LeftNavigationColumn", true)
+		</div>
+		<div class="mainContent">
+			<div id="contentPanel">
+				@RenderBody()
+			</div>
+		</div>
+		@RenderSection("RightNavigationSideBar", false)
+	</div>
+</div>
+<div class="binder top"></div>
+<div class="binder bottom"></div>
+@Html.Partial("_FooterControl")
+@RenderSection("AdditionalElementsSection", false)

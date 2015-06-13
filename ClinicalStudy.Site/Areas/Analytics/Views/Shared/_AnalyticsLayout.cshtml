@@ -1,0 +1,12 @@
+﻿@{
+	Layout = "~/Views/Shared/_LoggedUsersLayout.cshtml";
+}
+
+@section ScriptsSection{
+	<script src="@Url.Content("~/DX.ashx?jsfile=~/Scripts/Analytics.js")" type="text/javascript"> </script>
+}
+
+@section LeftNavigationColumn{
+	@Html.Action("AdminNavBar", "AdminNavBar")
+}
+@RenderBody()

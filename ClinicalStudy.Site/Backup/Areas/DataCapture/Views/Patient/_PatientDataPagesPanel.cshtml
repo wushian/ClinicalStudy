@@ -1,0 +1,16 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Shared.DataContainerViewModel
+
+@Html.DevExpress().CallbackPanel(s => {
+	                                       	s.Name = "PatientDataPanel";
+	                                       	s.CallbackRouteValues = new {
+												Controller = "Patient", Action = "PatientDataPanel",
+												patientNumber = Model.PatientNumber, visitName = Model.SelectedVisitName, formName = Model.SelectedFormName
+											};
+	                                       	s.SetContent(() => ViewContext.Writer.Write(
+												Html.Partial("_PatientDataPages", Model)));
+	                                       	s.SettingsLoadingPanel.Enabled = false;
+	                                       	s.HideContentOnCallback = false;
+	                                       	s.ClientSideEvents.BeginCallback = "beforeReloadPatientVisitsPanel";
+	                                       	s.ClientSideEvents.EndCallback = "afterReloadPatientVisitsPanel";
+	                                       	s.ControlStyle.CssClass = "patientDataPanel";
+	                                       }).GetHtml()

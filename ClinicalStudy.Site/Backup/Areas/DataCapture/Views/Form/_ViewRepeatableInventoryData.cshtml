@@ -1,0 +1,45 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.InventoryFormViewModel
+
+@{
+	GridViewExtension grid = Html.DevExpress().GridView(s => {
+	                                                    	s.Name = "gvRepeatableInventory";
+
+	                                                    	s.SettingsPager.Mode = GridViewPagerMode.ShowPager;
+															s.SettingsPager.PageSize = 6;
+															s.SettingsPager.ShowNumericButtons = true;
+															s.SettingsPager.NumericButtonCount = 4;
+		
+	                                                    	s.Width = Unit.Pixel(500);
+
+	                                                    	s.KeyFieldName = "Id";
+															s.CallbackRouteValues = new { Controller = "Form", Action = "InlineViewingRepeatableInventoryData", inventoryFormId = Model.FormId};
+	                                                    	s.SettingsEditing.Mode = GridViewEditingMode.Inline;
+	                                                    	s.SettingsBehavior.ConfirmDelete = true;
+
+	                                                    	s.SetEmptyDataRowTemplateContent(c => ViewContext.Writer.Write(
+																"Sorry, there is no information about Medication usage."));
+
+	                                                    	s.Columns.Add(column => {
+	                                                    	              	column.ReadOnly = true;
+	                                                    	              	column.FieldName = "DateUsed";
+	                                                    	              	column.Caption = "Date Used";
+
+	                                                    	              	column.ColumnType = MVCxGridViewColumnType.DateEdit;
+	                                                    	              });
+	                                                    	s.Columns.Add(column => {
+	                                                    	              	column.ReadOnly = true;
+	                                                    	              	column.FieldName = "QuantityUsed";
+	                                                    	              	column.Caption = "Quantity Used";
+
+	                                                    	              	column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+	                                                    	              	var spinEditProperties = column.PropertiesEdit as SpinEditProperties;
+	                                                    	              	spinEditProperties.Increment = 0.1m;
+	                                                    	              	spinEditProperties.LargeIncrement = 1m;
+	                                                    	              	spinEditProperties.DecimalPlaces = 2;
+	                                                    	              	spinEditProperties.NumberFormat = SpinEditNumberFormat.Number;
+	                                                    	              });
+	                                                    });
+}
+
+@grid.Bind(Model.MedicationUsage).GetHtml()

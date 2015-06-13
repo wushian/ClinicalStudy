@@ -1,0 +1,34 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxe:ASPxCalendar runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<LoadingPanelImage Url="Editors/Loading.gif"></LoadingPanelImage>
+
+<HeaderStyle Spacing="1px"></HeaderStyle>
+
+<FastNavFooterStyle>
+<Border BorderColor="#9DA0AA" BorderStyle="Solid" BorderWidth="1px"></Border>
+
+<BorderTop BorderStyle="None" BorderWidth="0px"></BorderTop>
+</FastNavFooterStyle>
+
+<LoadingPanelStyle ImageSpacing="8px"></LoadingPanelStyle>
+</dxe:ASPxCalendar>
+
+<dxe:ASPxCalendar runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css" BackColor="Transparent" SkinID="ClearCalendar">
+<LoadingPanelImage Url="Editors/Loading.gif"></LoadingPanelImage>
+
+<HeaderStyle Spacing="1px"></HeaderStyle>
+
+<FastNavStyle BackColor="White"></FastNavStyle>
+
+<FastNavFooterStyle BackColor="White">
+<Border BorderColor="#9DA0AA" BorderStyle="Solid" BorderWidth="1px"></Border>
+
+<BorderTop BorderStyle="None" BorderWidth="0px"></BorderTop>
+</FastNavFooterStyle>
+
+<LoadingPanelStyle ImageSpacing="8px"></LoadingPanelStyle>
+
+<Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px"></Border>
+</dxe:ASPxCalendar>

@@ -1,0 +1,14 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.ASPxTreeList.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dx:ASPxTreeList runat="server">
+    <Styles CssFilePath="{0}/styles.css" CssPostfix="ClinicalStudyTheme">
+        <LoadingPanel ImageSpacing="8" />
+    </Styles>
+    <StylesEditors ButtonEditCellSpacing="0" />
+    <Images SpriteCssFilePath="{0}/sprite.css">
+        <LoadingPanel Url="TreeList/Loading.gif" />
+    </Images>
+    <Settings SuppressOuterGridLines="true" />
+    <SettingsPager CurrentPageNumberFormat="{0}" />
+</dx:ASPxTreeList>

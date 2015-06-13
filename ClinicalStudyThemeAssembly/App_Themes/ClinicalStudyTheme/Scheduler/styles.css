@@ -1,0 +1,495 @@
+.dxscControl_ClinicalStudyTheme
+{
+    background: #9da0aa;
+    border: 1px solid #9da0aa;
+}
+.dxscLoadingPanel_ClinicalStudyTheme
+{
+    font: 11px Verdana;
+    color: #201f35;
+    background: White;
+    border: 1px solid #9da0aa;
+}
+.dxscLoadingPanel_ClinicalStudyTheme td.dx
+{
+    white-space: nowrap;
+    text-align: center;
+    padding: 7px 10px;
+}
+.dxscLoadingDiv_ClinicalStudyTheme
+{
+    background: White;
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+    cursor: wait;
+}
+
+/* Headers */
+.dxscDateHeader_ClinicalStudyTheme, 
+.dxscAlternateDateHeader_ClinicalStudyTheme,
+.dxscDayHeader_ClinicalStudyTheme,
+.dxscDateCellHeader_ClinicalStudyTheme,
+.dxscTodayCellHeader_ClinicalStudyTheme,
+.dxscTimelineDateHeader_ClinicalStudyTheme,
+.dxscHorizontalResourceHeader_ClinicalStudyTheme,
+.dxscVerticalResourceHeader_ClinicalStudyTheme
+{
+    color: #201f35;
+    background: #f2f2f3;
+    border: 1px solid #cacbd3;
+    border-width: 0 1px 1px 0;
+    padding: 4px;
+    font: 11px Verdana;
+    text-align: center;
+    vertical-align: top;
+    cursor: default;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.dxscAlternateTimelineDateHeader_ClinicalStudyTheme,
+.dxscAlternateDateHeader_ClinicalStudyTheme
+{
+    background: #ede5f9;
+    color: #201f35;
+}
+.dxscDayHeader_ClinicalStudyTheme
+{
+    border-width: 1px 1px 0 0;
+}
+.dxscDateCellHeader_ClinicalStudyTheme
+{
+    border-width: 1px;
+}
+.dxscTodayCellHeader_ClinicalStudyTheme
+{
+    border-top-width: 1px;
+    background: #e2eafd;
+    color: #201f35;
+}
+.dxscTimelineDateHeader_ClinicalStudyTheme
+{
+    border-width: 1px 1px 1px 0;
+}
+.dxscHorizontalResourceHeader_ClinicalStudyTheme
+{
+    border-color: #cacbd3;
+    border-width: 1px 1px 1px 0;
+    background: #f2f2f3;
+}
+.dxscVerticalResourceHeader_ClinicalStudyTheme
+{
+    border-width: 1px 1px 0 0;
+    border-top-color: #9da0aa;
+    background: #f2f2f3;
+    white-space: normal;
+}
+.dxscSelectionBar_ClinicalStudyTheme
+{
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    height: 30px;
+}
+
+/* Corners */
+.dxscLeftTopCorner_ClinicalStudyTheme, 
+.dxscRightTopCorner_ClinicalStudyTheme
+{
+    background-color: #f2f2f3;
+    width: 1px;
+    border-style: solid;
+    border-color: #9da0aa;
+    border-width: 0 0 1px;
+}
+.dxscLeftTopCorner_ClinicalStudyTheme
+{
+    border-width: 1px 1px 1px 0;
+    font: 11px Verdana;
+    text-align: center;
+    padding: 2px;
+    overflow: hidden;
+}
+
+/* Separators */
+.dxscGroupSeparatorVertical_ClinicalStudyTheme,
+.dxscGroupSeparatorHorizontal_ClinicalStudyTheme
+{
+    background: #ebecef;
+    border: 1px solid #9da0aa;
+}
+.dxscDayHdrsTbl .dxscGroupSeparatorVertical_ClinicalStudyTheme,
+.dxscDayHdrsTbl .dxscGroupSeparatorHorizontal_ClinicalStudyTheme
+{
+    background: White;
+    border-color: #9da0aa;
+}
+.dxscGroupSeparatorVertical_ClinicalStudyTheme
+{
+    width: 1px;
+    border-width: 0 1px;
+}
+.dxscGroupSeparatorHorizontal_ClinicalStudyTheme
+{
+    height: 1px;
+    border-width: 1px 0 0;
+    font-size: 1px;
+}
+
+/* Apts Area */
+.dxscAllDayArea_ClinicalStudyTheme
+{
+    background-color: #ebecef;
+    border: 1px solid #9da0aa;
+    border-width: 0 1px 1px 0;
+}
+.dxscDateCellBody_ClinicalStudyTheme
+{
+    height: 100px;
+    border: solid 1px;
+    border-width: 0 1px 0 0;
+}
+.dxscTimeCellBody_ClinicalStudyTheme
+{
+    border: solid 1px;
+    font: 11px Verdana;
+}
+.dxscTimelineCellBody_ClinicalStudyTheme
+{
+    height: 300px;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+}
+
+.dxscAppointment_ClinicalStudyTheme
+{
+    color: #201f35;
+    font: 11px Verdana;
+    border: 1px solid #9da0aa;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.dxscAppointmentInnerBorders_ClinicalStudyTheme
+{
+    border: 1px solid #9da0aa;
+    padding: 0px;
+}
+.dxscMoreButton_ClinicalStudyTheme
+{
+    font: 11px Verdana;
+    color: #201f35;
+    text-decoration: underline;
+    padding: 0;	
+}
+.dxscAppointmentHorizontalSeparator_ClinicalStudyTheme
+{
+    height: 1px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+/* Rulers */
+.dxscTimeRulerHoursItem_ClinicalStudyTheme, 
+.dxscTimeRulerMinuteItem_ClinicalStudyTheme
+{
+    color: #646464;
+    background: White;
+    border: 1px solid #a0a0a0;
+    border-width: 0px 1px 1px 0;
+    vertical-align: top;
+    white-space: nowrap;
+}
+.dxscTimeRulerHoursItem_ClinicalStudyTheme
+{
+    border-right-width: 0;
+    border-left-color: #9da0aa;
+    font: 11px Verdana;
+    text-align: right;
+    width: 45px;
+    padding: 4px 4px 0px;
+}
+.dxscTimeRulerMinuteItem_ClinicalStudyTheme
+{
+    border-left-width: 0px;
+    text-align: center;
+    width: 18px;
+    font: 9px Verdana;
+    padding: 4px;
+    padding: 5px 1px 5px 1px;
+}
+
+.dxscTimeRulerHeaderHourItem_ClinicalStudyTheme
+{
+    width: 55px;
+}
+.dxscTimeRulerHeaderMinuteItem_ClinicalStudyTheme
+{
+    width: 16px;
+}
+.dxscScrollHeaderItem_ClinicalStudyTheme
+{
+    width: 16px;
+}
+
+
+/* Control elements */
+.dxscToolbarContainer_ClinicalStudyTheme
+{
+    border-bottom: 1px solid #9da0aa;
+    border-right: 1px solid #9da0aa;
+}
+.dxscToolbar_ClinicalStudyTheme
+{
+    background: #f1f2f6 url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.Scheduler.CssImages.ToolbarBack.png")%>') left top repeat-x;
+    padding: 3px 0 3px 3px;
+}
+.dxscViewSelector_ClinicalStudyTheme
+{
+    background-color: transparent;
+    padding: 0;
+}
+.dxscResourceNavigator_ClinicalStudyTheme
+{
+    background: White;
+    padding: 3px 6px 3px 3px;
+    border: 1px solid #9da0aa;
+}
+.dxscViewVisibleInterval_ClinicalStudyTheme
+{
+    color: #201f35;
+    font: 11px Verdana;
+    padding: 0 20px;
+    white-space: nowrap;
+}
+.dxscInplaceEditor_ClinicalStudyTheme
+{
+    background: #ebecef;
+    border: solid 3px black;
+    padding: 0;
+    font: 11px Verdana;
+    color: #201f35;
+}
+.dxscErrorInfo_ClinicalStudyTheme
+{
+    background: #f1abab;
+    color: #853a3a;
+    padding: 10px;
+    border: 1px solid #9da0aa;
+    border-width: 1px 0;
+}
+
+/* Buttons */
+.dxscViewNavigatorButton_ClinicalStudyTheme,
+.dxscViewNavigatorGotoDateButton_ClinicalStudyTheme
+{
+    font: 11px Verdana;
+    color: #1b3f91;
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: 21px;
+    cursor: pointer;
+}
+.dxscViewNavigatorButton_ClinicalStudyTheme span,
+.dxscViewNavigatorGotoDateButton_ClinicalStudyTheme span
+{
+    padding: 0 10px;
+}
+.dxscViewNavigatorButtonHover_ClinicalStudyTheme span
+{
+    text-decoration: underline;
+}
+
+.dxscViewSelectorButton_ClinicalStudyTheme
+{
+    font: 11px Verdana;
+    color: #201f35;
+    background: #f1f2f6 url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.Scheduler.CssImages.ViewSelectorButtonBack.png")%>') left top repeat-x;
+    border: 1px solid #9da0aa;
+    border-width: 0 0 0 1px;
+    padding: 8px 18px;
+    cursor: pointer;
+}
+.dxscViewSelectorButtonHover_ClinicalStudyTheme
+{
+    background: #f7f9fe url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.Scheduler.CssImages.ViewSelectorButtonHoverBack.png")%>') left top repeat-x;
+    border-color: #9da0aa;
+}
+.dxscViewSelectorButtonChecked_ClinicalStudyTheme
+{
+    background: White;
+    border-color: #9da0aa;
+}
+.dxscViewSelectorButtonPressed_ClinicalStudyTheme
+{
+    background: #f6f7f9 url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.Scheduler.CssImages.ViewSelectorButtonPressedBack.png")%>') left top repeat-x;
+    border-color: #9da0aa;
+}
+
+.dxscViewSelector_ClinicalStudyTheme.dxscVSHorz,
+.dxscViewSelector_ClinicalStudyTheme.dxscVSVert
+{
+    border-style: solid;
+    border-color: #9da0aa;
+    border-width: 1px 0 0 1px;
+}
+.dxscToolbar_ClinicalStudyTheme .dxscViewSelector_ClinicalStudyTheme
+{
+    border-width: 0;
+}
+.dxscVSHorz .dxscViewSelectorButton_ClinicalStudyTheme,
+.dxscVSVert .dxscViewSelectorButton_ClinicalStudyTheme
+{
+    border-width: 0 1px 1px 0;
+}
+.dxscToolbar_ClinicalStudyTheme .dxscViewSelectorButton_ClinicalStudyTheme
+{
+    border-width: 0 0 0 1px;
+}
+
+.dxscResourceNavigatorButton_ClinicalStudyTheme
+{
+    background: none;
+    cursor: pointer;
+}
+.dxscResourceNavigatorButtonHover_ClinicalStudyTheme
+{
+    background: none;
+}
+.dxscResourceNavigatorButtonPressed_ClinicalStudyTheme
+{
+    background: none;
+}
+
+.dxscNavigationButton_ClinicalStudyTheme
+{
+    background: none;
+    cursor: pointer;
+}
+.dxscNavigationButtonHover_ClinicalStudyTheme
+{
+    background: none;
+}
+.dxscNavigationButtonPressed_ClinicalStudyTheme
+{
+    background: none;
+}
+
+.dxscSmartTagButton_ClinicalStudyTheme
+{
+    background: #f1f2f6 url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.Scheduler.CssImages.ViewSelectorButtonBack.png")%>') left top repeat-x;
+    border: 1px solid #9da0aa;
+    padding: 4px 5px;
+    cursor: pointer;
+}
+
+.dxscDVBottomMoreButton_ClinicalStudyTheme,
+.dxscDVTopMoreButton_ClinicalStudyTheme
+{
+    cursor: pointer;
+}
+
+.dxscNoBorderButton_ClinicalStudyTheme
+{
+    cursor: pointer;
+    border: 1px solid #9da0aa;
+}
+.dxscNoBorderButtonHover_ClinicalStudyTheme
+{
+    background: #d4dffc;
+    border-color: #9da0aa;
+}
+.dxscNoBorderButtonPressed_ClinicalStudyTheme
+{
+    background: #dddde2;
+    border-color: #9da0aa;
+}
+.dxscControlAreaForm_ClinicalStudyTheme
+{
+    font: 16px Verdana;
+    color: #201f35;
+    white-space: normal;
+    padding: 9px 12px 13px 12px;
+    background-color: white;
+}
+.dxscToolTipRoundedCornersTopBottomRow_ClinicalStudyTheme
+{
+    font-size: 1px;
+}
+.dxscToolTipRoundedCornersTopSide_ClinicalStudyTheme
+{
+    border-top: 1px solid Black;
+    vertical-align: bottom; 
+    height: 1px;
+    background-color: #fafad2;
+}
+.dxscToolTipRoundedCornersLeftSide_ClinicalStudyTheme
+{
+    border-left: 1px solid Black;
+    vertical-align: bottom;
+    background-color: #fafad2;
+}
+.dxscToolTipRoundedCornersRightSide_ClinicalStudyTheme
+{
+    border-right: 1px solid Black;
+    vertical-align: bottom; 
+    background-color: #fafad2;
+}
+.dxscToolTipRoundedCornersBottomSide_ClinicalStudyTheme
+{
+    border-bottom: 1px solid Black;
+    vertical-align: bottom;
+    height: 1px;
+    background-color: #fafad2;
+}
+.dxscToolTipRoundedCornersContent_ClinicalStudyTheme
+{
+    background-color: #fafad2;
+    padding: 0;
+}
+.dxscToolTipSquaredCorners_ClinicalStudyTheme
+{
+    background: #f9f9cd;
+    padding: 0;
+    font: 11px Verdana;
+    color: #303030;
+    white-space: nowrap;
+    border: 1px solid Black;
+}
+.dxscTimeMarker_ClinicalStudyTheme
+{
+    top: -8px;
+}
+.dxscTimeMarkerLine_ClinicalStudyTheme
+{
+    top: -2px;
+    height: 3px;
+    font-size: 1px;
+}
+.dxscTimeMarkerLineV_ClinicalStudyTheme
+{
+    position: absolute;
+    background-color: White;
+    border: 1px solid #9da0aa;
+    width: 1px;
+    font-size: 1px;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+.dxscTimeMarkerLineH_ClinicalStudyTheme
+{
+    position: absolute;
+    top: -2px;
+    background-color: White;
+    border: 1px solid #9da0aa;
+    height: 1px;
+    font-size: 1px;
+    border-left-width: 0;
+    border-right-width: 0;
+}

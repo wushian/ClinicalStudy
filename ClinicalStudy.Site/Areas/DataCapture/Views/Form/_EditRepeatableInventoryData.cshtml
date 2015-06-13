@@ -1,0 +1,68 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.InventoryFormViewModel
+@{
+	GridViewExtension grid = Html.DevExpress().GridView(s => {
+	                                                    	s.Name = "gvRepeatableInventory";
+
+															s.SettingsPager.Mode = GridViewPagerMode.ShowPager;
+															s.SettingsPager.PageSize = 6;
+															s.SettingsPager.ShowNumericButtons = true;
+															s.SettingsPager.NumericButtonCount = 4;
+	                                                    	s.Width = Unit.Pixel(500);
+
+	                                                    	s.KeyFieldName = "InnerId";
+															s.CallbackRouteValues = new { Controller = "Form", Action = "InlineEditingRepeatableInventoryData", inventoryFormId = Model.FormId};
+															s.SettingsEditing.AddNewRowRouteValues = new { Controller = "Form", Action = "InlineEditingAddNewRepeatableInventoryData", inventoryFormId = Model.FormId };
+															s.SettingsEditing.UpdateRowRouteValues = new { Controller = "Form", Action = "InlineEditingUpdateRepeatableInventoryData", inventoryFormId = Model.FormId };
+															s.SettingsEditing.DeleteRowRouteValues = new { Controller = "Form", Action = "InlineEditingDeleteRepeatableInventoryData", inventoryFormId = Model.FormId };
+	                                                    	s.SettingsEditing.Mode = GridViewEditingMode.Inline;
+	                                                    	s.SettingsBehavior.ConfirmDelete = true;
+
+                                                            s.CommandColumn.Width = Unit.Pixel(90);
+	                                                    	s.CommandColumn.Visible = true;
+	                                                    	s.CommandColumn.ShowNewButton = true;
+	                                                    	s.CommandColumn.ShowDeleteButton = true;
+	                                                    	s.CommandColumn.ShowEditButton = true;
+	                                                    	s.SettingsText.EmptyDataRow = "Sorry, there is no information about Medication usage.";
+	                                                    	s.Columns.Add(column => {
+	                                                    	              	column.FieldName = "DateUsed";
+	                                                    	              	column.Caption = "Date Used";
+
+	                                                    	              	column.ColumnType = MVCxGridViewColumnType.DateEdit;
+	                                                    	              	var dateEditProperties = column.PropertiesEdit as DateEditProperties;
+	                                                    	              	dateEditProperties.AllowMouseWheel = true;
+                                                                            dateEditProperties.AllowUserInput = true;
+	                                                    	              	dateEditProperties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithTooltip;
+                                                                            dateEditProperties.ValidationSettings.Display = Display.Dynamic;
+	                                                    	              });
+	                                                    	s.Columns.Add(column => {
+	                                                    	              	column.FieldName = "QuantityUsed";
+	                                                    	              	column.Caption = "Quantity Used";
+
+	                                                    	              	column.ColumnType = MVCxGridViewColumnType.SpinEdit;
+	                                                    	              	var spinEditProperties = column.PropertiesEdit as SpinEditProperties;
+	                                                    	              	spinEditProperties.AllowMouseWheel = true;
+	                                                    	              	spinEditProperties.AllowUserInput = true;
+	                                                    	              	spinEditProperties.Increment = 0.5m;
+	                                                    	              	spinEditProperties.LargeIncrement = 1m;
+	                                                    	              	spinEditProperties.DecimalPlaces = 2;
+	                                                    	              	spinEditProperties.MaxValue = 100;
+	                                                    	              	spinEditProperties.MinValue = 0;
+	                                                    	              	spinEditProperties.NumberFormat = SpinEditNumberFormat.Number;
+                                                                            spinEditProperties.SpinButtons.ShowLargeIncrementButtons = true;
+	                                                    	              	spinEditProperties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithTooltip;
+                                                                            spinEditProperties.ValidationSettings.Display = Display.Dynamic;
+	                                                    	              });
+
+															s.SettingsLoadingPanel.Mode = GridViewLoadingPanelMode.Disabled;
+															s.ClientSideEvents.BeginCallback = "RepeatableInventoryBeginCallback";
+															s.ClientSideEvents.EndCallback = "RepeatableInventoryEndCallback";
+	                                                    });
+
+
+	if (ViewData["EditError"] != null) {
+		grid.SetEditErrorText((string) ViewData["EditError"]);
+	}
+}
+
+@grid.Bind(Model.MedicationUsage).GetHtml()

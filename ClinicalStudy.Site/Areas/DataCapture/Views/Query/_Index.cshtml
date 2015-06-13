@@ -1,0 +1,13 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Query.QueryListDataViewModel
+
+<div class="contentSection">
+	<h1>Queries</h1>
+	@Html.DevExpress().Label(ls => {
+	                               	ls.Text = String.Format("{0} total queries, {1} open", Model.TotalQueryNumber, Model.OpenQueryNumber);
+	                               	ls.SkinID = "SmallLabel";
+	                               	ls.Style.Add("color", "#727272");
+	                               	ls.Style.Add("margin", "0 0 35px 0");
+	                               	ls.Style.Add("display", "inline-block");
+	                               }).GetHtml()
+	@Html.Partial("_QueryGrid")
+</div>

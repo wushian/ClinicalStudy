@@ -1,0 +1,20 @@
+﻿@model List<DateTime>
+
+@Html.DevExpress().Calendar(s => {
+	                                  	s.Name = "calSchedule";
+	                                  	s.ClientEnabled = true;
+                                        s.CallbackRouteValues = new { Controller = "Schedule", Action = "Calendar" };
+	                                  	s.Properties.ClientSideEvents.ValueChanged = "function(s,e){cpDailyVisits.PerformCallback();}";
+	                                  	s.Properties.ShowClearButton = false;
+	                                  	s.Properties.ShowTodayButton = false;
+	                                  	s.SkinID = "ClearCalendar";
+
+                                        s.DayCellPrepared = (sender, e) =>
+                                        {
+                                            if (Model.Any(v => v.Date == e.Date))
+                                            {
+                                                e.TextControl.ForeColor = System.Drawing.Color.Black;
+                                                e.TextControl.Font.Bold = true;
+                                            }
+                                        }; 
+	                                  }).GetHtml()

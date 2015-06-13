@@ -1,0 +1,118 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.PatientViewModel
+@{
+	string validationGroup = string.Format("patient{0}Validation", Model.Id);
+}   
+<div id="patientPanel">
+	<h2>Patient Information - @Model.Caption</h2>
+	@using (Ajax.BeginForm("EditPatient", "Patient",
+		null,
+		new AjaxOptions {
+			UpdateTargetId = "patientPanel",
+			LoadingElementId = "loadingIndicator",
+			OnSuccess = "refreshPatientListAfterEdit",
+			OnFailure = "ajaxFailure"
+		},
+		new {id = "editPatientForm"})) {
+		@Html.HiddenFor(model => model.Id)
+
+		<div class="editor-field">
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = "Patient Initials:";
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.AssociatedControlName = "PatientInitials";
+		                               }).GetHtml()
+			@Html.DevExpress().TextBox(s => {
+		                                 	s.Name = "PatientInitials";
+		                                 	s.Width = 150;
+                                            s.ShowModelErrors = true;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                 	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+		                                 }).Bind(Model.PatientInitials).GetHtml()
+		</div>
+
+		<div class="editor-field">
+			@Html.HiddenFor(m => m.PatientNumber)
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = "Patient Number:";
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.AssociatedControlName = "PatientNumber";
+		                               }).GetHtml()
+			@Html.DevExpress().Label(s => { s.Width = 150; }).Bind(Model.PatientNumber).GetHtml()
+		</div>
+
+		<div class="editor-field">
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = "Active:";
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.AssociatedControlName = "IsActive";
+		                               }).GetHtml()
+			@Html.DevExpress().CheckBox(s => {
+		                                  	s.Name = "IsActive";
+                                            s.Width = 150;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                  }).Bind(Model.IsActive).GetHtml()
+		</div>
+
+		<div class="editor-field">
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = "Enrolled:";
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.AssociatedControlName = "IsEnrolled";
+		                               }).GetHtml()
+			@Html.DevExpress().CheckBox(s => {
+		                                  	s.Name = "IsEnrolled";
+                                            s.Width = 150;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                  }).Bind(Model.IsEnrolled).GetHtml()
+		</div>
+
+		<div class="editor-field">
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = "Enroll Date:";
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.AssociatedControlName = "EnrollDate";
+		                               }).GetHtml()
+			@Html.DevExpress().DateEdit(s => {
+		                                  	s.Name = "EnrollDate";
+                                            s.Width = 150;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                  }).Bind(Model.EnrollDate).GetHtml()
+		</div>
+
+		<div class="editor-field">
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = "Randomization Number:";
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.AssociatedControlName = "RandomisationNumber";
+		                               }).GetHtml()
+			@Html.DevExpress().SpinEdit(s => {
+		                                  	s.Name = "RandomisationNumber";
+                                            s.Width = 150;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                  }).Bind(Model.RandomisationNumber).GetHtml()
+		</div>
+
+		<div class="editor-field">
+			@Html.DevExpress().Label(s => {
+		                               	s.Text = "Randomization Date:";
+		                               	s.ControlStyle.CssClass = "editor-label";
+		                               	s.AssociatedControlName = "RandomisationDate";
+		                               }).GetHtml()
+			@Html.DevExpress().DateEdit(s => {
+		                                  	s.Name = "RandomisationDate";
+                                            s.Width = 150;
+                                            s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+		                                  }).Bind(Model.RandomisationDate).GetHtml()
+		</div>
+
+		@Html.DevExpress().Button(s => {
+		                                	s.Name = "btnSave";
+		                                	s.Text = "Save";
+		                                	s.SkinID = "DarkPink";
+		                                	s.UseSubmitBehavior = true;
+		                                	s.ValidationGroup = validationGroup;
+		                                	s.ClientSideEvents.Click = "function(s,e){ PrepareValidationScripts($('#editPatientForm'));}";
+		                                }).GetHtml()
+	}
+
+</div>

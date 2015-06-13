@@ -1,0 +1,47 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.Schedule.DailyScheduleViewModel
+@(Html.DevExpress()
+  	.GridView(s => {
+  	          	s.Name = "todayVisitsSummary";
+  	          	s.Settings.ShowFooter = true;
+  	          	s.Settings.ShowColumnHeaders = false;
+  	          	s.Settings.ShowTitlePanel = true;
+  	          	s.Width = 270;
+  	          	s.SkinID = "Summary";
+
+  	          	s.SettingsText.EmptyDataRow = "You have no events scheduled for today";
+
+  	          	MVCxGridViewColumn firstCol = s.Columns.Add("IsPassed");
+  	          	firstCol.Width = 21;
+  	          	firstCol.CellStyle.Paddings.PaddingLeft = 9;
+  	          	firstCol.SetDataItemTemplateContent(c => {
+  	          	                                    	if ((bool) DataBinder.Eval(c.DataItem, "IsPassed")) {
+															ViewContext.Writer.Write(
+																Html.DevExpress().Image(imgS => { imgS.ImageUrl = Url.Content("~/Content/Icons/MarkCompleted.png"); }).GetHtml()
+																);
+														}
+  	          	                                    });
+
+  	          	s.Columns
+					.Add("VisitCaption")
+					.SetDataItemTemplateContent(c => {
+					                            	ViewContext.Writer.Write(DataBinder.Eval(c.DataItem, "PatientInitials") as string);
+					                            	ViewContext.Writer.Write("&nbsp;&nbsp;");
+					                            	ViewContext.Writer.Write(DataBinder.Eval(c.DataItem, "VisitCaption") as string);
+					                            });
+
+  	          	s.SetTitlePanelTemplateContent(c => ViewContext.Writer.Write(
+					Html.DevExpress().Label(ls => {
+					                        	ls.SkinID = "BigLabel";
+					                        	ls.Text = "Today's Events";
+					                        }).GetHtml()));
+
+  	          	s.SetFooterRowTemplateContent(c => ViewContext.Writer.Write(
+					Ajax.ActionLink("View All", "Index", new {}, new AjaxOptions {
+						UpdateTargetId = "contentPanel",
+						HttpMethod = "GET",
+						LoadingElementId = "loadingIndicator",
+						OnSuccess = "setActiveNavTab('schedule')"
+					}, new {@class = "dcLink"})));
+  	          })
+  	.Bind(Model.ScheduledVisits)
+  	.GetHtml())

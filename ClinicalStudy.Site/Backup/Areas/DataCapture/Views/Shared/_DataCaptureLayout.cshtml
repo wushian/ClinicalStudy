@@ -1,0 +1,26 @@
+﻿@{
+	Layout = "~/Views/Shared/_LoggedUsersLayout.cshtml";
+}
+
+@section ScriptsSection{
+	<script src="@Url.Content("~/DX.ashx?jsfile=~/Scripts/dataCapture.js")" type="text/javascript"> </script>
+}
+
+@section LeftNavigationColumn{
+	@Html.Partial("_PatientNavigation")
+	@Html.DevExpress().LoadingPanel(s => {
+                                      	                                      	s.Name = "patNavLoadingIndicator";
+                                      	                                      	s.ContainerElementID = "patientNavigation";
+                                      	                                      	s.Modal = false;
+                                      	                                      }).GetHtml()	
+}
+
+@section RightNavigationSideBar{
+	@Html.Partial("_RightNavigation")
+}
+
+@RenderBody()
+
+@section AdditionalElementsSection{
+	@Html.Action("ReplyQueryDialog", "Query", new {queryId = -1})
+}

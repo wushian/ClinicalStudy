@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{A11662CF-ED85-4240-A99B-E495970721F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{55CE09A9-3A0D-4A7B-A6D4-D22C1D95D49B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{C89D1F73-14F7-46E1-BD0C-304D3C0B8E3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudy.Site", "..\ClinicalStudy.Site\ClinicalStudy.Site.csproj", "{C1F4D5F5-9EBE-4732-A999-E5335B2F0F29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudy.DomainModel", "..\ClinicalStudy.DomainModel\ClinicalStudy.DomainModel.csproj", "{C77FBD02-5476-4D5A-AB95-E5671CBE4190}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudy.Repositories", "..\ClinicalStudy.Repositories\ClinicalStudy.Repositories.csproj", "{62781D27-08D4-42FD-9303-3084F646A814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudy.Repositories.Tests", "..\ClinicalStudy.Repositories.Tests\ClinicalStudy.Repositories.Tests.csproj", "{BF2DD27B-EA9C-4987-A220-B7EB3E5F6A0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudy.Site.Tests", "..\ClinicalStudy.Site.Tests\ClinicalStudy.Site.Tests.csproj", "{A1E4DCC0-F27D-48FA-97F9-911A9C0E22F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudy.DemoData", "..\ClinicalStudy.DemoData\ClinicalStudy.DemoData.csproj", "{B0E95843-7648-46B4-B2FA-4F3B867F9C14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudy.ModelBuilders", "..\ClinicalStudy.ModelBuilders\ClinicalStudy.ModelBuilders.csproj", "{3B0F428F-3A7B-4273-B67B-AF16C149629E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Themes", "Themes", "{866562B8-589A-4BD3-8731-EE77D7672D3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClinicalStudyThemeAssembly", "..\ClinicalStudyThemeAssembly\ClinicalStudyThemeAssembly.csproj", "{033DBF43-ED50-449B-894B-0B2AB5153827}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1F4D5F5-9EBE-4732-A999-E5335B2F0F29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F4D5F5-9EBE-4732-A999-E5335B2F0F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F4D5F5-9EBE-4732-A999-E5335B2F0F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F4D5F5-9EBE-4732-A999-E5335B2F0F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C77FBD02-5476-4D5A-AB95-E5671CBE4190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C77FBD02-5476-4D5A-AB95-E5671CBE4190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C77FBD02-5476-4D5A-AB95-E5671CBE4190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C77FBD02-5476-4D5A-AB95-E5671CBE4190}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62781D27-08D4-42FD-9303-3084F646A814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62781D27-08D4-42FD-9303-3084F646A814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62781D27-08D4-42FD-9303-3084F646A814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62781D27-08D4-42FD-9303-3084F646A814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF2DD27B-EA9C-4987-A220-B7EB3E5F6A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2DD27B-EA9C-4987-A220-B7EB3E5F6A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2DD27B-EA9C-4987-A220-B7EB3E5F6A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2DD27B-EA9C-4987-A220-B7EB3E5F6A0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E4DCC0-F27D-48FA-97F9-911A9C0E22F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E4DCC0-F27D-48FA-97F9-911A9C0E22F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E4DCC0-F27D-48FA-97F9-911A9C0E22F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E4DCC0-F27D-48FA-97F9-911A9C0E22F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0E95843-7648-46B4-B2FA-4F3B867F9C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0E95843-7648-46B4-B2FA-4F3B867F9C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0E95843-7648-46B4-B2FA-4F3B867F9C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0E95843-7648-46B4-B2FA-4F3B867F9C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0F428F-3A7B-4273-B67B-AF16C149629E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0F428F-3A7B-4273-B67B-AF16C149629E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0F428F-3A7B-4273-B67B-AF16C149629E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0F428F-3A7B-4273-B67B-AF16C149629E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{033DBF43-ED50-449B-894B-0B2AB5153827}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{033DBF43-ED50-449B-894B-0B2AB5153827}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{033DBF43-ED50-449B-894B-0B2AB5153827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033DBF43-ED50-449B-894B-0B2AB5153827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C77FBD02-5476-4D5A-AB95-E5671CBE4190} = {A11662CF-ED85-4240-A99B-E495970721F2}
+		{62781D27-08D4-42FD-9303-3084F646A814} = {A11662CF-ED85-4240-A99B-E495970721F2}
+		{3B0F428F-3A7B-4273-B67B-AF16C149629E} = {A11662CF-ED85-4240-A99B-E495970721F2}
+		{BF2DD27B-EA9C-4987-A220-B7EB3E5F6A0B} = {55CE09A9-3A0D-4A7B-A6D4-D22C1D95D49B}
+		{A1E4DCC0-F27D-48FA-97F9-911A9C0E22F8} = {55CE09A9-3A0D-4A7B-A6D4-D22C1D95D49B}
+		{B0E95843-7648-46B4-B2FA-4F3B867F9C14} = {C89D1F73-14F7-46E1-BD0C-304D3C0B8E3F}
+		{033DBF43-ED50-449B-894B-0B2AB5153827} = {866562B8-589A-4BD3-8731-EE77D7672D3E}
+	EndGlobalSection
+EndGlobal

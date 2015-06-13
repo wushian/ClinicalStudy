@@ -1,0 +1,123 @@
+﻿@model ClinicalStudy.Site.Areas.DataCapture.Models.FormData.InventoryFormViewModel
+@{
+	string validationGroup = string.Format("form{0}Validation", Model.FormId);
+}
+
+<h2>@Model.FormCaption <abbr title="Case Report Form">CRF</abbr></h2>
+@using (Ajax.BeginForm("EditInventoryForm", "Form", null,
+	new AjaxOptions {
+		UpdateTargetId = "formPanel" + Model.FormId.ToString(),
+		LoadingElementId = "loadingIndicator",
+		OnSuccess = "processDataChanges"
+	}, new { @id = "editForm" + Model.FormId })){
+	@Html.HiddenFor(model => model.Id)
+	@Html.HiddenFor(model => model.FormId)
+	@Html.HiddenFor(model => model.FormCaption)
+	@Html.HiddenFor(model => model.PatientNumber)
+	@Html.HiddenFor(model => model.VisitName)
+	@Html.Hidden("InventoryFormId", Model.FormId)
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Quantity Shipped:";
+	                               	    s.AssociatedControlName = "QuantityShipped";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.QuantityShippedQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().SpinEdit(s => {
+	                                  	s.Name = "QuantityShipped";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+	                                  	s.Properties.Increment = 0.5m;
+	                                  	s.Properties.DecimalPlaces = 2;
+	                                  	s.Properties.MaxValue = 100;
+	                                  	s.Properties.MinValue = 0;
+	                                  	s.Properties.NumberFormat = SpinEditNumberFormat.Number;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.QuantityShipped).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Batch Number:";
+	                               	    s.AssociatedControlName = "BatchNumber";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.BatchNumberQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().SpinEdit(s => {
+	                                  	s.Name = "BatchNumber";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+	                                  	s.Properties.Increment = 1;
+	                                  	s.Properties.MaxValue = 250;
+	                                  	s.Properties.MinValue = 1;
+	                                  	s.Properties.NumberFormat = SpinEditNumberFormat.Number;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.BatchNumber).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Receipt Date:";
+	                               	    s.AssociatedControlName = "ReceiptDate";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.ReceiptDateQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().DateEdit(s => {
+	                                  	s.Name = "ReceiptDate";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+	                                  	s.Properties.AllowUserInput = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.ReceiptDate).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Ship Date:";
+	                               	    s.AssociatedControlName = "ShipDate";
+	                                   }).GetHtml()
+		    @FormHelpers.PutQueryIcon(Model.ShipDateQuestionId, Model, Url)
+        </div>
+		@Html.DevExpress().DateEdit(s => {
+	                                  	s.Name = "ShipDate";
+	                                  	s.Width = 150;
+	                                  	s.Properties.AllowMouseWheel = true;
+                                        s.Properties.AllowUserInput = true;
+                                        s.ShowModelErrors = true;
+                                        s.Properties.ValidationSettings.ValidationGroup = validationGroup;
+	                                  	s.Properties.ValidationSettings.ErrorDisplayMode = ErrorDisplayMode.ImageWithText;
+	                                  }).Bind(Model.ShipDate).GetHtml()
+	</div>
+
+	<div class="editor-field">
+        <div>
+		    @Html.DevExpress().Label(s => {
+	                               	    s.ControlStyle.CssClass = "editor-label";
+	                               	    s.Text = "Medication Usage:";
+	                               	    s.AssociatedControlName = "Medication Usage";
+	                                   }).GetHtml()
+        </div>
+		@Html.Partial("_EditRepeatableInventoryData", Model)
+	</div>
+
+
+	@FormHelpers.FormSaveCancelButtons(Html, Ajax, Model)
+	@FormHelpers.FormDataChangePopup(Html, ViewContext, Model)
+}

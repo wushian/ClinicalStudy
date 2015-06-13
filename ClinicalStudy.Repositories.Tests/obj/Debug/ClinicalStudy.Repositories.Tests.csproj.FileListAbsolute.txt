@@ -1,0 +1,28 @@
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.Tests.dll.config
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.Tests.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.Tests.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DemoData.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DomainModel.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.ModelBuilders.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DemoData.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DomainModel.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.ModelBuilders.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\obj\Debug\ClinicalStudy.Repositories.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\obj\Debug\ClinicalStudy.Repositories.Tests.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Repositories.Tests\obj\Debug\ClinicalStudy.Repositories.Tests.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.Tests.dll.config
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.Tests.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.Tests.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DemoData.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DomainModel.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.ModelBuilders.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DemoData.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.DomainModel.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.ModelBuilders.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\bin\Debug\ClinicalStudy.Repositories.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\obj\Debug\ClinicalStudy.Repositories.Tests.csprojResolveAssemblyReference.cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\obj\Debug\ClinicalStudy.Repositories.Tests.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Repositories.Tests\obj\Debug\ClinicalStudy.Repositories.Tests.pdb

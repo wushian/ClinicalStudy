@@ -1,0 +1,33 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxsm" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxsm:ASPxSiteMapControl runat="server"	CssFilePath="{0}/styles.css" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme">
+	<LevelProperties>
+        <dxsm:LevelProperties>
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties ImageSpacing="11">
+            <Image SpriteProperties-CssClass="dxWeb_smBullet_ClinicalStudyTheme" />
+            <ChildNodesPaddings PaddingLeft="17" PaddingTop="1" PaddingBottom="0" />
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties ImageSpacing="11">
+            <Image SpriteProperties-CssClass="dxWeb_smBullet_ClinicalStudyTheme" />
+            <ChildNodesPaddings PaddingLeft="17" PaddingTop="1" PaddingBottom="0" />
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties ImageSpacing="11">
+            <Image SpriteProperties-CssClass="dxWeb_smBullet_ClinicalStudyTheme" />
+            <ChildNodesPaddings PaddingLeft="17" PaddingTop="1" PaddingBottom="0" />
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties ImageSpacing="11">
+            <Image SpriteProperties-CssClass="dxWeb_smBullet_ClinicalStudyTheme" />
+            <ChildNodesPaddings PaddingLeft="17" PaddingTop="1" PaddingBottom="0" />
+        </dxsm:LevelProperties>
+        <dxsm:LevelProperties ImageSpacing="11">
+            <Image SpriteProperties-CssClass="dxWeb_smBullet_ClinicalStudyTheme" />
+            <ChildNodesPaddings PaddingLeft="17" PaddingTop="1" PaddingBottom="0" />
+        </dxsm:LevelProperties>
+    </LevelProperties>
+	<ColumnSeparatorStyle>
+		<Paddings PaddingRight="1px" PaddingLeft="0px" />
+	</ColumnSeparatorStyle>
+</dxsm:ASPxSiteMapControl>
+

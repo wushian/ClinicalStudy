@@ -1,0 +1,29 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxtc:ASPxTabControl runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css">
+<Paddings PaddingTop="0px"></Paddings>
+</dxtc:ASPxTabControl>
+
+<dxtc:ASPxTabControl runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="RightTab_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="RightTab">
+<Paddings Padding="2px" PaddingLeft="5px" PaddingRight="5px"></Paddings>
+
+    <ContentStyle>
+<Border BorderColor="#9DA0AA" BorderStyle="Solid" BorderWidth="1px"></Border>
+	</ContentStyle>
+</dxtc:ASPxTabControl>
+
+<dxtc:ASPxTabControl runat="server" SpriteCssFilePath="{0}/sprite.css" CssPostfix="LeftTab_ClinicalStudyTheme" CssFilePath="{0}/styles.css" SkinID="LeftTab">
+<Paddings Padding="0px"></Paddings>
+<ActiveTabStyle>
+<Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px"></Border>
+</ActiveTabStyle>
+
+<TabStyle>
+<Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px"></Border>
+</TabStyle>
+
+<ContentStyle>
+<Border BorderColor="#9DA0AA" BorderStyle="Solid" BorderWidth="1px"></Border>
+</ContentStyle>
+</dxtc:ASPxTabControl>

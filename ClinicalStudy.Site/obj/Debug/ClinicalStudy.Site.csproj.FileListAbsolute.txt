@@ -1,0 +1,38 @@
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.Areas.Analytics.Reports.PatientsReport.resources
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.Areas.Analytics.Reports.QueriesReport.resources
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.csproj.GenerateResource.Cache
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.Site.dll.config
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.Site.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.Site.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.DemoData.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.DomainModel.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.ModelBuilders.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.Repositories.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudyThemeAssembly.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.DemoData.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.DomainModel.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.ModelBuilders.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudy.Repositories.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\bin\ClinicalStudyThemeAssembly.pdb
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.dll
+C:\Users\Public\Documents\DevExpress Demos 14.2\Components\ASP.NET\CS\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.Site.dll.config
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.Site.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.Site.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.DemoData.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.DomainModel.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.ModelBuilders.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.Repositories.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudyThemeAssembly.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.DemoData.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.DomainModel.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.ModelBuilders.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudy.Repositories.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\bin\ClinicalStudyThemeAssembly.pdb
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.csprojResolveAssemblyReference.cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.Areas.Analytics.Reports.PatientsReport.resources
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.Areas.Analytics.Reports.QueriesReport.resources
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.csproj.GenerateResource.Cache
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.dll
+D:\Git_rep\! MyImportantProject\ClinicalStudy\ClinicalStudy.Site\obj\Debug\ClinicalStudy.Site.pdb

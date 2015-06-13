@@ -1,0 +1,12 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v14.2, Version=14.2.0.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4" %>
+
+<dxe:ASPxLabel runat="server" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css" Font-Size="100%" ForeColor="#6B636B"></dxe:ASPxLabel>
+
+<dxe:ASPxLabel runat="server" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css" Font-Size="84.6%" ForeColor="#847E84" SkinID="SmallLabel"></dxe:ASPxLabel>
+
+<dxe:ASPxLabel runat="server" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css" Font-Size="100%" ForeColor="#3E3B3E" SkinID="SubjLabel"></dxe:ASPxLabel>
+
+<dxe:ASPxLabel runat="server" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css" Font-Size="123.1%" ForeColor="#3E3B3E" SkinID="BigLabel"></dxe:ASPxLabel>
+
+<dxe:ASPxLabel runat="server" CssPostfix="ClinicalStudyTheme" CssFilePath="{0}/styles.css" Font-Names="Kozuka Gothic Pro,Segoe UI,Verdana,Tahoma,Arial,&quot;Helvetica Neue&quot;,Helvetica,Sans-Serif" Font-Size="100%" ForeColor="White" SkinID="LogonLabel"></dxe:ASPxLabel>

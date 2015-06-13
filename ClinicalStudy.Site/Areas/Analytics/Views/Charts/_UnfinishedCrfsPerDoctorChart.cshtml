@@ -1,0 +1,43 @@
+﻿@using ClinicalStudy.Site.Areas.Analytics.Helpers
+@using ViewType = DevExpress.XtraCharts.ViewType
+@model ClinicalStudy.Site.Areas.Analytics.Models.Charts.UnfinishedCrfsList
+
+@Html.DevExpress().Chart(s => {
+	                               	s.Name = "UnfinishedCrfsPerDoctorChart";
+
+                                    s.BorderOptions.Visibility = DefaultBoolean.False;
+	                               	s.Height = 400;
+	                               	s.Width = 700;
+                                    s.Legend.AlignmentHorizontal = LegendAlignmentHorizontal.RightOutside;
+	                               	s.Legend.AlignmentVertical = LegendAlignmentVertical.Top;
+
+	                               	s.ToolTipEnabled = DefaultBoolean.False;
+	                               	s.ToolTipOptions.ShowForPoints = false;
+
+	                               	s.SeriesTemplate.ChangeView(ViewType.Bar);
+	                               	s.SeriesDataMember = "FormType";
+	                               	s.SeriesTemplate.ArgumentDataMember = "EntityName";
+	                               	s.SeriesTemplate.ValueDataMembers[0] = "FormsNumber";
+	                               	s.SeriesTemplate.Label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+
+                                    ((XYDiagram)s.Diagram).AxisY.NumericScaleOptions.AutoGrid = false;
+                                    ((XYDiagram)s.Diagram).AxisY.NumericScaleOptions.GridSpacing = 1;
+                                    ((XYDiagram)s.Diagram).AxisY.Tickmarks.MinorVisible = false;
+                                    s.CrosshairEnabled = DefaultBoolean.False;
+                                    
+                                    s.PaletteRepository.Add(ChartHelper.StudyProgressPaletteName, ChartHelper.StudyProgressPalette);
+	                               	s.PaletteName = ChartHelper.StudyProgressPaletteName;
+
+	                               	s.EnableClientSideAPI = true;
+	                               	s.CallbackRouteValues = new {Controller = "Chart", Action = "DrillDownPartial"};
+	                               }).Bind(Model).GetHtml()
+<br />
+@Ajax.ActionLink("Back to high-level chart",
+	"UnfinishedCrfsPerClinic",
+	null,
+	new AjaxOptions {
+		UpdateTargetId = "contentPanel",
+		HttpMethod = "GET",
+		LoadingElementId = "loadingIndicator"
+	},
+	new {@class = "dcLink"})

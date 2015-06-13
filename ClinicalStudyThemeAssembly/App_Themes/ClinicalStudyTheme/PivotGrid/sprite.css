@@ -1,0 +1,213 @@
+.dxPivotGrid_pgCollapsedButton_ClinicalStudyTheme,
+.dxPivotGrid_pgExpandedButton_ClinicalStudyTheme,
+.dxPivotGrid_pgSortDownButton_ClinicalStudyTheme,
+.dxPivotGrid_pgSortUpButton_ClinicalStudyTheme,
+.dxPivotGrid_pgFilterResizer_ClinicalStudyTheme,
+.dxPivotGrid_pgFilterButton_ClinicalStudyTheme,
+.dxPivotGrid_pgFilterButtonActive_ClinicalStudyTheme,
+.dxPivotGrid_pgCustomizationFormCloseButton_ClinicalStudyTheme,
+.dxPivotGrid_pgDragArrowDown_ClinicalStudyTheme,
+.dxPivotGrid_pgDragArrowUp_ClinicalStudyTheme,
+.dxPivotGrid_pgDragHideField_ClinicalStudyTheme,
+.dxPivotGrid_pgDataHeaders_ClinicalStudyTheme,
+.dxPivotGrid_pgGroupSeparator_ClinicalStudyTheme,
+.dxPivotGrid_pgSortByColumn_ClinicalStudyTheme,
+.dxPivotGrid_pgPrefilterButton_ClinicalStudyTheme {
+    background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.PivotGrid.sprite.png")%>');
+    -background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.PivotGrid.sprite.gif")%>'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxPivotGrid_pgCollapsedButton_ClinicalStudyTheme {
+    background-position: 0px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxPivotGrid_pgExpandedButton_ClinicalStudyTheme {
+    background-position: 0px -17px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxPivotGrid_pgSortDownButton_ClinicalStudyTheme {
+    background-position: -34px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxPivotGrid_pgSortUpButton_ClinicalStudyTheme {
+    background-position: -34px -17px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxPivotGrid_pgFilterResizer_ClinicalStudyTheme {
+    background-position: -62px -37px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxPivotGrid_pgFilterButton_ClinicalStudyTheme {
+    background-position: 0px -37px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxPivotGrid_pgFilterButtonActive_ClinicalStudyTheme {
+    background-position: -18px -37px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxPivotGrid_pgCustomizationFormCloseButton_ClinicalStudyTheme {
+    background-position: -77px -37px;
+    width: 29px;
+    height: 15px;
+}
+
+.dxPivotGrid_pgDragArrowDown_ClinicalStudyTheme {
+    background-position: -18px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxPivotGrid_pgDragArrowUp_ClinicalStudyTheme {
+    background-position: -18px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxPivotGrid_pgDragHideField_ClinicalStudyTheme {
+    background-position: -62px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxPivotGrid_pgDataHeaders_ClinicalStudyTheme {
+    background-position: -44px -17px;
+    width: 12px;
+    height: 12px;
+}
+
+.dxPivotGrid_pgGroupSeparator_ClinicalStudyTheme {
+    background-position: -89px -17px;
+    width: 5px;
+    height: 1px;
+}
+
+.dxPivotGrid_pgSortByColumn_ClinicalStudyTheme {
+    background-position: -44px 0px;
+    width: 11px;
+    height: 6px;
+}
+
+.dxPivotGrid_pgPrefilterButton_ClinicalStudyTheme {
+    background-position: -89px 0px;
+    width: 13px;
+    height: 13px;
+}
+.dxPivotGrid_FLButton_ClinicalStudyTheme,
+.dxPivotGrid_FLStackedDefault_ClinicalStudyTheme,
+.dxPivotGrid_FLStackedSideBySide_ClinicalStudyTheme,
+.dxPivotGrid_FLTopPanelOnly_ClinicalStudyTheme,
+.dxPivotGrid_FLBottomPanelOnly2by2_ClinicalStudyTheme,
+.dxPivotGrid_FLBottomPanelOnly1by4_ClinicalStudyTheme,
+.dxPivotGrid_FLFieldList_ClinicalStudyTheme,
+.dxPivotGrid_FLFilterAreaHeaders_ClinicalStudyTheme,
+.dxPivotGrid_FLColumnAreaHeaders_ClinicalStudyTheme,
+.dxPivotGrid_FLRowAreaHeaders_ClinicalStudyTheme,
+.dxPivotGrid_FLDataAreaHeaders_ClinicalStudyTheme,
+.dxPivotGrid_pgDragArrowLeft_ClinicalStudyTheme,
+.dxPivotGrid_pgDragArrowRight_ClinicalStudyTheme
+ {
+    background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.PivotGrid.FLsprite.png")%>');
+    -background-image: url('<%=WebResource("ClinicalStudyThemeAssembly.App_Themes.ClinicalStudyTheme.PivotGrid.FLsprite.gif")%>'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent; 
+}
+.dxpgFLTextDiv_ClinicalStudyTheme img.dxPivotGrid_FLFilterAreaHeaders_ClinicalStudyTheme,
+.dxpgFLTextDiv_ClinicalStudyTheme img.dxPivotGrid_FLColumnAreaHeaders_ClinicalStudyTheme,
+.dxpgFLTextDiv_ClinicalStudyTheme img.dxPivotGrid_FLRowAreaHeaders_ClinicalStudyTheme,
+.dxpgFLTextDiv_ClinicalStudyTheme img.dxPivotGrid_FLDataAreaHeaders_ClinicalStudyTheme,
+.dxpgFLTextDiv_ClinicalStudyTheme img.dxPivotGrid_FLFieldList_ClinicalStudyTheme
+{
+    height:16px;
+    width:16px;
+}
+.dxPivotGrid_FLButton_ClinicalStudyTheme
+{
+    display:block;
+    height:16px;
+    width:16px
+}
+.dxPivotGrid_FLStackedDefault_ClinicalStudyTheme,
+.dxPivotGrid_FLStackedSideBySide_ClinicalStudyTheme,
+.dxPivotGrid_FLTopPanelOnly_ClinicalStudyTheme,
+.dxPivotGrid_FLBottomPanelOnly2by2_ClinicalStudyTheme,
+.dxPivotGrid_FLBottomPanelOnly1by4_ClinicalStudyTheme
+{
+    height:32px;
+    width:32px;
+}
+.dxPivotGrid_pgDragArrowLeft_ClinicalStudyTheme,
+.dxPivotGrid_pgDragArrowRight_ClinicalStudyTheme
+{
+    height:11px;
+    width:9px;
+}
+.dxPivotGrid_pgDragArrowLeft_ClinicalStudyTheme
+{
+  background-position: -96px -11px; 
+}
+.dxPivotGrid_pgDragArrowRight_ClinicalStudyTheme
+{
+ background-position: -96px -0px; 
+}
+.dxPivotGrid_FLButton_ClinicalStudyTheme
+{
+    background-position: -96px -32px;
+}
+.dxPivotGrid_FLStackedDefault_ClinicalStudyTheme
+{
+    background-position: -32px 0px;
+}
+.dxPivotGrid_FLStackedSideBySide_ClinicalStudyTheme
+{
+    background-position: 0px -32px;
+}
+.dxPivotGrid_FLTopPanelOnly_ClinicalStudyTheme
+{
+    background-position: 0px 0px;
+}
+.dxPivotGrid_FLBottomPanelOnly2by2_ClinicalStudyTheme
+{
+    background-position: -32px -32px;
+}
+.dxPivotGrid_FLBottomPanelOnly1by4_ClinicalStudyTheme
+{
+    background-position: -64px 0px;
+}
+.dxPivotGrid_FLFieldList_ClinicalStudyTheme
+{
+    background-position: -64px -32px;
+}
+.dxPivotGrid_FLFilterAreaHeaders_ClinicalStudyTheme
+{
+    background-position: -80px -48px;
+}
+.dxPivotGrid_FLColumnAreaHeaders_ClinicalStudyTheme
+{
+    background-position: -64px -48px;
+}
+.dxPivotGrid_FLRowAreaHeaders_ClinicalStudyTheme
+{
+    background-position: -96px -48px;
+}
+.dxPivotGrid_FLDataAreaHeaders_ClinicalStudyTheme
+{
+    background-position: -80px -32px;
+} 
+
+

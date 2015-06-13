@@ -1,0 +1,30 @@
+﻿@using System.Web.UI.WebControls
+@model ClinicalStudy.Site.Areas.Analytics.Models.AdminNavigationViewModel
+
+@Html.DevExpress().NavBar(s => {
+	                                	s.Name = "nbAdmin";
+
+	                                	s.SkinID = "AdminNav";
+	                                	s.AllowExpanding = true;
+	                                	s.AllowSelectItem = true;
+	                                	s.AutoCollapse = true;
+	                                	s.EnableHotTrack = true;
+	                                	s.EnableAnimation = true;
+	                                	s.Width = Unit.Percentage(100);
+
+	                                	s.SetGroupHeaderTemplateCollapsedContent(c => {
+	                                	                                         	ViewContext.Writer.Write("<div class='anbInactiveFlag'>");
+	                                	                                         	ViewContext.Writer.Write("<img src='{0}'/>", Url.Content(String.Format("~/Content/Icons/Admin/{0}", DataBinder.Eval(c.Group.DataItem, "InactiveImageName").ToString())));
+	                                	                                         	ViewContext.Writer.Write("</div>");
+	                                	                                         	ViewContext.Writer.Write("<span class='anbHeaderText'>{0}</span>", DataBinder.Eval(c.Group.DataItem, "Text").ToString());
+	                                	                                         });
+
+	                                	s.SetGroupHeaderTemplateContent(c => {
+	                                	                                	ViewContext.Writer.Write("<div class='anbActiveFlag'>");
+	                                	                                	ViewContext.Writer.Write("<img src='{0}'/>", Url.Content(String.Format("~/Content/Icons/Admin/{0}", DataBinder.Eval(c.Group.DataItem, "ActiveImageName").ToString())));
+	                                	                                	ViewContext.Writer.Write("</div>");
+	                                	                                	ViewContext.Writer.Write("<span class='anbHeaderText'>{0}</span>", DataBinder.Eval(c.Group.DataItem, "Text").ToString());
+	                                	                                });
+
+	                                	s.ClientSideEvents.ItemClick = "anbItemClick";
+	                                }).Bind(Model.NavigationCategories).GetHtml()

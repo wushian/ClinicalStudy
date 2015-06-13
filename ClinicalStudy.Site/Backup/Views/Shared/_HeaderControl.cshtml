@@ -1,0 +1,14 @@
+﻿@using DevExpress.Web.Mvc.UI
+<header>
+	<div id="headerContent">
+		@Html.Action("LoggedUserInfo", "Account", new {area = ""})
+
+		@Html.DevExpress().HyperLink(settings => {
+                                   	settings.NavigateUrl = Url.Action("Index", "Dashboard", null);
+                                   	settings.Properties.Text = "Dashboard";													
+                                   	settings.Properties.ImageUrl = "~/Content/Images/Logo.png";
+                                   	settings.Properties.ImageHeight = 49;
+                                   	settings.Properties.ImageWidth = 253;
+                                   }).GetHtml()
+	</div>
+</header>

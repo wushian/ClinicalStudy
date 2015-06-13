@@ -1,0 +1,25 @@
+﻿<div class="rightNav">
+	@Html.DevExpress().TabControl(s => {
+	                                    	s.Name = "navigationRightTab";
+	                                    	s.SkinID = "RightTab";
+	                                    	s.TabPosition = TabPosition.Right;
+	                                    	s.SyncSelectionMode = SyncSelectionMode.CurrentPath;
+
+	                                    	MVCxTab dashboardTab = s.Tabs.Add("", "patients", Url.Content("~/Content/Images/Tabs/PatientsTab.png"));
+	                                    	dashboardTab.ActiveTabImage.Url = Url.Content("~/Content/Images/Tabs/PatientsActiveTab.png");
+	                                    	dashboardTab.ToolTip = "View Dashboard";
+
+	                                    	MVCxTab scheduleTab = s.Tabs.Add("", "schedule", Url.Content("~/Content/Images/Tabs/SchedulerTab.png"));
+	                                    	scheduleTab.ActiveTabImage.Url = Url.Content("~/Content/Images/Tabs/SchedulerActiveTab.png");
+	                                    	scheduleTab.ToolTip = "Today's Visits";
+
+	                                    	MVCxTab queryTab = s.Tabs.Add("", "queries", Url.Content("~/Content/Images/Tabs/QueriesTab.png"));
+	                                    	queryTab.ActiveTabImage.Url = Url.Content("~/Content/Images/Tabs/QueriesActiveTab.png");
+	                                    	queryTab.ToolTip = "View Queries";
+
+	                                    	s.ClientSideEvents.TabClick = String.Format(@"function (s,e) {{
+																						var tabUrls = {{patients : '{0}', queries : '{1}', schedule : '{2}'}};
+																						rightNavTabClick(s,e, tabUrls);}}",
+												Url.Action("Index", "Dashboard"), Url.Action("Index", "Query"), Url.Action("Index", "Schedule"));
+	                                    }).GetHtml()
+</div>

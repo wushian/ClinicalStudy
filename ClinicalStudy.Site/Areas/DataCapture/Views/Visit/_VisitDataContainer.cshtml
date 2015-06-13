@@ -1,0 +1,10 @@
+﻿@using ClinicalStudy.Site.Areas.DataCapture.Models.Shared
+@model ClinicalStudy.Site.Areas.DataCapture.Models.Shared.DataContainerViewModel
+
+@Html.Action("ShowVisit", "Visit", new {patientNumber = Model.PatientNumber, visitName = Model.SelectedVisitName})
+
+@foreach (ConteinerChildViewModel child in Model.Children) {
+	<div id="formPanel@(child.Id)" class="formPanel">
+		@Html.Action("ShowForm", "Form", new {patientNumber = Model.PatientNumber, visitName = Model.SelectedVisitName, formName = child.Caption})
+	</div>
+}
